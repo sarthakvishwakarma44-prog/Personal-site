@@ -1,8 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+    <!-- =====================================
+         VERSION 0.1 — DOCUMENT SETUP
+    ====================================== -->
 
     <meta charset="UTF-8">
 
@@ -10,12 +13,20 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Stardance Learning Hub - Learn HTML, CSS and JavaScript from beginner to advanced.">
+          content="Stardance Learning Hub — an easy and interactive place to learn HTML, CSS and JavaScript.">
+
+    <meta name="author"
+          content="Stardance Learning Hub">
 
     <title>Stardance Learning Hub</title>
 
-    <!-- Connect CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- =====================================
+         VERSION 0.2 — CSS CONNECTION
+    ====================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
 
@@ -24,28 +35,44 @@
 
 
     <!-- =====================================
-         NAVIGATION
+         VERSION 0.3 — NAVIGATION
     ====================================== -->
 
     <header class="navbar">
 
         <div class="logo">
+
             🚀 Stardance Learning
+
         </div>
 
 
         <nav class="nav-buttons">
 
-            <button onclick="showPage('home')">
+            <button
+                type="button"
+                onclick="showPage('home')">
+
                 Home
+
             </button>
 
-            <button onclick="showPage('courses')">
+
+            <button
+                type="button"
+                onclick="showPage('courses')">
+
                 Courses
+
             </button>
 
-            <button onclick="showPage('progress')">
+
+            <button
+                type="button"
+                onclick="showPage('progress')">
+
                 Progress
+
             </button>
 
         </nav>
@@ -55,42 +82,55 @@
 
 
     <!-- =====================================
-         MAIN WEBSITE
+         MAIN APPLICATION
     ====================================== -->
 
     <main>
 
 
         <!-- =================================
-             HOME PAGE
+             VERSION 0.4 — HOME
         ================================== -->
 
-        <section id="home" class="page">
+        <section
+            id="home"
+            class="page">
+
 
             <div class="hero">
 
+
                 <div class="eyebrow">
-                    LEARN • BUILD • EXPLORE
+
+                    STARDANCE LEARNING HUB
+
                 </div>
 
 
                 <h1>
+
                     Learn Coding
                     <br>
                     Without Confusion.
+
                 </h1>
 
 
                 <p>
+
                     Learn HTML, CSS and JavaScript
-                    from complete beginner to advanced
-                    level through simple explanations,
-                    examples and challenges.
+                    from the absolute beginning to
+                    advanced concepts using simple
+                    explanations, examples,
+                    experiments and challenges.
+
                 </p>
 
 
-                <button class="primary-button"
-                        onclick="showPage('courses')">
+                <button
+                    type="button"
+                    class="primary-button"
+                    onclick="showPage('courses')">
 
                     Start Learning →
 
@@ -100,65 +140,93 @@
 
 
 
-            <!-- FEATURES -->
+            <!-- =================================
+                 VERSION 0.5 — FEATURES
+            ================================== -->
 
             <div class="features">
 
 
-                <div class="feature">
+                <article class="feature">
 
                     <div class="feature-icon">
+
                         🧠
+
                     </div>
 
+
                     <h3>
-                        Simple Lessons
+
+                        Easy Learning
+
                     </h3>
 
+
                     <p>
-                        Learn difficult concepts using
-                        simple language and examples.
+
+                        Every concept is explained
+                        in simple language before
+                        moving to the next level.
+
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <div class="feature">
+                <article class="feature">
 
                     <div class="feature-icon">
+
                         💻
+
                     </div>
 
+
                     <h3>
-                        Code Yourself
+
+                        Learn by Doing
+
                     </h3>
 
+
                     <p>
-                        Write code and see the result
-                        immediately.
+
+                        Write code yourself and
+                        immediately see what your
+                        code produces.
+
                     </p>
 
-                </div>
+                </article>
 
 
 
-                <div class="feature">
+                <article class="feature">
 
                     <div class="feature-icon">
-                        🏆
+
+                        🚀
+
                     </div>
 
+
                     <h3>
-                        Earn XP
+
+                        Build Projects
+
                     </h3>
 
+
                     <p>
-                        Complete challenges and build
-                        your learning progress.
+
+                        Gradually move from tiny
+                        experiments to real projects.
+
                     </p>
 
-                </div>
+                </article>
 
 
             </div>
@@ -167,28 +235,38 @@
 
 
 
-        <!-- =================================
-             COURSES PAGE
-        ================================== -->
+        <!-- =====================================
+             VERSION 0.6 — COURSE SELECTION
+        ====================================== -->
 
-        <section id="courses" class="page hidden">
+        <section
+            id="courses"
+            class="page hidden">
 
 
             <div class="section-heading">
 
+
                 <div class="eyebrow">
-                    CHOOSE YOUR PATH
+
+                    STEP 01
+
                 </div>
 
 
                 <h2>
-                    What do you want to learn?
+
+                    What do you want
+                    to learn?
+
                 </h2>
 
 
                 <p>
-                    Choose a technology and start
-                    your learning journey.
+
+                    Choose your technology
+                    and begin your journey.
+
                 </p>
 
             </div>
@@ -200,28 +278,39 @@
 
                 <!-- HTML -->
 
-                <article class="course-card"
-                         onclick="openCourse('HTML')">
+                <article
+                    class="course-card"
+                    onclick="openCourse('HTML')">
+
 
                     <div class="course-icon">
+
                         &lt;/&gt;
+
                     </div>
 
 
                     <h3>
+
                         HTML
+
                     </h3>
 
 
                     <p>
-                        Learn how webpages are structured
-                        from the very beginning.
+
+                        Learn how websites are
+                        structured.
+
                     </p>
 
 
                     <span class="course-level">
+
                         Beginner → Expert
+
                     </span>
+
 
                 </article>
 
@@ -229,28 +318,39 @@
 
                 <!-- CSS -->
 
-                <article class="course-card"
-                         onclick="openCourse('CSS')">
+                <article
+                    class="course-card"
+                    onclick="openCourse('CSS')">
+
 
                     <div class="course-icon">
+
                         🎨
+
                     </div>
 
 
                     <h3>
+
                         CSS
+
                     </h3>
 
 
                     <p>
-                        Learn how to design beautiful
-                        and responsive webpages.
+
+                        Learn how to design,
+                        style and animate webpages.
+
                     </p>
 
 
                     <span class="course-level">
+
                         Beginner → Expert
+
                     </span>
+
 
                 </article>
 
@@ -258,28 +358,39 @@
 
                 <!-- JAVASCRIPT -->
 
-                <article class="course-card"
-                         onclick="openCourse('JavaScript')">
+                <article
+                    class="course-card"
+                    onclick="openCourse('JavaScript')">
+
 
                     <div class="course-icon">
+
                         ⚡
+
                     </div>
 
 
                     <h3>
+
                         JavaScript
+
                     </h3>
 
 
                     <p>
+
                         Learn programming and make
-                        webpages interactive.
+                        websites interactive.
+
                     </p>
 
 
                     <span class="course-level">
+
                         Beginner → Expert
+
                     </span>
+
 
                 </article>
 
@@ -290,15 +401,19 @@
 
 
 
-        <!-- =================================
-             COURSE LEVEL PAGE
-        ================================== -->
+        <!-- =====================================
+             VERSION 0.7 — LEVEL SELECTION
+        ====================================== -->
 
-        <section id="course" class="page hidden">
+        <section
+            id="course"
+            class="page hidden">
 
 
-            <button class="back-button"
-                    onclick="showPage('courses')">
+            <button
+                type="button"
+                class="back-button"
+                onclick="showPage('courses')">
 
                 ← Back to courses
 
@@ -308,18 +423,25 @@
 
             <div class="course-header">
 
+
                 <div class="eyebrow">
-                    LEARNING PATH
+
+                    STEP 02 — LEARNING PATH
+
                 </div>
 
 
                 <h2 id="course-name">
+
                     HTML
+
                 </h2>
 
 
                 <p id="course-description">
-                    Learn HTML from beginner to expert.
+
+                    Choose your learning level.
+
                 </p>
 
             </div>
@@ -329,105 +451,150 @@
             <div class="level-grid">
 
 
-                <!-- BASIC -->
+                <!-- LEVEL 1 -->
 
-                <button class="level-button"
-                        onclick="openLevel('Basic')">
+                <button
+                    type="button"
+                    class="level-button"
+                    onclick="openLevel('Basic')">
+
 
                     <strong class="level-number">
+
                         01
+
                     </strong>
 
 
                     <span>
 
                         <b>
+
                             Basic
+
                         </b>
 
+
                         <small>
-                            Start completely from zero.
+
+                            Start from absolute zero.
+
                         </small>
 
                     </span>
+
 
                 </button>
 
 
 
-                <!-- INTERMEDIATE -->
+                <!-- LEVEL 2 -->
 
-                <button class="level-button"
-                        onclick="openLevel('Intermediate')">
+                <button
+                    type="button"
+                    class="level-button"
+                    onclick="openLevel('Intermediate')">
+
 
                     <strong class="level-number">
+
                         02
+
                     </strong>
 
 
                     <span>
 
                         <b>
+
                             Intermediate
+
                         </b>
 
+
                         <small>
+
                             Start building real webpages.
+
                         </small>
 
                     </span>
+
 
                 </button>
 
 
 
-                <!-- ADVANCED -->
+                <!-- LEVEL 3 -->
 
-                <button class="level-button"
-                        onclick="openLevel('Advanced')">
+                <button
+                    type="button"
+                    class="level-button"
+                    onclick="openLevel('Advanced')">
+
 
                     <strong class="level-number">
+
                         03
+
                     </strong>
 
 
                     <span>
 
                         <b>
+
                             Advanced
+
                         </b>
 
+
                         <small>
-                            Learn more powerful techniques.
+
+                            Learn powerful techniques.
+
                         </small>
 
                     </span>
+
 
                 </button>
 
 
 
-                <!-- EXPERT -->
+                <!-- LEVEL 4 -->
 
-                <button class="level-button"
-                        onclick="openLevel('Expert')">
+                <button
+                    type="button"
+                    class="level-button"
+                    onclick="openLevel('Expert')">
+
 
                     <strong class="level-number">
+
                         04
+
                     </strong>
 
 
                     <span>
 
                         <b>
+
                             Expert
+
                         </b>
 
+
                         <small>
-                            Think and build like a professional.
+
+                            Build and think like
+                            a professional.
+
                         </small>
 
                     </span>
+
 
                 </button>
 
@@ -438,17 +605,21 @@
 
 
 
-        <!-- =================================
-             LESSON PAGE
-        ================================== -->
+        <!-- =====================================
+             VERSION 0.8 — LESSON SYSTEM
+        ====================================== -->
 
-        <section id="lesson" class="page hidden">
+        <section
+            id="lesson"
+            class="page hidden">
 
 
-            <button class="back-button"
-                    onclick="showPage('course')">
+            <button
+                type="button"
+                class="back-button"
+                onclick="showPage('course')">
 
-                ← Back
+                ← Back to level selection
 
             </button>
 
@@ -457,87 +628,112 @@
             <div class="lesson-layout">
 
 
-                <!-- LESSON SIDEBAR -->
+                <!-- =================================
+                     LESSON SIDEBAR
+                ================================== -->
 
                 <aside class="lesson-sidebar">
 
+
                     <h3 id="lesson-course">
+
                         HTML
+
                     </h3>
 
 
                     <p id="lesson-level">
+
                         Basic
+
                     </p>
 
 
                     <div id="lesson-list">
 
-                        <!-- JavaScript puts
-                             lessons here -->
+                        <!-- JavaScript creates
+                             lesson buttons here -->
 
                     </div>
+
 
                 </aside>
 
 
 
-                <!-- LESSON CONTENT -->
+                <!-- =================================
+                     LESSON CONTENT
+                ================================== -->
 
                 <article class="lesson-content">
 
 
                     <div class="eyebrow">
-                        LESSON
+
+                        CURRENT LESSON
+
                     </div>
 
 
                     <h2 id="lesson-title">
-                        Welcome
+
+                        Welcome to the lesson
+
                     </h2>
 
 
                     <div id="lesson-body">
 
-                        <!-- JavaScript puts
-                             lesson explanation here -->
+                        <!-- JavaScript inserts
+                             explanation here -->
 
                     </div>
 
 
 
-                    <!-- CODE EDITOR -->
+                    <!-- =================================
+                         CODE EDITOR
+                    ================================== -->
 
                     <div class="editor">
 
 
                         <div class="editor-top">
 
+
                             <span>
-                                💻 Try the code
+
+                                💻 Code Editor
+
                             </span>
 
 
-                            <button class="run-button"
-                                    onclick="runCode()">
+                            <button
+                                type="button"
+                                class="run-button"
+                                onclick="runCode()">
 
                                 ▶ Run
 
                             </button>
 
+
                         </div>
 
 
-
-                        <textarea id="code-editor"
-                                  spellcheck="false"></textarea>
+                        <textarea
+                            id="code-editor"
+                            spellcheck="false"
+                            aria-label="Code editor"></textarea>
 
 
                     </div>
 
 
 
-                    <!-- LIVE PREVIEW -->
+                    <!-- =================================
+                         LIVE PREVIEW
+                    ================================== -->
 
                     <div class="preview-heading">
 
@@ -546,20 +742,25 @@
                     </div>
 
 
-                    <iframe id="preview"
-                            title="Code Preview">
+                    <iframe
+                        id="preview"
+                        title="Live code preview">
 
                     </iframe>
 
 
 
-                    <!-- CHALLENGE -->
+                    <!-- =================================
+                         CHALLENGE
+                    ================================== -->
 
                     <div class="challenge">
 
 
                         <h3>
-                            🧪 Challenge
+
+                            🧪 Your Challenge
+
                         </h3>
 
 
@@ -570,10 +771,12 @@
                         </p>
 
 
-                        <button class="challenge-button"
-                                onclick="completeChallenge()">
+                        <button
+                            type="button"
+                            class="challenge-button"
+                            onclick="completeChallenge()">
 
-                            Complete Challenge
+                            ✓ Complete Challenge
 
                         </button>
 
@@ -582,19 +785,25 @@
 
 
 
-                    <!-- LESSON NAVIGATION -->
+                    <!-- =================================
+                         LESSON NAVIGATION
+                    ================================== -->
 
                     <div class="lesson-navigation">
 
 
-                        <button onclick="previousLesson()">
+                        <button
+                            type="button"
+                            onclick="previousLesson()">
 
                             ← Previous
 
                         </button>
 
 
-                        <button onclick="nextLesson()">
+                        <button
+                            type="button"
+                            onclick="nextLesson()">
 
                             Next →
 
@@ -606,34 +815,44 @@
 
                 </article>
 
+
             </div>
 
         </section>
 
 
 
-        <!-- =================================
-             PROGRESS PAGE
-        ================================== -->
+        <!-- =====================================
+             VERSION 0.9 — PROGRESS SYSTEM
+        ====================================== -->
 
-        <section id="progress" class="page hidden">
+        <section
+            id="progress"
+            class="page hidden">
 
 
             <div class="section-heading">
 
 
                 <div class="eyebrow">
-                    YOUR JOURNEY
+
+                    YOUR LEARNING JOURNEY
+
                 </div>
 
 
                 <h2>
+
                     Your Progress
+
                 </h2>
 
 
                 <p>
-                    Keep learning and earn XP.
+
+                    Complete lessons and challenges
+                    to earn XP.
+
                 </p>
 
 
@@ -641,13 +860,14 @@
 
 
 
-            <!-- XP -->
+            <!-- XP CARD -->
 
             <div class="progress-card">
 
 
-                <div class="xp-number"
-                     id="xp-display">
+                <div
+                    class="xp-number"
+                    id="xp-display">
 
                     0 XP
 
@@ -656,13 +876,16 @@
 
                 <div class="progress-bar">
 
+
                     <div id="xp-bar"></div>
+
 
                 </div>
 
 
-                <p class="progress-description"
-                   id="progress-text">
+                <p
+                    class="progress-description"
+                    id="progress-text">
 
                     Start learning to earn XP.
 
@@ -673,57 +896,132 @@
 
 
 
-            <!-- BADGES -->
+            <!-- =================================
+                 BADGES
+            ================================== -->
 
             <div class="badges">
 
 
-                <div class="badge"
-                     id="badge-first">
+                <div
+                    class="badge"
+                    id="badge-first">
+
 
                     <div class="badge-icon">
+
                         🌟
+
                     </div>
 
 
                     <span class="badge-name">
+
                         First Challenge
+
                     </span>
+
 
                 </div>
 
 
 
-                <div class="badge"
-                     id="badge-five">
+                <div
+                    class="badge"
+                    id="badge-five">
+
 
                     <div class="badge-icon">
+
                         🔥
+
                     </div>
 
 
                     <span class="badge-name">
+
                         5 Challenges
+
                     </span>
+
 
                 </div>
 
 
 
-                <div class="badge"
-                     id="badge-master">
+                <div
+                    class="badge"
+                    id="badge-master">
+
 
                     <div class="badge-icon">
+
                         🏆
+
                     </div>
 
 
                     <span class="badge-name">
+
                         100 XP Master
+
                     </span>
+
 
                 </div>
 
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             VERSION 1.0 — FUTURE EXPANSION AREA
+
+             This area is intentionally prepared
+             for future features such as:
+
+             • Search
+             • User profiles
+             • More courses
+             • Projects
+             • Quizzes
+             • Certificates
+             • Dark/light themes
+             • Learning statistics
+             • NASA educational content
+             • Stardust integration
+        ====================================== -->
+
+        <section
+            id="future"
+            class="page hidden">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+
+                    VERSION 1.0+
+
+                </div>
+
+
+                <h2>
+
+                    More Coming Soon
+
+                </h2>
+
+
+                <p>
+
+                    The learning platform can continue
+                    growing with projects, quizzes,
+                    certificates and advanced courses.
+
+                </p>
 
             </div>
 
@@ -740,21 +1038,32 @@
 
     <footer>
 
+
         <span>
-            Stardance Learning Hub
+
+            🚀 Stardance Learning Hub
+
         </span>
 
 
         <span>
-            Learn • Build • Explore 🚀
+
+            Learn • Build • Explore
+
         </span>
+
 
     </footer>
 
 
 
     <!-- =====================================
-         CONNECT JAVASCRIPT
+         VERSION 1.0 — JAVASCRIPT CONNECTION
+
+         IMPORTANT:
+         JavaScript is NOT written here.
+
+         It is loaded from script.js.
     ====================================== -->
 
     <script src="script.js"></script>
@@ -763,4 +1072,3 @@
 </body>
 
 </html>
-```
