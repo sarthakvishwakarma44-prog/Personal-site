@@ -1,19 +1,19 @@
-/* =====================================
+/* =========================================================
    STARDANCE LEARNING HUB
-   JavaScript
-===================================== */
+   JAVASCRIPT — VERSION 0.1 → 1.0
+========================================================= */
 
 
-/* =====================================
-   COURSE DATA
-===================================== */
+/* =========================================================
+   0.1 — COURSE DATABASE
+========================================================= */
 
 const courses = {
 
     HTML: {
 
         description:
-            "Learn HTML from complete beginner to advanced level.",
+            "Learn HTML from absolute beginner to professional level.",
 
         Basic: [
 
@@ -24,33 +24,35 @@ const courses = {
                     <div class="lesson-text">
 
                         <p>
-                            HTML stands for
+                            HTML means
                             <strong>HyperText Markup Language</strong>.
                         </p>
 
                         <p>
-                            HTML creates the basic structure
-                            of a webpage.
+                            HTML creates the structure of a webpage.
                         </p>
 
                         <h3>Think about a house</h3>
 
                         <p>
-                            HTML is like the structure of a house.
-                            CSS makes it beautiful, while
-                            JavaScript makes it interactive.
+                            HTML is the structure,
+                            CSS is the design,
+                            and JavaScript adds behaviour.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
+
     <title>My First Website</title>
+
 </head>
 
 <body>
@@ -75,216 +77,252 @@ const courses = {
                     <div class="lesson-text">
 
                         <p>
-                            HTML uses tags to tell the browser
-                            what an element is.
+                            HTML uses tags to describe
+                            different parts of a webpage.
                         </p>
 
-                        <h3>Example</h3>
-
                         <p>
+                            For example:
                             <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>
                         </p>
 
                         <p>
-                            The opening tag is
-                            <code>&lt;h1&gt;</code>
-                            and the closing tag is
-                            <code>&lt;/h1&gt;</code>.
+                            The first tag opens the element
+                            and the second tag closes it.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<h1>Hello World!</h1>
+                code: `<h1>Hello World!</h1>
 
 <p>This is a paragraph.</p>`,
 
                 challenge:
-                    "Create a paragraph that says I am learning HTML."
+                    "Create a paragraph that says: I am learning HTML."
             },
 
 
             {
-                title: "HTML Elements",
+                title: "Headings",
 
                 explanation: `
                     <div class="lesson-text">
 
                         <p>
-                            An HTML element normally contains
-                            an opening tag, content and
-                            a closing tag.
+                            HTML has six main heading levels:
+                            h1, h2, h3, h4, h5 and h6.
                         </p>
 
-                        <h3>Example</h3>
-
                         <p>
-                            <code>&lt;p&gt;Hello&lt;/p&gt;</code>
+                            h1 is normally the most important
+                            heading and h6 is the smallest level.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<h1>My Website</h1>
+                code: `<h1>Main Heading</h1>
 
-<p>Welcome to my website.</p>`,
+<h2>Section Heading</h2>
+
+<h3>Subsection Heading</h3>`,
 
                 challenge:
-                    "Create an h2 element saying Technologies."
+                    "Create an h2 heading saying My Projects."
             },
 
 
             {
-                title: "HTML Attributes",
+                title: "Paragraphs",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            The <code>&lt;p&gt;</code> element
+                            is used for paragraphs.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<p>
+    This is my first paragraph.
+</p>
+
+<p>
+    This is my second paragraph.
+</p>`,
+
+                challenge:
+                    "Create two paragraphs."
+            },
+
+
+            {
+                title: "Attributes",
 
                 explanation: `
                     <div class="lesson-text">
 
                         <p>
                             Attributes provide additional
-                            information about an HTML element.
-                        </p>
-
-                        <h3>Example</h3>
-
-                        <p>
-                            <code>
-                                &lt;p id="intro"&gt;Hello&lt;/p&gt;
-                            </code>
+                            information about HTML elements.
                         </p>
 
                         <p>
-                            Here <code>id</code> is an attribute.
+                            Example:
+                            <code>id="main"</code>
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<p id="intro">
-    Hello World!
+                code: `<p id="message">
+    Hello!
 </p>`,
 
                 challenge:
-                    "Create a paragraph with id=\"message\"."
+                    "Create a paragraph with id='intro'."
             },
 
 
             {
-                title: "The Head Section",
+                title: "Links",
 
                 explanation: `
                     <div class="lesson-text">
 
                         <p>
-                            The <code>&lt;head&gt;</code>
-                            contains information about
-                            the webpage.
-                        </p>
-
-                        <h3>Common elements</h3>
-
-                        <p>
-                            You will commonly find
-                            <code>&lt;title&gt;</code>,
-                            <code>&lt;meta&gt;</code>
-                            and
-                            <code>&lt;link&gt;</code>
-                            inside it.
+                            The <code>&lt;a&gt;</code> element
+                            creates a hyperlink.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>My Website</title>
-
-</head>
-
-<body>
-
-    <h1>Hello!</h1>
-
-</body>
-
-</html>`,
+                code: `<a href="https://example.com">
+    Visit Example
+</a>`,
 
                 challenge:
-                    "Create a webpage with a title called My Website."
+                    "Create a link using the a element."
             },
 
 
             {
-                title: "The Body",
+                title: "Images",
 
                 explanation: `
                     <div class="lesson-text">
 
                         <p>
-                            The <code>&lt;body&gt;</code>
-                            contains the visible content
-                            of the webpage.
+                            The <code>&lt;img&gt;</code> element
+                            displays an image.
                         </p>
 
                         <p>
-                            Headings, paragraphs, images,
-                            buttons and many other elements
-                            normally go inside the body.
+                            The src attribute specifies
+                            where the image comes from.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
-
-<html>
-
-<head>
-
-    <title>My Site</title>
-
-</head>
-
-<body>
-
-    <h1>Welcome!</h1>
-
-    <p>This is my website.</p>
-
-</body>
-
-</html>`,
+                code: `<img
+    src="https://via.placeholder.com/300"
+    alt="Example image"
+>`,
 
                 challenge:
-                    "Put a heading and paragraph inside the body."
+                    "Create an image with an alt attribute."
+            },
+
+
+            {
+                title: "Lists",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            HTML supports ordered and
+                            unordered lists.
+                        </p>
+
+                        <p>
+                            <code>&lt;ul&gt;</code> creates
+                            an unordered list.
+                        </p>
+
+                        <p>
+                            <code>&lt;ol&gt;</code> creates
+                            an ordered list.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<ul>
+
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+
+</ul>`,
+
+                challenge:
+                    "Create a list containing three programming languages."
+            },
+
+
+            {
+                title: "Div and Sections",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            The div element is a general
+                            container for HTML content.
+                        </p>
+
+                        <p>
+                            Semantic elements such as
+                            section, header and footer
+                            give meaning to page structure.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<section>
+
+    <h2>About Me</h2>
+
+    <p>
+        I am learning web development.
+    </p>
+
+</section>`,
+
+                challenge:
+                    "Create a section containing a heading and paragraph."
             }
 
         ]
     },
 
 
-    /* =====================================
+    /* =====================================================
        CSS
-    ===================================== */
+    ===================================================== */
 
     CSS: {
 
         description:
-            "Learn how to design beautiful and responsive webpages.",
+            "Learn CSS from basic styling to advanced web design.",
 
         Basic: [
 
@@ -295,84 +333,19 @@ const courses = {
                     <div class="lesson-text">
 
                         <p>
-                            CSS stands for
+                            CSS means
                             <strong>Cascading Style Sheets</strong>.
                         </p>
 
                         <p>
-                            CSS controls the appearance
-                            of HTML elements.
-                        </p>
-
-                        <h3>CSS can control</h3>
-
-                        <p>
-                            Colors, sizes, spacing, layouts,
-                            borders, animations and much more.
+                            CSS controls how HTML elements
+                            look on the screen.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<style>
-
-h1 {
-    font-size: 45px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<h1>Hello CSS!</h1>
-
-</body>
-
-</html>`,
-
-                challenge:
-                    "Change the heading size to 60px."
-            },
-
-
-            {
-                title: "CSS Colors",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            CSS can change text colors
-                            and background colors.
-                        </p>
-
-                        <h3>Example</h3>
-
-                        <p>
-                            The <code>color</code> property
-                            changes text color.
-                        </p>
-
-                    </div>
-                `,
-
-                code:
-`<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<style>
+                code: `<style>
 
 h1 {
     color: blue;
@@ -380,102 +353,234 @@ h1 {
 
 </style>
 
-</head>
-
-<body>
-
-<h1>Hello!</h1>
-
-</body>
-
-</html>`,
+<h1>Hello CSS!</h1>`,
 
                 challenge:
-                    "Change the heading to another color."
+                    "Change the heading color."
             },
 
 
             {
-                title: "CSS Width and Height",
+                title: "Colors",
 
                 explanation: `
                     <div class="lesson-text">
 
                         <p>
-                            CSS can control the width
-                            and height of elements.
-                        </p>
-
-                        <p>
-                            For example,
-                            <code>width: 200px;</code>
-                            gives an element a width of
-                            200 CSS pixels.
+                            CSS can change text and
+                            background colors.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<style>
 
-<html>
+body {
+    background: black;
+    color: white;
+}
 
-<head>
+</style>
 
-<style>
+<h1>Hello!</h1>`,
+
+                challenge:
+                    "Change the background color."
+            },
+
+
+            {
+                title: "Font Size",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            The font-size property controls
+                            the size of text.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<style>
+
+h1 {
+    font-size: 50px;
+}
+
+</style>
+
+<h1>Large Text</h1>`,
+
+                challenge:
+                    "Change the heading to 60px."
+            },
+
+
+            {
+                title: "Width and Height",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            width controls horizontal size.
+                        </p>
+
+                        <p>
+                            height controls vertical size.
+                        </p>
+
+                        <p>
+                            1px means one CSS pixel.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<style>
 
 .box {
 
     width: 200px;
     height: 100px;
 
-    background: black;
+    background: blue;
 
 }
 
 </style>
 
-</head>
-
-<body>
-
-<div class="box"></div>
-
-</body>
-
-</html>`,
+<div class="box"></div>`,
 
                 challenge:
-                    "Change the box width."
+                    "Change the width to 300px."
             },
 
 
             {
-                title: "CSS Classes",
+                title: "Margin",
 
                 explanation: `
                     <div class="lesson-text">
 
                         <p>
-                            A class allows you to apply
-                            the same CSS rules to one or
-                            multiple HTML elements.
+                            Margin creates space outside
+                            an element.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<style>
+                code: `<style>
 
 .box {
+
+    margin: 30px;
+
+    background: lightblue;
+
+}
+
+</style>
+
+<div class="box">
+    Hello
+</div>`,
+
+                challenge:
+                    "Change the margin to 50px."
+            },
+
+
+            {
+                title: "Padding",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            Padding creates space between
+                            an element's content and its border.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<style>
+
+.box {
+
+    padding: 30px;
+
+    background: lightblue;
+
+}
+
+</style>
+
+<div class="box">
+    Hello
+</div>`,
+
+                challenge:
+                    "Change the padding to 40px."
+            },
+
+
+            {
+                title: "Borders",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            The border property creates
+                            a visible boundary around an element.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<style>
+
+.box {
+
+    width: 200px;
+    height: 100px;
+
+    border: 3px solid black;
+
+}
+
+</style>
+
+<div class="box"></div>`,
+
+                challenge:
+                    "Create a 5px border."
+            },
+
+
+            {
+                title: "Classes",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            Classes allow CSS rules to be
+                            applied to selected HTML elements.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<style>
+
+.card {
 
     padding: 20px;
     background: lightblue;
@@ -484,34 +589,82 @@ h1 {
 
 </style>
 
-</head>
+<div class="card">
 
-<body>
+    My Card
 
-<div class="box">
-    Hello!
-</div>
-
-</body>
-
-</html>`,
+</div>`,
 
                 challenge:
                     "Create a class called card."
+            },
+
+
+            {
+                title: "Flexbox",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            Flexbox is a powerful CSS layout
+                            system.
+                        </p>
+
+                        <p>
+                            It makes it easier to arrange
+                            elements horizontally or vertically.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<style>
+
+.container {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.box {
+
+    padding: 30px;
+
+    background: lightblue;
+
+}
+
+</style>
+
+<div class="container">
+
+    <div class="box">A</div>
+
+    <div class="box">B</div>
+
+    <div class="box">C</div>
+
+</div>`,
+
+                challenge:
+                    "Create three boxes using Flexbox."
             }
 
         ]
     },
 
 
-    /* =====================================
+    /* =====================================================
        JAVASCRIPT
-    ===================================== */
+    ===================================================== */
 
     JavaScript: {
 
         description:
-            "Learn programming and make webpages interactive.",
+            "Learn JavaScript programming and build interactive websites.",
 
         Basic: [
 
@@ -523,29 +676,19 @@ h1 {
 
                         <p>
                             JavaScript is a programming language
-                            commonly used to make webpages
-                            interactive.
+                            commonly used to make webpages interactive.
                         </p>
 
-                        <h3>JavaScript can</h3>
-
                         <p>
-                            React to clicks, change webpage
-                            content, calculate values, communicate
-                            with APIs and much more.
+                            HTML creates structure.
+                            CSS creates appearance.
+                            JavaScript creates behaviour.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
-
-<html>
-
-<body>
-
-<h1 id="title">
+                code: `<h1 id="title">
     Hello!
 </h1>
 
@@ -554,14 +697,10 @@ h1 {
 document.getElementById("title")
     .textContent = "Hello JavaScript!";
 
-</script>
-
-</body>
-
-</html>`,
+<\/script>`,
 
                 challenge:
-                    "Use JavaScript to change the heading text."
+                    "Use JavaScript to change the heading."
             },
 
 
@@ -576,39 +715,60 @@ document.getElementById("title")
                             that your program can use.
                         </p>
 
-                        <h3>Example</h3>
-
                         <p>
-                            <code>let name = "Learner";</code>
+                            Modern JavaScript commonly
+                            uses let and const.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
-
-<html>
-
-<body>
-
-<h1 id="output"></h1>
+                code: `<h1 id="output"></h1>
 
 <script>
 
-let name = "Learner";
+let name = "Stardance";
 
 document.getElementById("output")
-    .textContent = "Hello " + name;
+    .textContent = name;
 
-</script>
-
-</body>
-
-</html>`,
+<\/script>`,
 
                 challenge:
                     "Create a variable containing your name."
+            },
+
+
+            {
+                title: "Numbers",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            JavaScript can perform mathematical
+                            calculations.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<h1 id="answer"></h1>
+
+<script>
+
+let a = 10;
+let b = 20;
+
+let result = a + b;
+
+document.getElementById("answer")
+    .textContent = result;
+
+<\/script>`,
+
+                challenge:
+                    "Create two numbers and add them."
             },
 
 
@@ -620,20 +780,13 @@ document.getElementById("output")
 
                         <p>
                             A function is a reusable block
-                            of code that performs a task.
+                            of code.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
-
-<html>
-
-<body>
-
-<h1 id="output"></h1>
+                code: `<h1 id="output"></h1>
 
 <script>
 
@@ -646,14 +799,54 @@ function sayHello() {
 document.getElementById("output")
     .textContent = sayHello();
 
-</script>
-
-</body>
-
-</html>`,
+<\/script>`,
 
                 challenge:
                     "Create a function that returns your name."
+            },
+
+
+            {
+                title: "Conditions",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            Conditions allow a program
+                            to make decisions.
+                        </p>
+
+                        <p>
+                            The if statement runs code
+                            when a condition is true.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<h1 id="output"></h1>
+
+<script>
+
+let age = 18;
+
+if (age >= 18) {
+
+    document.getElementById("output")
+        .textContent = "Adult";
+
+} else {
+
+    document.getElementById("output")
+        .textContent = "Under 18";
+
+}
+
+<\/script>`,
+
+                challenge:
+                    "Create an if statement."
             },
 
 
@@ -664,26 +857,23 @@ document.getElementById("output")
                     <div class="lesson-text">
 
                         <p>
-                            JavaScript can respond to events
+                            JavaScript can react to events
                             such as button clicks.
                         </p>
 
                     </div>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<button onclick="changeText()">
 
-<html>
-
-<body>
-
-<button onclick="changeText()">
     Click Me
+
 </button>
 
 <h1 id="message">
+
     Waiting...
+
 </h1>
 
 <script>
@@ -695,14 +885,47 @@ function changeText() {
 
 }
 
-</script>
-
-</body>
-
-</html>`,
+<\/script>`,
 
                 challenge:
                     "Make the button change the message."
+            },
+
+
+            {
+                title: "The DOM",
+
+                explanation: `
+                    <div class="lesson-text">
+
+                        <p>
+                            DOM means Document Object Model.
+                        </p>
+
+                        <p>
+                            JavaScript can use the DOM
+                            to find and modify HTML elements.
+                        </p>
+
+                    </div>
+                `,
+
+                code: `<h1 id="title">
+    Original
+</h1>
+
+<script>
+
+const heading =
+    document.getElementById("title");
+
+heading.textContent =
+    "Changed using the DOM!";
+
+<\/script>`,
+
+                challenge:
+                    "Find an element using its id."
             }
 
         ]
@@ -711,15 +934,20 @@ function changeText() {
 };
 
 
-/* =====================================
-   CURRENT STATE
-===================================== */
+/* =========================================================
+   0.2 — APPLICATION STATE
+========================================================= */
 
 let currentCourse = "HTML";
 
 let currentLevel = "Basic";
 
 let currentLesson = 0;
+
+
+/* =========================================================
+   0.3 — SAVE USER PROGRESS
+========================================================= */
 
 let xp =
     Number(localStorage.getItem("stardanceXP")) || 0;
@@ -728,9 +956,9 @@ let completedLessons =
     Number(localStorage.getItem("stardanceLessons")) || 0;
 
 
-/* =====================================
-   PAGE SYSTEM
-===================================== */
+/* =========================================================
+   0.4 — PAGE NAVIGATION
+========================================================= */
 
 function showPage(page) {
 
@@ -767,9 +995,9 @@ function showPage(page) {
 }
 
 
-/* =====================================
-   OPEN COURSE
-===================================== */
+/* =========================================================
+   0.5 — COURSE SELECTION
+========================================================= */
 
 function openCourse(course) {
 
@@ -790,9 +1018,9 @@ function openCourse(course) {
 }
 
 
-/* =====================================
-   OPEN LEVEL
-===================================== */
+/* =========================================================
+   0.6 — LEVEL SELECTION
+========================================================= */
 
 function openLevel(level) {
 
@@ -802,11 +1030,11 @@ function openLevel(level) {
 
 
     /*
-        At this stage, only Basic lessons
-        are created.
+        At version 1.0, the detailed lessons
+        are currently available in Basic.
 
-        Until other levels are added,
-        they use the Basic lessons.
+        Other levels use the Basic lessons
+        until their own lesson database is added.
     */
 
     if (!courses[currentCourse][currentLevel]) {
@@ -823,9 +1051,9 @@ function openLevel(level) {
 }
 
 
-/* =====================================
-   LOAD LESSON
-===================================== */
+/* =========================================================
+   0.7 — LOAD LESSON
+========================================================= */
 
 function loadLesson() {
 
@@ -835,6 +1063,13 @@ function loadLesson() {
 
     const lesson =
         lessons[currentLesson];
+
+
+    if (!lesson) {
+
+        return;
+
+    }
 
 
     document
@@ -854,17 +1089,20 @@ function loadLesson() {
 
     document
         .getElementById("lesson-body")
-        .innerHTML = lesson.explanation;
+        .innerHTML =
+        lesson.explanation;
 
 
     document
         .getElementById("code-editor")
-        .value = lesson.code;
+        .value =
+        lesson.code;
 
 
     document
         .getElementById("challenge-text")
-        .textContent = lesson.challenge;
+        .textContent =
+        lesson.challenge;
 
 
     buildLessonList();
@@ -873,9 +1111,9 @@ function loadLesson() {
 }
 
 
-/* =====================================
-   BUILD LESSON LIST
-===================================== */
+/* =========================================================
+   0.8 — LESSON SIDEBAR
+========================================================= */
 
 function buildLessonList() {
 
@@ -896,7 +1134,10 @@ function buildLessonList() {
             document.createElement("button");
 
 
-        button.className = "lesson-item";
+        button.type = "button";
+
+        button.className =
+            "lesson-item";
 
 
         if (index === currentLesson) {
@@ -907,7 +1148,9 @@ function buildLessonList() {
 
 
         button.textContent =
-            (index + 1) + ". " + lesson.title;
+            (index + 1) +
+            ". " +
+            lesson.title;
 
 
         button.onclick = function() {
@@ -925,29 +1168,35 @@ function buildLessonList() {
 }
 
 
-/* =====================================
-   RUN USER CODE
-===================================== */
+/* =========================================================
+   0.9 — RUN CODE
+========================================================= */
 
 function runCode() {
 
-    const code =
-        document
-            .getElementById("code-editor")
-            .value;
+    const editor =
+        document.getElementById("code-editor");
 
 
     const preview =
         document.getElementById("preview");
 
 
-    preview.srcdoc = code;
+    if (!editor || !preview) {
+
+        return;
+
+    }
+
+
+    preview.srcdoc =
+        editor.value;
 }
 
 
-/* =====================================
-   NEXT LESSON
-===================================== */
+/* =========================================================
+   0.10 — NEXT LESSON
+========================================================= */
 
 function nextLesson() {
 
@@ -968,17 +1217,15 @@ function nextLesson() {
 
     else {
 
-        alert(
-            "🎉 You completed this level!"
-        );
+        completeLevel();
 
     }
 }
 
 
-/* =====================================
-   PREVIOUS LESSON
-===================================== */
+/* =========================================================
+   0.11 — PREVIOUS LESSON
+========================================================= */
 
 function previousLesson() {
 
@@ -993,16 +1240,16 @@ function previousLesson() {
     else {
 
         alert(
-            "This is the first lesson."
+            "You are already on the first lesson."
         );
 
     }
 }
 
 
-/* =====================================
-   COMPLETE CHALLENGE
-===================================== */
+/* =========================================================
+   0.12 — COMPLETE CHALLENGE
+========================================================= */
 
 function completeChallenge() {
 
@@ -1032,9 +1279,29 @@ function completeChallenge() {
 }
 
 
-/* =====================================
-   UPDATE PROGRESS
-===================================== */
+/* =========================================================
+   0.13 — COMPLETE LEVEL
+========================================================= */
+
+function completeLevel() {
+
+    alert(
+        "🎉 Congratulations!\n\n" +
+        "You completed the " +
+        currentLevel +
+        " level of " +
+        currentCourse +
+        "!"
+    );
+
+
+    showPage("progress");
+}
+
+
+/* =========================================================
+   0.14 — UPDATE XP
+========================================================= */
 
 function updateProgress() {
 
@@ -1065,57 +1332,122 @@ function updateProgress() {
         Math.min(xp, 100);
 
 
-    xpBar.style.width =
-        percentage + "%";
+    if (xpBar) {
+
+        xpBar.style.width =
+            percentage + "%";
+
+    }
 
 
-    progressText.textContent =
-        completedLessons +
-        " challenges completed.";
+    if (progressText) {
+
+        progressText.textContent =
+            completedLessons +
+            " challenges completed.";
+
+    }
 
 
     unlockBadges();
 }
 
 
-/* =====================================
-   BADGES
-===================================== */
+/* =========================================================
+   0.15 — BADGE SYSTEM
+========================================================= */
 
 function unlockBadges() {
 
-    if (completedLessons >= 1) {
+    const firstBadge =
+        document.getElementById("badge-first");
 
-        document
-            .getElementById("badge-first")
-            .classList.add("unlocked");
+
+    const fiveBadge =
+        document.getElementById("badge-five");
+
+
+    const masterBadge =
+        document.getElementById("badge-master");
+
+
+    if (
+        firstBadge &&
+        completedLessons >= 1
+    ) {
+
+        firstBadge.classList.add("unlocked");
 
     }
 
 
-    if (completedLessons >= 5) {
+    if (
+        fiveBadge &&
+        completedLessons >= 5
+    ) {
 
-        document
-            .getElementById("badge-five")
-            .classList.add("unlocked");
+        fiveBadge.classList.add("unlocked");
 
     }
 
 
-    if (xp >= 100) {
+    if (
+        masterBadge &&
+        xp >= 100
+    ) {
 
-        document
-            .getElementById("badge-master")
-            .classList.add("unlocked");
+        masterBadge.classList.add("unlocked");
 
     }
 }
 
 
-/* =====================================
-   START WEBSITE
-===================================== */
+/* =========================================================
+   0.16 — KEYBOARD SHORTCUTS
+========================================================= */
 
-updateProgress();
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-showPage("home");
+        /*
+            Ctrl + Enter
+            = Run code
+        */
+
+        if (
+            event.ctrlKey &&
+            event.key === "Enter"
+        ) {
+
+            runCode();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   0.17 — AUTO RUN CODE
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        updateProgress();
+
+        showPage("home");
+
+    }
+);
+
+
+/* =========================================================
+   1.0 — START APPLICATION
+========================================================= */
+
+console.log(
+    "🚀 Stardance Learning Hub v1.0 loaded successfully!"
+);
