@@ -1,0 +1,2569 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Stardance Learning Hub - Learn HTML, CSS and JavaScript from beginner to advanced.">
+
+    <title>Stardance Learning Hub</title>
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #070a12;
+            --surface: #101522;
+            --surface2: #171d2d;
+            --border: #292f42;
+            --text: #ffffff;
+            --muted: #929aae;
+            --accent: #7c9cff;
+            --success: #61d98b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 70px;
+            padding: 0 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid var(--border);
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(7, 10, 18, 0.94);
+            backdrop-filter: blur(15px);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 6px;
+        }
+
+        .nav-buttons button {
+            border: none;
+            background: transparent;
+            color: var(--muted);
+
+            padding: 10px 15px;
+            border-radius: 8px;
+
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .nav-buttons button:hover {
+            background: var(--surface2);
+            color: var(--text);
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .page {
+            min-height: calc(100vh - 130px);
+            padding: 70px 6%;
+        }
+
+
+        /* =========================
+           HOME
+        ========================= */
+
+        .hero {
+            max-width: 950px;
+            margin: 70px auto 100px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            color: var(--muted);
+            font-size: 12px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 100px);
+            line-height: 0.98;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        .primary-button {
+            margin-top: 35px;
+
+            padding: 16px 28px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: var(--accent);
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 30px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-heading {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           COURSE CARDS
+        ========================= */
+
+        .course-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            padding: 35px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 20px;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s,
+                background 0.2s,
+                border-color 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            background: var(--surface2);
+            border-color: var(--accent);
+        }
+
+        .course-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: var(--surface2);
+
+            font-size: 28px;
+
+            margin-bottom: 25px;
+        }
+
+        .course-card h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .course-card .course-level {
+            color: var(--accent);
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           COURSE LEVELS
+        ========================= */
+
+        .back-button {
+            border: none;
+            background: transparent;
+            color: var(--muted);
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            margin-bottom: 35px;
+        }
+
+        .back-button:hover {
+            color: white;
+        }
+
+        .course-header {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .course-header h2 {
+            font-size: clamp(45px, 7vw, 75px);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .course-header p {
+            color: var(--muted);
+        }
+
+        .level-grid {
+            max-width: 900px;
+            margin: 45px auto 0;
+
+            display: grid;
+            gap: 15px;
+        }
+
+        .level-button {
+            display: flex;
+            align-items: center;
+
+            gap: 25px;
+
+            width: 100%;
+
+            padding: 25px;
+
+            background: var(--surface);
+            color: white;
+
+            border: 1px solid var(--border);
+            border-radius: 16px;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .level-button:hover {
+            background: var(--surface2);
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .level-number {
+            font-size: 25px;
+            color: var(--muted);
+            min-width: 45px;
+        }
+
+        .level-button span {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .level-button b {
+            font-size: 19px;
+        }
+
+        .level-button small {
+            color: var(--muted);
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           LESSON
+        ========================= */
+
+        .lesson-layout {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 240px 1fr;
+
+            gap: 40px;
+        }
+
+        .lesson-sidebar {
+            height: fit-content;
+
+            position: sticky;
+            top: 95px;
+
+            padding: 20px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .lesson-sidebar h3 {
+            font-size: 20px;
+        }
+
+        .lesson-sidebar > p {
+            color: var(--muted);
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        .lesson-item {
+            width: 100%;
+
+            padding: 11px;
+
+            margin-top: 5px;
+
+            background: transparent;
+
+            border: none;
+            border-radius: 8px;
+
+            color: var(--muted);
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .lesson-item:hover {
+            background: var(--surface2);
+            color: white;
+        }
+
+        .lesson-item.active {
+            background: var(--surface2);
+            color: white;
+        }
+
+        .lesson-content {
+            max-width: 900px;
+        }
+
+        .lesson-content h2 {
+            font-size: clamp(35px, 5vw, 55px);
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+        }
+
+        .lesson-text {
+            color: #c7ccda;
+            font-size: 17px;
+        }
+
+        .lesson-text h3 {
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .lesson-text code {
+            background: var(--surface2);
+            padding: 3px 7px;
+            border-radius: 5px;
+            color: #dfe5ff;
+        }
+
+
+        /* =========================
+           CODE EDITOR
+        ========================= */
+
+        .editor {
+            margin-top: 40px;
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            overflow: hidden;
+        }
+
+        .editor-top {
+            padding: 13px 15px;
+
+            background: var(--surface);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .run-button {
+            padding: 8px 16px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: var(--success);
+            color: #07120b;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        #code-editor {
+            width: 100%;
+            min-height: 300px;
+
+            display: block;
+
+            padding: 20px;
+
+            resize: vertical;
+
+            border: none;
+            outline: none;
+
+            background: #04060b;
+            color: #e0e5f3;
+
+            font-family: Consolas, Monaco, monospace;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           PREVIEW
+        ========================= */
+
+        .preview-heading {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        #preview {
+            width: 100%;
+            min-height: 260px;
+
+            display: block;
+
+            background: white;
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+
+        /* =========================
+           CHALLENGE
+        ========================= */
+
+        .challenge {
+            margin-top: 35px;
+
+            padding: 25px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .challenge h3 {
+            margin-bottom: 8px;
+        }
+
+        .challenge p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .challenge-button {
+            padding: 11px 18px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: var(--accent);
+            color: white;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           LESSON NAVIGATION
+        ========================= */
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 30px;
+        }
+
+        .lesson-navigation button {
+            padding: 11px 18px;
+
+            background: var(--surface);
+            color: white;
+
+            border: 1px solid var(--border);
+            border-radius: 8px;
+
+            cursor: pointer;
+        }
+
+        .lesson-navigation button:hover {
+            background: var(--surface2);
+        }
+
+
+        /* =========================
+           PROGRESS
+        ========================= */
+
+        .progress-card {
+            max-width: 800px;
+            margin: auto;
+
+            padding: 35px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 20px;
+        }
+
+        .xp-number {
+            font-size: 38px;
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 16px;
+
+            background: var(--surface2);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        #xp-bar {
+            width: 0%;
+            height: 100%;
+
+            background: var(--accent);
+
+            transition: width 0.5s;
+        }
+
+        .progress-description {
+            color: var(--muted);
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           BADGES
+        ========================= */
+
+        .badges {
+            max-width: 800px;
+
+            margin: 30px auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .badge {
+            padding: 25px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            text-align: center;
+
+            opacity: 0.3;
+
+            transition: 0.3s;
+        }
+
+        .badge-icon {
+            font-size: 35px;
+        }
+
+        .badge-name {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .badge.unlocked {
+            opacity: 1;
+            border-color: var(--accent);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            min-height: 60px;
+
+            padding: 20px 6%;
+
+            display: flex;
+            justify-content: space-between;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .nav-buttons {
+                display: none;
+            }
+
+            .page {
+                padding: 50px 5%;
+            }
+
+            .features,
+            .course-grid,
+            .badges {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-sidebar {
+                position: static;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚀 Stardance Learning
+        </div>
+
+        <nav class="nav-buttons">
+
+            <button onclick="showPage('home')">
+                Home
+            </button>
+
+            <button onclick="showPage('courses')">
+                Courses
+            </button>
+
+            <button onclick="showPage('progress')">
+                Progress
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =========================
+             HOME
+        ========================= -->
+
+        <section id="home" class="page">
+
+            <div class="hero">
+
+                <div class="eyebrow">
+                    LEARN • BUILD • EXPLORE
+                </div>
+
+                <h1>
+                    Learn Coding<br>
+                    Without Confusion.
+                </h1>
+
+                <p>
+                    Learn HTML, CSS and JavaScript from
+                    complete beginner to advanced level
+                    through simple explanations, examples,
+                    practice and challenges.
+                </p>
+
+                <button class="primary-button"
+                        onclick="showPage('courses')">
+
+                    Start Learning →
+
+                </button>
+
+            </div>
+
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Simple Lessons
+                    </h3>
+
+                    <p>
+                        Learn difficult concepts using
+                        simple language and examples.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Code Yourself
+                    </h3>
+
+                    <p>
+                        Write code and see your result
+                        immediately.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Earn XP
+                    </h3>
+
+                    <p>
+                        Complete challenges and build
+                        your learning progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             COURSES
+        ========================= -->
+
+        <section id="courses" class="page hidden">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    CHOOSE YOUR PATH
+                </div>
+
+                <h2>
+                    What do you want to learn?
+                </h2>
+
+                <p>
+                    Choose a technology and start your journey.
+                </p>
+
+            </div>
+
+
+            <div class="course-grid">
+
+
+                <article class="course-card"
+                         onclick="openCourse('HTML')">
+
+                    <div class="course-icon">
+                        &lt;/&gt;
+                    </div>
+
+                    <h3>
+                        HTML
+                    </h3>
+
+                    <p>
+                        Learn how webpages are structured
+                        from the very beginning.
+                    </p>
+
+                    <span class="course-level">
+                        Beginner → Expert
+                    </span>
+
+                </article>
+
+
+                <article class="course-card"
+                         onclick="openCourse('CSS')">
+
+                    <div class="course-icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        CSS
+                    </h3>
+
+                    <p>
+                        Learn how to design beautiful,
+                        responsive webpages.
+                    </p>
+
+                    <span class="course-level">
+                        Beginner → Expert
+                    </span>
+
+                </article>
+
+
+                <article class="course-card"
+                         onclick="openCourse('JavaScript')">
+
+                    <div class="course-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Learn programming and make
+                        webpages interactive.
+                    </p>
+
+                    <span class="course-level">
+                        Beginner → Expert
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             COURSE LEVEL
+        ========================= -->
+
+        <section id="course" class="page hidden">
+
+            <button class="back-button"
+                    onclick="showPage('courses')">
+
+                ← Back to courses
+
+            </button>
+
+
+            <div class="course-header">
+
+                <div class="eyebrow">
+                    LEARNING PATH
+                </div>
+
+                <h2 id="course-name">
+                    HTML
+                </h2>
+
+                <p id="course-description">
+                    Learn HTML from beginner to expert.
+                </p>
+
+            </div>
+
+
+            <div class="level-grid">
+
+
+                <button class="level-button"
+                        onclick="openLevel('Basic')">
+
+                    <strong class="level-number">
+                        01
+                    </strong>
+
+                    <span>
+                        <b>Basic</b>
+                        <small>
+                            Start completely from zero.
+                        </small>
+                    </span>
+
+                </button>
+
+
+                <button class="level-button"
+                        onclick="openLevel('Intermediate')">
+
+                    <strong class="level-number">
+                        02
+                    </strong>
+
+                    <span>
+                        <b>Intermediate</b>
+                        <small>
+                            Start building real webpages.
+                        </small>
+                    </span>
+
+                </button>
+
+
+                <button class="level-button"
+                        onclick="openLevel('Advanced')">
+
+                    <strong class="level-number">
+                        03
+                    </strong>
+
+                    <span>
+                        <b>Advanced</b>
+                        <small>
+                            Learn more powerful techniques.
+                        </small>
+                    </span>
+
+                </button>
+
+
+                <button class="level-button"
+                        onclick="openLevel('Expert')">
+
+                    <strong class="level-number">
+                        04
+                    </strong>
+
+                    <span>
+                        <b>Expert</b>
+                        <small>
+                            Think and build like a professional.
+                        </small>
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             LESSON
+        ========================= -->
+
+        <section id="lesson" class="page hidden">
+
+            <button class="back-button"
+                    onclick="showPage('course')">
+
+                ← Back
+
+            </button>
+
+
+            <div class="lesson-layout">
+
+
+                <aside class="lesson-sidebar">
+
+                    <h3 id="lesson-course">
+                        HTML
+                    </h3>
+
+                    <p id="lesson-level">
+                        Basic
+                    </p>
+
+                    <div id="lesson-list"></div>
+
+                </aside>
+
+
+
+                <article class="lesson-content">
+
+                    <div class="eyebrow">
+                        LESSON
+                    </div>
+
+                    <h2 id="lesson-title">
+                        Welcome
+                    </h2>
+
+                    <div id="lesson-body"></div>
+
+
+                    <!-- CODE EDITOR -->
+
+                    <div class="editor">
+
+                        <div class="editor-top">
+
+                            <span>
+                                💻 Try the code
+                            </span>
+
+                            <button class="run-button"
+                                    onclick="runCode()">
+
+                                ▶ Run
+
+                            </button>
+
+                        </div>
+
+
+                        <textarea id="code-editor"
+                                  spellcheck="false"></textarea>
+
+                    </div>
+
+
+                    <!-- PREVIEW -->
+
+                    <div class="preview-heading">
+                        Live Preview
+                    </div>
+
+                    <iframe id="preview"
+                            title="Code Preview">
+                    </iframe>
+
+
+                    <!-- CHALLENGE -->
+
+                    <div class="challenge">
+
+                        <h3>
+                            🧪 Challenge
+                        </h3>
+
+                        <p id="challenge-text">
+                            Complete the challenge.
+                        </p>
+
+                        <button class="challenge-button"
+                                onclick="completeChallenge()">
+
+                            Complete Challenge
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- LESSON NAVIGATION -->
+
+                    <div class="lesson-navigation">
+
+                        <button onclick="previousLesson()">
+                            ← Previous
+                        </button>
+
+                        <button onclick="nextLesson()">
+                            Next →
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROGRESS
+        ========================= -->
+
+        <section id="progress" class="page hidden">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    YOUR JOURNEY
+                </div>
+
+                <h2>
+                    Your Progress
+                </h2>
+
+                <p>
+                    Keep learning and earn XP.
+                </p>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <div class="xp-number"
+                     id="xp-display">
+
+                    0 XP
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div id="xp-bar"></div>
+
+                </div>
+
+
+                <p class="progress-description"
+                   id="progress-text">
+
+                    Start learning to earn XP.
+
+                </p>
+
+            </div>
+
+
+            <div class="badges">
+
+
+                <div class="badge"
+                     id="badge-first">
+
+                    <div class="badge-icon">
+                        🌟
+                    </div>
+
+                    <span class="badge-name">
+                        First Challenge
+                    </span>
+
+                </div>
+
+
+                <div class="badge"
+                     id="badge-five">
+
+                    <div class="badge-icon">
+                        🔥
+                    </div>
+
+                    <span class="badge-name">
+                        5 Challenges
+                    </span>
+
+                </div>
+
+
+                <div class="badge"
+                     id="badge-master">
+
+                    <div class="badge-icon">
+                        🏆
+                    </div>
+
+                    <span class="badge-name">
+                        100 XP Master
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <span>
+            Stardance Learning Hub
+        </span>
+
+        <span>
+            Learn • Build • Explore 🚀
+        </span>
+
+    </footer>
+
+
+
+    <script>
+
+        /* =====================================
+           COURSE DATA
+        ===================================== */
+
+        const courses = {
+
+            HTML: {
+
+                description:
+                    "Learn HTML from the structure of a webpage to advanced professional concepts.",
+
+                Basic: [
+
+                    {
+                        title: "What is HTML?",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    HTML stands for
+                                    <strong>HyperText Markup Language</strong>.
+                                </p>
+
+                                <p>
+                                    HTML is used to create the
+                                    structure of webpages.
+                                </p>
+
+                                <h3>
+                                    Think about a house
+                                </h3>
+
+                                <p>
+                                    HTML is like the structure
+                                    of a house.
+                                    CSS makes it beautiful,
+                                    while JavaScript makes
+                                    it interactive.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Website</title>
+</head>
+
+<body>
+
+    <h1>Hello World!</h1>
+
+    <p>I am learning HTML.</p>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Create an h1 element containing the text Hello World."
+                    },
+
+
+                    {
+                        title: "HTML Tags",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    HTML uses tags to tell the
+                                    browser what an element is.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>
+                                </p>
+
+                                <p>
+                                    The opening tag is
+                                    <code>&lt;h1&gt;</code>
+                                    and the closing tag is
+                                    <code>&lt;/h1&gt;</code>.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<h1>Hello World!</h1>
+
+<p>This is a paragraph.</p>`,
+
+                        challenge:
+                            "Create a paragraph that says I am learning HTML."
+                    },
+
+
+                    {
+                        title: "HTML Elements",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    An element normally contains
+                                    an opening tag, content and
+                                    a closing tag.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    <code>&lt;p&gt;Hello&lt;/p&gt;</code>
+                                </p>
+
+                                <p>
+                                    The complete structure is
+                                    one HTML element.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<h1>My Website</h1>
+
+<p>Welcome to my website.</p>`,
+
+                        challenge:
+                            "Create an h2 element saying Technologies."
+                    },
+
+
+                    {
+                        title: "HTML Attributes",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    Attributes provide additional
+                                    information about an element.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    <code>&lt;p id="intro"&gt;Hello&lt;/p&gt;</code>
+                                </p>
+
+                                <p>
+                                    Here <code>id</code> is an
+                                    attribute and <code>intro</code>
+                                    is its value.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<p id="intro">
+    Hello World!
+</p>`,
+
+                        challenge:
+                            "Create a paragraph with id=\"message\"."
+                    },
+
+
+                    {
+                        title: "The Head Section",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    The <code>&lt;head&gt;</code>
+                                    contains information and
+                                    resources for the webpage.
+                                </p>
+
+                                <h3>
+                                    Common elements
+                                </h3>
+
+                                <p>
+                                    You will commonly find
+                                    <code>&lt;title&gt;</code>,
+                                    <code>&lt;meta&gt;</code>
+                                    and
+                                    <code>&lt;link&gt;</code>
+                                    inside it.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+
+</head>
+
+<body>
+
+    <h1>Hello!</h1>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Create a webpage with a title called My Website."
+                    },
+
+
+                    {
+                        title: "The Body",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    The
+                                    <code>&lt;body&gt;</code>
+                                    contains the main content
+                                    of your webpage.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    Headings, paragraphs, images,
+                                    buttons and many other visible
+                                    elements normally go inside
+                                    the body.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>My Site</title>
+</head>
+
+<body>
+
+    <h1>Welcome!</h1>
+
+    <p>This is my website.</p>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Put a heading and paragraph inside the body."
+                    }
+
+                ]
+            },
+
+
+            CSS: {
+
+                description:
+                    "Learn how to style webpages and create beautiful responsive interfaces.",
+
+                Basic: [
+
+                    {
+                        title: "What is CSS?",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    CSS stands for
+                                    <strong>Cascading Style Sheets</strong>.
+                                </p>
+
+                                <p>
+                                    CSS controls the appearance
+                                    of HTML elements.
+                                </p>
+
+                                <h3>
+                                    CSS can control
+                                </h3>
+
+                                <p>
+                                    Colors, sizes, spacing,
+                                    layouts, borders, animations
+                                    and much more.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+h1 {
+    font-size: 45px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Hello CSS!</h1>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Change the heading size to 60px."
+                    },
+
+
+                    {
+                        title: "CSS Colors",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    CSS can change the color
+                                    of text and backgrounds.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    The
+                                    <code>color</code>
+                                    property changes text color.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+h1 {
+    color: blue;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Hello!</h1>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Change the heading to another color."
+                    },
+
+
+                    {
+                        title: "CSS Width and Height",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    CSS can control the width
+                                    and height of elements.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    <code>width: 200px;</code>
+                                    gives an element a width
+                                    of 200 CSS pixels.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+.box {
+
+    width: 200px;
+    height: 100px;
+
+    background: black;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box"></div>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Change the box width."
+                    },
+
+
+                    {
+                        title: "CSS Classes",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    A class lets you apply the
+                                    same CSS rules to one or
+                                    multiple elements.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    <code>class="box"</code>
+                                    connects an HTML element
+                                    to a CSS selector.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+.box {
+
+    padding: 20px;
+    background: lightblue;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+    Hello!
+</div>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Create a class called card."
+                    }
+
+                ]
+            },
+
+
+            JavaScript: {
+
+                description:
+                    "Learn programming fundamentals and make webpages interactive.",
+
+                Basic: [
+
+                    {
+                        title: "What is JavaScript?",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    JavaScript is a programming
+                                    language commonly used to
+                                    make webpages interactive.
+                                </p>
+
+                                <h3>
+                                    JavaScript can
+                                </h3>
+
+                                <p>
+                                    React to clicks, change
+                                    webpage content, calculate
+                                    values, communicate with
+                                    APIs and much more.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="title">
+    Hello!
+</h1>
+
+<script>
+
+document.getElementById("title")
+    .textContent = "Hello JavaScript!";
+
+</script>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Use JavaScript to change the heading text."
+                    },
+
+
+                    {
+                        title: "Variables",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    A variable stores a value
+                                    that your program can use.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    <code>let name = "Learner";</code>
+                                </p>
+
+                                <p>
+                                    Here the variable
+                                    <code>name</code>
+                                    stores text.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="output"></h1>
+
+<script>
+
+let name = "Learner";
+
+document.getElementById("output")
+    .textContent = "Hello " + name;
+
+</script>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Create a variable containing your name."
+                    },
+
+
+                    {
+                        title: "Functions",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    A function is a reusable
+                                    block of code that performs
+                                    a task.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    You can create a function
+                                    and call it whenever you
+                                    need it.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="output"></h1>
+
+<script>
+
+function sayHello() {
+
+    return "Hello!";
+
+}
+
+document.getElementById("output")
+    .textContent = sayHello();
+
+</script>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Create a function that returns your name."
+                    },
+
+
+                    {
+                        title: "Button Events",
+
+                        explanation: `
+                            <div class="lesson-text">
+
+                                <p>
+                                    JavaScript can respond to
+                                    events such as button clicks.
+                                </p>
+
+                                <h3>
+                                    Example
+                                </h3>
+
+                                <p>
+                                    A button can call a JavaScript
+                                    function when clicked.
+                                </p>
+
+                            </div>
+                        `,
+
+                        code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<button onclick="changeText()">
+    Click Me
+</button>
+
+<h1 id="message">
+    Waiting...
+</h1>
+
+<script>
+
+function changeText() {
+
+    document.getElementById("message")
+        .textContent = "Button clicked!";
+
+}
+
+</script>
+
+</body>
+
+</html>`,
+
+                        challenge:
+                            "Make the button change the message."
+                    }
+
+                ]
+            }
+
+        };
+
+
+        /* =====================================
+           STATE
+        ===================================== */
+
+        let currentCourse = "HTML";
+        let currentLevel = "Basic";
+        let currentLesson = 0;
+
+        let xp =
+            Number(localStorage.getItem("stardanceXP")) || 0;
+
+        let completedLessons =
+            Number(localStorage.getItem("stardanceLessons")) || 0;
+
+
+        /* =====================================
+           PAGE SYSTEM
+        ===================================== */
+
+        function showPage(page) {
+
+            document
+                .querySelectorAll(".page")
+                .forEach(function(element) {
+
+                    element.classList.add("hidden");
+
+                });
+
+
+            const target =
+                document.getElementById(page);
+
+
+            if (target) {
+
+                target.classList.remove("hidden");
+
+            }
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+
+            updateProgress();
+
+        }
+
+
+        /* =====================================
+           COURSE
+        ===================================== */
+
+        function openCourse(course) {
+
+            currentCourse = course;
+
+            document
+                .getElementById("course-name")
+                .textContent = course;
+
+
+            document
+                .getElementById("course-description")
+                .textContent =
+                courses[course].description;
+
+
+            showPage("course");
+
+        }
+
+
+        /* =====================================
+           LEVEL
+        ===================================== */
+
+        function openLevel(level) {
+
+            currentLevel = level;
+
+            currentLesson = 0;
+
+
+            /*
+                If a level does not yet have
+                separate lessons, the basic
+                lessons are used as a starting
+                point.
+            */
+
+            if (!courses[currentCourse][currentLevel]) {
+
+                courses[currentCourse][currentLevel] =
+                    courses[currentCourse].Basic;
+
+            }
+
+
+            loadLesson();
+
+            showPage("lesson");
+
+        }
+
+
+        /* =====================================
+           LOAD LESSON
+        ===================================== */
+
+        function loadLesson() {
+
+            const lessons =
+                courses[currentCourse][currentLevel];
+
+
+            const lesson =
+                lessons[currentLesson];
+
+
+            document
+                .getElementById("lesson-course")
+                .textContent = currentCourse;
+
+
+            document
+                .getElementById("lesson-level")
+                .textContent = currentLevel;
+
+
+            document
+                .getElementById("lesson-title")
+                .textContent = lesson.title;
+
+
+            document
+                .getElementById("lesson-body")
+                .innerHTML = lesson.explanation;
+
+
+            document
+                .getElementById("code-editor")
+                .value = lesson.code;
+
+
+            document
+                .getElementById("challenge-text")
+                .textContent = lesson.challenge;
+
+
+            buildLessonList();
+
+            runCode();
+
+        }
+
+
+        /* =====================================
+           LESSON LIST
+        ===================================== */
+
+        function buildLessonList() {
+
+            const list =
+                document.getElementById("lesson-list");
+
+
+            list.innerHTML = "";
+
+
+            const lessons =
+                courses[currentCourse][currentLevel];
+
+
+            lessons.forEach(function(lesson, index) {
+
+                const button =
+                    document.createElement("button");
+
+
+                button.className = "lesson-item";
+
+
+                if (index === currentLesson) {
+
+                    button.classList.add("active");
+
+                }
+
+
+                button.textContent =
+                    (index + 1) + ". " + lesson.title;
+
+
+                button.onclick = function() {
+
+                    currentLesson = index;
+
+                    loadLesson();
+
+                };
+
+
+                list.appendChild(button);
+
+            });
+
+        }
+
+
+        /* =====================================
+           RUN CODE
+        ===================================== */
+
+        function runCode() {
+
+            const code =
+                document
+                    .getElementById("code-editor")
+                    .value;
+
+
+            const preview =
+                document.getElementById("preview");
+
+
+            preview.srcdoc = code;
+
+        }
+
+
+        /* =====================================
+           NEXT LESSON
+        ===================================== */
+
+        function nextLesson() {
+
+            const lessons =
+                courses[currentCourse][currentLevel];
+
+
+            if (
+                currentLesson <
+                lessons.length - 1
+            ) {
+
+                currentLesson++;
+
+                loadLesson();
+
+            }
+
+            else {
+
+                alert(
+                    "🎉 You completed this level!"
+                );
+
+            }
+
+        }
+
+
+        /* =====================================
+           PREVIOUS LESSON
+        ===================================== */
+
+        function previousLesson() {
+
+            if (currentLesson > 0) {
+
+                currentLesson--;
+
+                loadLesson();
+
+            }
+
+            else {
+
+                alert(
+                    "This is the first lesson."
+                );
+
+            }
+
+        }
+
+
+        /* =====================================
+           CHALLENGE
+        ===================================== */
+
+        function completeChallenge() {
+
+            xp += 10;
+
+            completedLessons++;
+
+
+            localStorage.setItem(
+                "stardanceXP",
+                xp
+            );
+
+
+            localStorage.setItem(
+                "stardanceLessons",
+                completedLessons
+            );
+
+
+            updateProgress();
+
+
+            alert(
+                "🎉 Challenge completed!\n\n+10 XP"
+            );
+
+        }
+
+
+        /* =====================================
+           PROGRESS
+        ===================================== */
+
+        function updateProgress() {
+
+            const xpDisplay =
+                document.getElementById("xp-display");
+
+
+            const xpBar =
+                document.getElementById("xp-bar");
+
+
+            const progressText =
+                document.getElementById("progress-text");
+
+
+            if (!xpDisplay) {
+                return;
+            }
+
+
+            xpDisplay.textContent =
+                xp + " XP";
+
+
+            const percentage =
+                Math.min(xp, 100);
+
+
+            xpBar.style.width =
+                percentage + "%";
+
+
+            progressText.textContent =
+                completedLessons +
+                " challenges completed.";
+
+
+            unlockBadges();
+
+        }
+
+
+        /* =====================================
+           BADGES
+        ===================================== */
+
+        function unlockBadges() {
+
+            if (completedLessons >= 1) {
+
+                document
+                    .getElementById("badge-first")
+                    .classList.add("unlocked");
+
+            }
+
+
+            if (completedLessons >= 5) {
+
+                document
+                    .getElementById("badge-five")
+                    .classList.add("unlocked");
+
+            }
+
+
+            if (xp >= 100) {
+
+                document
+                    .getElementById("badge-master")
+                    .classList.add("unlocked");
+
+            }
+
+        }
+
+
+        /* =====================================
+           START
+        ===================================== */
+
+        updateProgress();
+
+        showPage("home");
+
+    </script>
+
+</body>
+
+</html>
+```
