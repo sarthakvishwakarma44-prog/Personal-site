@@ -1,42 +1,28 @@
 ```javascript
 /* =========================================================
    STARDANCE LEARNING HUB
-   JAVASCRIPT v0.1 → v1.0
-   =========================================================
-   
-   This file controls:
-   • Course selection
-   • 4 different learning levels
-   • Lessons
-   • Code editor
-   • Live preview
-   • Challenges
-   • XP
-   • Badges
-   • Progress saving
+   JAVASCRIPT v1.0
+
+   HTML + CSS + JavaScript
+   Basic → Intermediate → Advanced → Expert
 ========================================================= */
 
 
 /* =========================================================
-   0.1 — COURSE DATABASE
+   COURSE DATABASE
 ========================================================= */
 
 const courses = {
 
-
     /* =====================================================
-       HTML COURSE
+       HTML
     ===================================================== */
 
     HTML: {
 
         description:
-            "Learn HTML from absolute beginner to professional webpage architecture.",
+            "Learn HTML from your first tag to professional webpage structure.",
 
-
-        /* =================================================
-           HTML — BASIC
-        ================================================= */
 
         Basic: [
 
@@ -44,123 +30,71 @@ const courses = {
                 title: "What is HTML?",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p><strong>HTML</strong> means HyperText Markup Language.</p>
 
-                        <p>
-                            HTML means
-                            <strong>HyperText Markup Language</strong>.
-                        </p>
+                    <p>
+                    HTML is used to create the structure of a webpage.
+                    Think of HTML as the skeleton of a website.
+                    </p>
 
-                        <p>
-                            HTML creates the structure of a webpage.
-                        </p>
+                    <h3>Example</h3>
 
-                        <h3>Think of a house</h3>
-
-                        <p>
-                            HTML is the structure,
-                            CSS is the appearance,
-                            and JavaScript adds behaviour.
-                        </p>
-
-                    </div>
+                    <p>
+                    A heading, paragraph, image and button can all be
+                    created using HTML elements.
+                    </p>
                 `,
 
-                code: `<!DOCTYPE html>
-
+                code:
+`<!DOCTYPE html>
 <html>
-
 <head>
-
-    <title>My First Website</title>
-
+    <title>My First Page</title>
 </head>
 
 <body>
 
     <h1>Hello World!</h1>
 
-</body>
+    <p>I am learning HTML.</p>
 
+</body>
 </html>`,
 
                 challenge:
-                    "Create an HTML page with an h1 saying Hello World."
+                    "Change the heading to your own name."
             },
 
 
             {
-                title: "HTML Document Structure",
+                title: "HTML Headings",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    HTML provides six heading levels:
+                    <strong>h1</strong> through <strong>h6</strong>.
+                    </p>
 
-                        <p>
-                            A normal HTML document contains
-                            html, head and body elements.
-                        </p>
-
-                        <p>
-                            The head contains information
-                            about the webpage.
-                        </p>
-
-                        <p>
-                            The body contains visible content.
-                        </p>
-
-                    </div>
+                    <p>
+                    h1 is the most important heading and h6 is the
+                    least important.
+                    </p>
                 `,
 
-                code: `<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <title>My Website</title>
-
-</head>
-
+                code:
+`<!DOCTYPE html>
+<html>
 <body>
 
-    <h1>Welcome!</h1>
+<h1>Main Heading</h1>
+<h2>Second Heading</h2>
+<h3>Third Heading</h3>
 
 </body>
-
 </html>`,
 
                 challenge:
-                    "Create a complete HTML document."
-            },
-
-
-            {
-                title: "Headings",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            HTML provides six heading levels:
-                            h1 through h6.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<h1>Main Heading</h1>
-
-<h2>Section</h2>
-
-<h3>Subsection</h3>
-
-<h4>Small Section</h4>`,
-
-                challenge:
-                    "Create an h2 heading called My Projects."
+                    "Add an h4 heading containing the text 'My Website'."
             },
 
 
@@ -168,26 +102,32 @@ const courses = {
                 title: "Paragraphs",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    The <strong>p</strong> element creates a paragraph.
+                    </p>
 
-                        <p>
-                            The p element is used for normal
-                            paragraphs of text.
-                        </p>
-
-                    </div>
+                    <p>
+                    You can use multiple paragraphs to organize
+                    information on your webpage.
+                    </p>
                 `,
 
-                code: `<p>
-    This is my first paragraph.
-</p>
+                code:
+`<!DOCTYPE html>
+<html>
+<body>
 
-<p>
-    This is my second paragraph.
-</p>`,
+<h1>About Me</h1>
+
+<p>Hello! My name is Sarthak.</p>
+
+<p>I am learning web development.</p>
+
+</body>
+</html>`,
 
                 challenge:
-                    "Create two paragraphs."
+                    "Add another paragraph."
             },
 
 
@@ -195,131 +135,37 @@ const courses = {
                 title: "Links",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    The <strong>a</strong> element creates a hyperlink.
+                    </p>
 
-                        <p>
-                            The a element creates hyperlinks.
-                        </p>
-
-                        <p>
-                            The href attribute tells the browser
-                            where the link should go.
-                        </p>
-
-                    </div>
+                    <p>
+                    The <strong>href</strong> attribute tells the browser
+                    where the link should go.
+                    </p>
                 `,
 
-                code: `<a href="https://example.com">
-    Visit Example
-</a>`,
+                code:
+`<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Links</h1>
+
+<a href="https://www.nasa.gov">
+    Visit NASA
+</a>
+
+</body>
+</html>`,
 
                 challenge:
-                    "Create a link using the a element."
-            },
-
-
-            {
-                title: "Images",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            The img element displays an image.
-                        </p>
-
-                        <p>
-                            The alt attribute describes the image.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<img
-    src="https://via.placeholder.com/300"
-    alt="Example image"
->`,
-
-                challenge:
-                    "Create an image containing an alt attribute."
-            },
-
-
-            {
-                title: "Lists",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            ul creates an unordered list.
-                        </p>
-
-                        <p>
-                            ol creates an ordered list.
-                        </p>
-
-                        <p>
-                            li creates an individual list item.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<ul>
-
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-
-</ul>`,
-
-                challenge:
-                    "Create a list containing three programming languages."
-            },
-
-
-            {
-                title: "Classes and IDs",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            The class attribute can be shared
-                            by multiple elements.
-                        </p>
-
-                        <p>
-                            An id normally identifies one
-                            specific element.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<h1 id="main-title">
-
-    Stardance
-
-</h1>
-
-<p class="description">
-
-    Learn coding.
-
-</p>`,
-
-                challenge:
-                    "Create an element with both an id and a class."
+                    "Create a link to another website."
             }
 
         ],
 
 
-        /* =================================================
-           HTML — INTERMEDIATE
-        ================================================= */
 
         Intermediate: [
 
@@ -327,47 +173,49 @@ const courses = {
                 title: "Semantic HTML",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Semantic elements describe what their content means.
+                    </p>
 
-                        <p>
-                            Semantic HTML uses elements that
-                            describe their purpose.
-                        </p>
-
-                        <p>
-                            Examples include header, nav,
-                            main, section, article and footer.
-                        </p>
-
-                    </div>
+                    <p>
+                    Examples include:
+                    <strong>header</strong>,
+                    <strong>nav</strong>,
+                    <strong>main</strong>,
+                    <strong>section</strong>,
+                    <strong>article</strong> and
+                    <strong>footer</strong>.
+                    </p>
                 `,
 
-                code: `<header>
+                code:
+`<!DOCTYPE html>
+<html>
 
+<body>
+
+<header>
     <h1>My Website</h1>
-
 </header>
 
 <main>
 
     <section>
-
-        <h2>About Me</h2>
-
-        <p>Hello!</p>
-
+        <h2>About</h2>
+        <p>Welcome to my website.</p>
     </section>
 
 </main>
 
 <footer>
-
     My Footer
+</footer>
 
-</footer>`,
+</body>
+</html>`,
 
                 challenge:
-                    "Create a page using header, main and footer."
+                    "Add a navigation section."
             },
 
 
@@ -375,40 +223,43 @@ const courses = {
                 title: "HTML Forms",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Forms allow users to enter information.
+                    </p>
 
-                        <p>
-                            Forms collect information from users.
-                        </p>
-
-                        <p>
-                            Common elements include input,
-                            label, textarea and button.
-                        </p>
-
-                    </div>
+                    <p>
+                    Common form elements include input,
+                    label, textarea and button.
+                    </p>
                 `,
 
-                code: `<form>
+                code:
+`<!DOCTYPE html>
+<html>
 
-    <label for="name">
-        Name
-    </label>
+<body>
 
-    <input
-        id="name"
-        type="text"
-        placeholder="Enter your name"
-    >
+<h1>Contact</h1>
 
-    <button>
-        Submit
-    </button>
+<form>
 
-</form>`,
+<label>Name:</label>
+
+<input type="text">
+
+<br><br>
+
+<button type="submit">
+    Send
+</button>
+
+</form>
+
+</body>
+</html>`,
 
                 challenge:
-                    "Create a form with a name input and submit button."
+                    "Add an email input."
             },
 
 
@@ -416,183 +267,90 @@ const courses = {
                 title: "Tables",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    HTML tables organize information into rows
+                    and columns.
+                    </p>
 
-                        <p>
-                            Tables represent information
-                            arranged in rows and columns.
-                        </p>
-
-                    </div>
+                    <p>
+                    Important elements are:
+                    table, tr, th and td.
+                    </p>
                 `,
 
-                code: `<table>
+                code:
+`<!DOCTYPE html>
+<html>
 
-    <tr>
+<body>
 
-        <th>Name</th>
-        <th>Score</th>
+<table border="1">
 
-    </tr>
+<tr>
+    <th>Name</th>
+    <th>Score</th>
+</tr>
 
-    <tr>
+<tr>
+    <td>Alex</td>
+    <td>95</td>
+</tr>
 
-        <td>Alex</td>
-        <td>95</td>
+</table>
 
-    </tr>
-
-</table>`,
-
-                challenge:
-                    "Create a table with two columns."
-            },
-
-
-            {
-                title: "Audio and Video",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            HTML can embed multimedia using
-                            audio and video elements.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<video
-    controls
-    width="400"
->
-
-    <source
-        src="video.mp4"
-        type="video/mp4"
-    >
-
-</video>`,
+</body>
+</html>`,
 
                 challenge:
-                    "Create a video element with controls."
-            },
-
-
-            {
-                title: "HTML Forms and Validation",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            HTML provides attributes such as
-                            required, minlength and type
-                            to help validate input.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<form>
-
-    <input
-        type="email"
-        required
-        placeholder="Email"
-    >
-
-    <button>
-        Submit
-    </button>
-
-</form>`,
-
-                challenge:
-                    "Create a required email input."
-            },
-
-
-            {
-                title: "Navigation",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Navigation menus help users move
-                            between pages or sections.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<nav>
-
-    <a href="#home">
-        Home
-    </a>
-
-    <a href="#about">
-        About
-    </a>
-
-    <a href="#contact">
-        Contact
-    </a>
-
-</nav>`,
-
-                challenge:
-                    "Create a navigation menu with three links."
+                    "Add another student to the table."
             }
 
         ],
 
 
-        /* =================================================
-           HTML — ADVANCED
-        ================================================= */
 
         Advanced: [
 
             {
-                title: "Accessibility Basics",
+                title: "Accessibility",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Accessible HTML makes websites easier to use
+                    for people with different abilities.
+                    </p>
 
-                        <p>
-                            Accessible HTML helps more people
-                            use websites successfully.
-                        </p>
-
-                        <p>
-                            Important techniques include
-                            meaningful labels, alt text,
-                            proper headings and semantic elements.
-                        </p>
-
-                    </div>
+                    <p>
+                    Use meaningful headings, labels, alt text
+                    and semantic elements.
+                    </p>
                 `,
 
-                code: `<label for="email">
-    Email address
+                code:
+`<!DOCTYPE html>
+<html>
+
+<body>
+
+<img
+    src="https://via.placeholder.com/300"
+    alt="Example image"
+>
+
+<label for="name">
+    Your name
 </label>
 
 <input
-    id="email"
-    type="email"
-    aria-describedby="email-help"
+    id="name"
+    type="text"
 >
 
-<p id="email-help">
-    Enter a valid email address.
-</p>`,
+</body>
+</html>`,
 
                 challenge:
-                    "Create a labelled input with helpful text."
+                    "Add an accessible label to another input."
             },
 
 
@@ -600,88 +358,163 @@ const courses = {
                 title: "Data Attributes",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    HTML allows custom data using
+                    <strong>data-*</strong> attributes.
+                    </p>
 
-                        <p>
-                            data-* attributes allow developers
-                            to attach custom data to HTML elements.
-                        </p>
-
-                    </div>
+                    <p>
+                    JavaScript can later read these values.
+                    </p>
                 `,
 
-                code: `<button
+                code:
+`<!DOCTYPE html>
+<html>
+
+<body>
+
+<button
     data-course="HTML"
-    data-level="advanced"
+    data-level="Advanced"
 >
+    Learn HTML
+</button>
 
-    Start Course
-
-</button>`,
+</body>
+</html>`,
 
                 challenge:
-                    "Create a button with a custom data attribute."
+                    "Create a button with a data-topic attribute."
             },
 
 
             {
-                title: "SVG Graphics",
+                title: "Professional Page Structure",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Large websites should have a clear and logical
+                    document structure.
+                    </p>
 
-                        <p>
-                            SVG allows scalable vector graphics
-                            to be placed directly into HTML.
-                        </p>
-
-                    </div>
+                    <p>
+                    Organize content using semantic elements
+                    instead of putting everything inside divs.
+                    </p>
                 `,
 
-                code: `<svg
-    width="200"
-    height="120"
-    viewBox="0 0 200 120"
->
+                code:
+`<!DOCTYPE html>
+<html>
 
-    <circle
-        cx="100"
-        cy="60"
-        r="40"
-        fill="skyblue"
-    />
+<head>
+    <title>Professional Site</title>
+</head>
 
-</svg>`,
+<body>
+
+<header>
+    <h1>My Site</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <article>
+        <h2>My Article</h2>
+
+        <p>
+            Article content.
+        </p>
+    </article>
+
+</main>
+
+<footer>
+    Copyright 2026
+</footer>
+
+</body>
+</html>`,
 
                 challenge:
-                    "Create an SVG circle."
-            },
+                    "Add a second article."
+            }
 
+        ],
+
+
+
+        Expert: [
 
             {
-                title: "Canvas",
+                title: "HTML Architecture",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Professional websites need a consistent
+                    document architecture.
+                    </p>
 
-                        <p>
-                            The canvas element provides a drawing
-                            surface that JavaScript can control.
-                        </p>
-
-                    </div>
+                    <p>
+                    Separate navigation, content, supporting
+                    information and footer content clearly.
+                    </p>
                 `,
 
-                code: `<canvas
-    id="canvas"
-    width="400"
-    height="200"
-    style="border:1px solid black;"
+                code:
+`<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
 >
-</canvas>`,
+
+<title>Professional Application</title>
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h1>Application</h1>
+
+        <article>
+            <h2>Content</h2>
+            <p>Main information.</p>
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+    Footer
+</footer>
+
+</body>
+</html>`,
 
                 challenge:
-                    "Create a canvas element."
+                    "Create another semantic section."
             },
 
 
@@ -689,189 +522,120 @@ const courses = {
                 title: "Metadata",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Metadata gives browsers and search engines
+                    information about your webpage.
+                    </p>
 
-                        <p>
-                            Metadata gives browsers and search
-                            systems information about a webpage.
-                        </p>
-
-                    </div>
+                    <p>
+                    Common metadata includes charset,
+                    viewport and description.
+                    </p>
                 `,
 
-                code: `<head>
+                code:
+`<!DOCTYPE html>
 
-    <meta
-        name="description"
-        content="My learning website"
-    >
+<html lang="en">
 
-    <meta
-        name="author"
-        content="Stardance"
-    >
+<head>
 
-</head>`,
+<meta charset="UTF-8">
 
-                challenge:
-                    "Create a description meta tag."
-            }
-
-        ],
-
-
-        /* =================================================
-           HTML — EXPERT
-        ================================================= */
-
-        Expert: [
-
-            {
-                title: "Professional HTML Architecture",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Professional websites use clear,
-                            maintainable and semantic structures.
-                        </p>
-
-                        <p>
-                            Good architecture makes websites
-                            easier to maintain and expand.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<body>
-
-    <header>
-        Site Header
-    </header>
-
-    <nav>
-        Navigation
-    </nav>
-
-    <main>
-
-        <section>
-
-            <article>
-                Main Content
-            </article>
-
-            <aside>
-                Related Content
-            </aside>
-
-        </section>
-
-    </main>
-
-    <footer>
-        Site Footer
-    </footer>
-
-</body>`,
-
-                challenge:
-                    "Design a professional semantic page structure."
-            },
-
-
-            {
-                title: "Advanced Accessibility",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Professional accessibility requires
-                            careful semantic structure, keyboard
-                            usability and appropriate ARIA usage.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<button
-    type="button"
-    aria-label="Open learning menu"
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
 >
 
-    ☰
+<meta
+    name="description"
+    content="My professional website"
+>
 
-</button>`,
+<title>Professional Website</title>
+
+</head>
+
+<body>
+
+<h1>Hello</h1>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Create an accessible button with an ARIA label."
+                    "Add a theme-color metadata tag."
             },
 
 
             {
-                title: "SEO-Friendly Structure",
+                title: "HTML Best Practices",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Professional HTML should be readable,
+                    semantic, accessible and logically organized.
+                    </p>
 
-                        <p>
-                            Good HTML structure helps search engines
-                            understand the content of a webpage.
-                        </p>
-
-                        <p>
-                            Meaningful titles, headings,
-                            descriptions and semantic elements
-                            are important.
-                        </p>
-
-                    </div>
+                    <p>
+                    Good structure makes CSS and JavaScript
+                    easier to maintain.
+                    </p>
                 `,
 
-                code: `<head>
+                code:
+`<!DOCTYPE html>
 
-    <title>
-        Stardance Learning Hub
-    </title>
+<html lang="en">
 
-    <meta
-        name="description"
-        content="Learn web development."
-    >
+<head>
 
-</head>`,
+<meta charset="UTF-8">
+
+<title>Clean HTML</title>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>My Application</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+    </nav>
+
+</header>
+
+<main id="home">
+
+    <section id="about">
+
+        <h2>About</h2>
+
+        <p>
+            Clean and semantic HTML.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>My Website</p>
+
+</footer>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Create an SEO-friendly page head."
-            },
-
-
-            {
-                title: "Professional Web Components",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Modern web development can use
-                            reusable custom elements and
-                            Web Components.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<my-learning-card>
-
-    HTML Course
-
-</my-learning-card>`,
-
-                challenge:
-                    "Create a custom-looking HTML component."
+                    "Add another navigation link."
             }
 
         ]
@@ -879,17 +643,16 @@ const courses = {
     },
 
 
+
     /* =====================================================
-       CSS COURSE
+       CSS
     ===================================================== */
 
     CSS: {
 
         description:
-            "Learn CSS from basic styling to advanced responsive design.",
+            "Learn CSS from colors and sizes to layouts, animations and advanced design.",
 
-
-        /* CSS BASIC */
 
         Basic: [
 
@@ -897,21 +660,24 @@ const courses = {
                 title: "What is CSS?",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    CSS means <strong>Cascading Style Sheets</strong>.
+                    </p>
 
-                        <p>
-                            CSS means Cascading Style Sheets.
-                        </p>
-
-                        <p>
-                            CSS controls the visual appearance
-                            of HTML elements.
-                        </p>
-
-                    </div>
+                    <p>
+                    HTML creates the structure and CSS controls
+                    how that structure looks.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
 
 h1 {
     color: blue;
@@ -919,7 +685,15 @@ h1 {
 
 </style>
 
-<h1>Hello CSS!</h1>`,
+</head>
+
+<body>
+
+<h1>Hello CSS!</h1>
+
+</body>
+
+</html>`,
 
                 challenge:
                     "Change the heading color."
@@ -930,26 +704,39 @@ h1 {
                 title: "Colors",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            CSS can change text and
-                            background colors.
-                        </p>
-
-                    </div>
+                    <p>
+                    CSS can change text and background colors.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
 
 body {
     background: black;
-    color: white;
+}
+
+h1 {
+    color: cyan;
 }
 
 </style>
 
-<h1>Hello!</h1>`,
+</head>
+
+<body>
+
+<h1>Colors</h1>
+
+</body>
+
+</html>`,
 
                 challenge:
                     "Change the background color."
@@ -957,112 +744,57 @@ body {
 
 
             {
-                title: "Font Size",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            font-size controls the size of text.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-h1 {
-    font-size: 50px;
-}
-
-</style>
-
-<h1>Large Text</h1>`,
-
-                challenge:
-                    "Change the heading to 60px."
-            },
-
-
-            {
                 title: "Width and Height",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    CSS width and height control the dimensions
+                    of an element.
+                    </p>
 
-                        <p>
-                            Width controls horizontal size.
-                        </p>
-
-                        <p>
-                            Height controls vertical size.
-                        </p>
-
-                    </div>
+                    <p>
+                    Pixels are one possible unit.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
 
 .box {
 
     width: 200px;
+
     height: 100px;
 
-    background: blue;
+    background: purple;
 
 }
 
 </style>
 
-<div class="box"></div>`,
+</head>
+
+<body>
+
+<div class="box"></div>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Change the width to 300px."
-            },
-
-
-            {
-                title: "Margin and Padding",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Margin creates space outside an element.
-                        </p>
-
-                        <p>
-                            Padding creates space inside an element.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-.box {
-
-    margin: 30px;
-    padding: 20px;
-
-    background: lightblue;
-
-}
-
-</style>
-
-<div class="box">
-    Hello
-</div>`,
-
-                challenge:
-                    "Add both margin and padding."
+                    "Change the box width to 300px."
             }
 
         ],
 
 
-        /* CSS INTERMEDIATE */
 
         Intermediate: [
 
@@ -1070,17 +802,20 @@ h1 {
                 title: "Flexbox",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Flexbox is a layout system for
-                            arranging elements efficiently.
-                        </p>
-
-                    </div>
+                    <p>
+                    Flexbox is used to arrange elements efficiently
+                    in rows or columns.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
 
 .container {
 
@@ -1094,22 +829,32 @@ h1 {
 
     padding: 30px;
 
-    background: skyblue;
+    background: purple;
 
 }
 
 </style>
 
+</head>
+
+<body>
+
 <div class="container">
 
-    <div class="box">A</div>
-    <div class="box">B</div>
-    <div class="box">C</div>
+<div class="box">A</div>
 
-</div>`,
+<div class="box">B</div>
+
+<div class="box">C</div>
+
+</div>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Create three boxes using Flexbox."
+                    "Center the boxes."
             },
 
 
@@ -1117,17 +862,19 @@ h1 {
                 title: "CSS Grid",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            CSS Grid is useful for two-dimensional
-                            layouts involving rows and columns.
-                        </p>
-
-                    </div>
+                    <p>
+                    CSS Grid is useful for two-dimensional layouts.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
 
 .grid {
 
@@ -1136,7 +883,7 @@ h1 {
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 15px;
+    gap: 10px;
 
 }
 
@@ -1144,88 +891,74 @@ h1 {
 
     padding: 30px;
 
-    background: lightblue;
+    background: cyan;
 
 }
 
 </style>
+
+</head>
+
+<body>
 
 <div class="grid">
 
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
 
-</div>`,
+</div>
 
-                challenge:
-                    "Create a three-column grid."
-            },
+</body>
 
-
-            {
-                title: "Positioning",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            CSS positioning controls how elements
-                            are placed relative to their normal flow
-                            or another reference.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-.box {
-
-    position: relative;
-
-    left: 30px;
-
-    top: 20px;
-
-}
-
-</style>
-
-<div class="box">
-    Moved
-</div>`,
+</html>`,
 
                 challenge:
-                    "Move an element using relative positioning."
-            },
+                    "Change the grid to two columns."
+            }
 
+        ],
+
+
+
+        Advanced: [
 
             {
                 title: "Responsive Design",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Responsive design allows a website to adapt
+                    to different screen sizes.
+                    </p>
 
-                        <p>
-                            Responsive design allows websites
-                            to adapt to different screen sizes.
-                        </p>
-
-                    </div>
+                    <p>
+                    Media queries are commonly used for this.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
 
-.card {
+<html>
+
+<head>
+
+<style>
+
+.box {
 
     width: 500px;
+
+    height: 150px;
+
+    background: purple;
 
 }
 
 @media (max-width: 600px) {
 
-    .card {
+    .box {
 
         width: 100%;
 
@@ -1235,59 +968,18 @@ h1 {
 
 </style>
 
-<div class="card">
-    Responsive Card
-</div>`,
+</head>
+
+<body>
+
+<div class="box"></div>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Create a media query for small screens."
-            }
-
-        ],
-
-
-        /* CSS ADVANCED */
-
-        Advanced: [
-
-            {
-                title: "CSS Variables",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            CSS custom properties allow values
-                            to be stored and reused.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-:root {
-
-    --main-color: royalblue;
-
-}
-
-button {
-
-    background: var(--main-color);
-
-    color: white;
-
-}
-
-</style>
-
-<button>
-    Click
-</button>`,
-
-                challenge:
-                    "Create and use a CSS variable."
+                    "Change the breakpoint to 700px."
             },
 
 
@@ -1295,17 +987,20 @@ button {
                 title: "Transitions",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Transitions smoothly animate changes
-                            between CSS states.
-                        </p>
-
-                    </div>
+                    <p>
+                    CSS transitions create smooth changes
+                    between states.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
 
 button {
 
@@ -1313,246 +1008,163 @@ button {
 
     background: blue;
 
+    color: white;
+
     transition: 0.3s;
 
 }
 
 button:hover {
 
-    background: purple;
+    transform: scale(1.1);
 
 }
 
 </style>
 
+</head>
+
+<body>
+
 <button>
     Hover Me
-</button>`,
+</button>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Add a transition to a button."
+                    "Change the transition duration."
+            }
+
+        ],
+
+
+
+        Expert: [
+
+            {
+                title: "CSS Variables",
+
+                explanation: `
+                    <p>
+                    CSS custom properties allow reusable values.
+                    </p>
+
+                    <p>
+                    They are especially useful in large projects
+                    and design systems.
+                    </p>
+                `,
+
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+:root {
+
+    --main-color: #6c63ff;
+
+}
+
+button {
+
+    background:
+        var(--main-color);
+
+    color: white;
+
+    padding: 15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button>
+    CSS Variable
+</button>
+
+</body>
+
+</html>`,
+
+                challenge:
+                    "Create a second CSS variable."
             },
 
 
             {
-                title: "Animations",
+                title: "Advanced Animations",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            CSS animations can automatically
-                            change styles over time.
-                        </p>
-
-                    </div>
+                    <p>
+                    CSS keyframes allow you to create custom
+                    animations without JavaScript.
+                    </p>
                 `,
 
-                code: `<style>
+                code:
+`<!DOCTYPE html>
 
-@keyframes move {
+<html>
 
-    from {
-        transform: translateX(0);
-    }
+<head>
 
-    to {
-        transform: translateX(200px);
-    }
-
-}
+<style>
 
 .box {
+
+    width: 80px;
+
+    height: 80px;
+
+    background: cyan;
 
     animation:
         move 2s infinite alternate;
 
 }
 
-</style>
+@keyframes move {
 
-<div class="box">
-    🚀
-</div>`,
+    from {
 
-                challenge:
-                    "Create a CSS animation."
-            },
+        transform: translateX(0);
 
+    }
 
-            {
-                title: "Advanced Selectors",
+    to {
 
-                explanation: `
-                    <div class="lesson-text">
+        transform: translateX(200px);
 
-                        <p>
-                            CSS provides powerful selectors
-                            for targeting elements precisely.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-ul > li:first-child {
-
-    color: red;
+    }
 
 }
 
 </style>
 
-<ul>
+</head>
 
-    <li>First</li>
-    <li>Second</li>
+<body>
 
-</ul>`,
+<div class="box"></div>
 
-                challenge:
-                    "Style only the first list item."
-            }
+</body>
 
-        ],
-
-
-        /* CSS EXPERT */
-
-        Expert: [
-
-            {
-                title: "Design Systems",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Professional websites often use
-                            reusable design tokens for colors,
-                            spacing, typography and components.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-:root {
-
-    --space-small: 8px;
-    --space-medium: 16px;
-    --space-large: 32px;
-
-    --color-primary: #2563eb;
-
-}
-
-.card {
-
-    padding: var(--space-large);
-
-    color: var(--color-primary);
-
-}
-
-</style>
-
-<div class="card">
-    Design System
-</div>`,
+</html>`,
 
                 challenge:
-                    "Create a reusable CSS design system."
-            },
-
-
-            {
-                title: "Advanced Responsive Layouts",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Professional layouts combine Grid,
-                            Flexbox, flexible units and media
-                            queries to adapt across devices.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-.layout {
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(200px, 1fr)
-        3fr;
-
-    gap: 2rem;
-
-}
-
-</style>
-
-<div class="layout">
-
-    <aside>
-        Sidebar
-    </aside>
-
-    <main>
-        Main Content
-    </main>
-
-</div>`,
-
-                challenge:
-                    "Build a flexible two-column layout."
-            },
-
-
-            {
-                title: "CSS Architecture",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Large projects need organized CSS
-                            so styles remain predictable and
-                            maintainable.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<style>
-
-/* Component */
-
-.card {
-
-    padding: 20px;
-
-}
-
-/* Component variation */
-
-.card--featured {
-
-    border: 2px solid blue;
-
-}
-
-</style>`,
-
-                challenge:
-                    "Create a reusable component and variation."
+                    "Change the animation duration."
             }
 
         ]
@@ -1560,17 +1172,16 @@ ul > li:first-child {
     },
 
 
+
     /* =====================================================
-       JAVASCRIPT COURSE
+       JAVASCRIPT
     ===================================================== */
 
     JavaScript: {
 
         description:
-            "Learn JavaScript from basic programming to advanced web application concepts.",
+            "Learn JavaScript programming from variables to interactive web applications.",
 
-
-        /* JAVASCRIPT BASIC */
 
         Basic: [
 
@@ -1578,35 +1189,41 @@ ul > li:first-child {
                 title: "What is JavaScript?",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    JavaScript is a programming language commonly
+                    used to make websites interactive.
+                    </p>
 
-                        <p>
-                            JavaScript is a programming language
-                            used to create interactive webpages.
-                        </p>
-
-                        <p>
-                            HTML creates structure.
-                            CSS creates appearance.
-                            JavaScript creates behaviour.
-                        </p>
-
-                    </div>
+                    <p>
+                    HTML creates structure, CSS creates appearance,
+                    and JavaScript adds behavior.
+                    </p>
                 `,
 
-                code: `<h1 id="message">
-    Waiting...
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="title">
+    Hello
 </h1>
 
 <script>
 
-document.getElementById("message")
+document.getElementById("title")
     .textContent = "Hello JavaScript!";
 
-<\/script>`,
+</script>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Use JavaScript to change the heading."
+                    "Change the message."
             },
 
 
@@ -1614,68 +1231,40 @@ document.getElementById("message")
                 title: "Variables",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Variables store information.
+                    </p>
 
-                        <p>
-                            Variables store values that programs
-                            can use later.
-                        </p>
-
-                        <p>
-                            let and const are commonly used
-                            to declare variables.
-                        </p>
-
-                    </div>
+                    <p>
+                    Modern JavaScript commonly uses
+                    <strong>let</strong> and <strong>const</strong>.
+                    </p>
                 `,
 
-                code: `<h1 id="output"></h1>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="output"></h1>
 
 <script>
 
-let name = "Stardance";
+let name = "Sarthak";
 
 document.getElementById("output")
     .textContent = name;
 
-<\/script>`,
+</script>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Create a variable containing your name."
-            },
-
-
-            {
-                title: "Numbers and Math",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            JavaScript can perform mathematical
-                            calculations.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<h1 id="answer"></h1>
-
-<script>
-
-let a = 10;
-
-let b = 20;
-
-let result = a + b;
-
-document.getElementById("answer")
-    .textContent = result;
-
-<\/script>`,
-
-                challenge:
-                    "Create two numbers and add them."
+                    "Change the name."
             },
 
 
@@ -1683,114 +1272,43 @@ document.getElementById("answer")
                 title: "Functions",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            A function is a reusable block of code.
-                        </p>
-
-                    </div>
+                    <p>
+                    Functions contain reusable instructions.
+                    </p>
                 `,
 
-                code: `<h1 id="output"></h1>
+                code:
+`<!DOCTYPE html>
 
-<script>
+<html>
 
-function greet() {
+<body>
 
-    return "Hello!";
-
-}
-
-document.getElementById("output")
-    .textContent = greet();
-
-<\/script>`,
-
-                challenge:
-                    "Create a function that returns a message."
-            },
-
-
-            {
-                title: "Conditions",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Conditions allow programs to make decisions.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<h1 id="output"></h1>
-
-<script>
-
-let score = 80;
-
-if (score >= 50) {
-
-    document.getElementById("output")
-        .textContent = "Passed!";
-
-} else {
-
-    document.getElementById("output")
-        .textContent = "Try again.";
-
-}
-
-<\/script>`,
-
-                challenge:
-                    "Create an if/else condition."
-            },
-
-
-            {
-                title: "Button Events",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            JavaScript can respond to events such
-                            as button clicks.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<button onclick="changeMessage()">
+<button onclick="hello()">
     Click Me
 </button>
 
-<h2 id="message">
-    Waiting...
-</h2>
-
 <script>
 
-function changeMessage() {
+function hello() {
 
-    document.getElementById("message")
-        .textContent = "You clicked the button!";
+    alert("Hello!");
 
 }
 
-<\/script>`,
+</script>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Make a button change a message."
+                    "Change the alert message."
             }
 
         ],
 
 
-        /* JAVASCRIPT INTERMEDIATE */
 
         Intermediate: [
 
@@ -1798,33 +1316,39 @@ function changeMessage() {
                 title: "Arrays",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Arrays store multiple values
-                            in one variable.
-                        </p>
-
-                    </div>
+                    <p>
+                    Arrays store multiple values in one variable.
+                    </p>
                 `,
 
-                code: `<h2 id="output"></h2>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="output"></h1>
 
 <script>
 
-const courses = [
-    "HTML",
-    "CSS",
-    "JavaScript"
+const planets = [
+    "Earth",
+    "Mars",
+    "Jupiter"
 ];
 
 document.getElementById("output")
-    .textContent = courses.join(" • ");
+    .textContent = planets.join(", ");
 
-<\/script>`,
+</script>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Create an array containing three items."
+                    "Add another planet."
             },
 
 
@@ -1832,83 +1356,43 @@ document.getElementById("output")
                 title: "Objects",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Objects store related information
-                            using properties and values.
-                        </p>
-
-                    </div>
+                    <p>
+                    Objects store related information using
+                    properties and values.
+                    </p>
                 `,
 
-                code: `<h2 id="output"></h2>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="output"></h1>
 
 <script>
 
 const student = {
 
-    name: "Alex",
+    name: "Sarthak",
 
-    level: "Beginner",
-
-    xp: 100
+    level: 11
 
 };
 
 document.getElementById("output")
     .textContent =
-    student.name + " — " +
-    student.xp + " XP";
+    student.name + " - Class " + student.level;
 
-<\/script>`,
+</script>
 
-                challenge:
-                    "Create an object with three properties."
-            },
+</body>
 
-
-            {
-                title: "Loops",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Loops repeat code multiple times.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<ul id="list"></ul>
-
-<script>
-
-const languages = [
-    "HTML",
-    "CSS",
-    "JavaScript"
-];
-
-const list =
-    document.getElementById("list");
-
-for (const language of languages) {
-
-    const item =
-        document.createElement("li");
-
-    item.textContent = language;
-
-    list.appendChild(item);
-
-}
-
-<\/script>`,
+</html>`,
 
                 challenge:
-                    "Use a loop to display three items."
+                    "Add a new property."
             },
 
 
@@ -1916,43 +1400,103 @@ for (const language of languages) {
                 title: "DOM Manipulation",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            JavaScript can find, modify and
-                            create HTML elements through the DOM.
-                        </p>
-
-                    </div>
+                    <p>
+                    The DOM represents the webpage as objects
+                    that JavaScript can access and modify.
+                    </p>
                 `,
 
-                code: `<button id="button">
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 id="title">
+    Original
+</h1>
+
+<button onclick="changeTitle()">
     Change
 </button>
 
-<p id="text">
-    Original text
-</p>
+<script>
+
+function changeTitle() {
+
+    document.getElementById("title")
+        .textContent = "Changed!";
+
+}
+
+</script>
+
+</body>
+
+</html>`,
+
+                challenge:
+                    "Change the text and its style."
+            }
+
+        ],
+
+
+
+        Advanced: [
+
+            {
+                title: "Events",
+
+                explanation: `
+                    <p>
+                    Events allow JavaScript to react to user actions.
+                    </p>
+
+                    <p>
+                    Examples include clicks, typing,
+                    mouse movement and keyboard events.
+                    </p>
+                `,
+
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<button id="button">
+    Click Me
+</button>
+
+<p id="message"></p>
 
 <script>
 
-const button =
-    document.getElementById("button");
+document
+    .getElementById("button")
+    .addEventListener(
+        "click",
+        function() {
 
-button.addEventListener(
-    "click",
-    function() {
+            document
+                .getElementById("message")
+                .textContent =
+                "Button clicked!";
 
-        document.getElementById("text")
-            .textContent = "Changed!";
+        }
+    );
 
-    }
-);
+</script>
 
-<\/script>`,
+</body>
+
+</html>`,
 
                 challenge:
-                    "Use the DOM to change an element."
+                    "Change the message."
             },
 
 
@@ -1960,116 +1504,111 @@ button.addEventListener(
                 title: "Local Storage",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    localStorage allows a webpage to store
+                    small amounts of data in the browser.
+                    </p>
 
-                        <p>
-                            localStorage can save small pieces
-                            of data in the browser.
-                        </p>
-
-                    </div>
+                    <p>
+                    This can be useful for saving learning progress.
+                    </p>
                 `,
 
-                code: `<button onclick="saveData()">
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<button onclick="saveData()">
     Save
 </button>
+
+<button onclick="loadData()">
+    Load
+</button>
+
+<p id="output"></p>
 
 <script>
 
 function saveData() {
 
     localStorage.setItem(
-        "name",
-        "Stardance"
+        "message",
+        "Hello!"
     );
-
-    alert("Saved!");
 
 }
 
-<\/script>`,
+function loadData() {
+
+    document.getElementById("output")
+        .textContent =
+        localStorage.getItem("message");
+
+}
+
+</script>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Save a value using localStorage."
+                    "Change the stored message."
             }
 
         ],
 
 
-        /* JAVASCRIPT ADVANCED */
 
-        Advanced: [
+        Expert: [
 
             {
-                title: "Promises",
+                title: "Async JavaScript",
 
                 explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Promises represent the eventual result
-                            of an asynchronous operation.
-                        </p>
-
-                    </div>
+                    <p>
+                    Asynchronous JavaScript allows a program to
+                    perform operations that may take time without
+                    blocking everything else.
+                    </p>
                 `,
 
-                code: `<script>
+                code:
+`<!DOCTYPE html>
 
-const task = new Promise(
-    function(resolve) {
+<html>
 
-        resolve("Task completed!");
+<body>
 
-    }
+<h1 id="output">
+    Waiting...
+</h1>
+
+<script>
+
+setTimeout(
+    function() {
+
+        document.getElementById("output")
+            .textContent =
+            "Finished!";
+
+    },
+    2000
 );
 
-task.then(function(message) {
+</script>
 
-    console.log(message);
+</body>
 
-});
-
-<\/script>`,
+</html>`,
 
                 challenge:
-                    "Create a Promise that resolves with a message."
-            },
-
-
-            {
-                title: "Async and Await",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            async and await provide a convenient
-                            way to work with Promises.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<script>
-
-async function start() {
-
-    const result =
-        await Promise.resolve(
-            "Finished!"
-        );
-
-    console.log(result);
-
-}
-
-start();
-
-<\/script>`,
-
-                challenge:
-                    "Create an async function using await."
+                    "Change the delay."
             },
 
 
@@ -2077,356 +1616,126 @@ start();
                 title: "Fetch API",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    The Fetch API allows JavaScript to request
+                    resources from servers.
+                    </p>
 
-                        <p>
-                            The Fetch API allows JavaScript to
-                            request resources from servers.
-                        </p>
-
-                    </div>
+                    <p>
+                    It is commonly used when working with APIs.
+                    </p>
                 `,
 
-                code: `<script>
+                code:
+`<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h2 id="output">
+    Loading...
+</h2>
+
+<script>
 
 fetch(
     "https://jsonplaceholder.typicode.com/todos/1"
 )
 
-.then(function(response) {
+.then(
+    response =>
+        response.json()
+)
 
-    return response.json();
+.then(
+    data => {
 
-})
+        document.getElementById("output")
+            .textContent =
+            data.title;
 
-.then(function(data) {
+    }
+)
 
-    console.log(data);
+.catch(
+    error => {
 
-});
+        document.getElementById("output")
+            .textContent =
+            "Request failed.";
 
-<\/script>`,
+    }
+);
+
+</script>
+
+</body>
+
+</html>`,
 
                 challenge:
-                    "Make a fetch request and convert the response to JSON."
+                    "Change the API endpoint."
             },
 
-
-            {
-                title: "Modules",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Modules allow JavaScript programs
-                            to be separated into reusable files.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `// math.js
-
-export function add(a, b) {
-
-    return a + b;
-
-}
-
-
-// app.js
-
-import { add } from "./math.js";
-
-console.log(add(5, 10));`,
-
-                challenge:
-                    "Create a JavaScript function that could be exported."
-            },
-
-
-            {
-                title: "Error Handling",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            try, catch and finally help programs
-                            handle errors safely.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<script>
-
-try {
-
-    throw new Error(
-        "Something went wrong"
-    );
-
-} catch (error) {
-
-    console.log(error.message);
-
-}
-
-<\/script>`,
-
-                challenge:
-                    "Create a try/catch block."
-            }
-
-        ],
-
-
-        /* JAVASCRIPT EXPERT */
-
-        Expert: [
 
             {
                 title: "Application Architecture",
 
                 explanation: `
-                    <div class="lesson-text">
+                    <p>
+                    Professional JavaScript applications separate
+                    data, state, user interface and application logic.
+                    </p>
 
-                        <p>
-                            Large JavaScript applications need
-                            organized architecture.
-                        </p>
-
-                        <p>
-                            Code can be separated into modules,
-                            components, services and state logic.
-                        </p>
-
-                    </div>
+                    <p>
+                    This makes large applications easier to maintain
+                    and expand.
+                    </p>
                 `,
 
-                code: `const app = {
+                code:
+`<!DOCTYPE html>
 
-    state: {
+<html>
 
-        user: null,
+<body>
 
-        xp: 0
-
-    },
-
-    start() {
-
-        console.log(
-            "Application started"
-        );
-
-    }
-
-};
-
-app.start();`,
-
-                challenge:
-                    "Create an object representing application state."
-            },
-
-
-            {
-                title: "Event Delegation",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Event delegation allows a parent element
-                            to manage events from its children.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `<ul id="menu">
-
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-
-</ul>
+<h1 id="output">
+    Application
+</h1>
 
 <script>
 
-document
-    .getElementById("menu")
-    .addEventListener(
-        "click",
-        function(event) {
+const state = {
 
-            if (
-                event.target.tagName === "LI"
-            ) {
+    user: "Student",
 
-                console.log(
-                    event.target.textContent
-                );
-
-            }
-
-        }
-    );
-
-<\/script>`,
-
-                challenge:
-                    "Use event delegation on a list."
-            },
-
-
-            {
-                title: "Performance Concepts",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            Professional JavaScript should avoid
-                            unnecessary work and excessive DOM updates.
-                        </p>
-
-                        <p>
-                            Efficient algorithms, careful event
-                            handling and appropriate rendering
-                            strategies can improve performance.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `const numbers = [];
-
-for (let i = 0; i < 1000; i++) {
-
-    numbers.push(i);
-
-}
-
-console.log(
-    "Generated " +
-    numbers.length +
-    " numbers."
-);`,
-
-                challenge:
-                    "Create a loop that processes a collection efficiently."
-            },
-
-
-            {
-                title: "State Management",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            State represents information that can
-                            change while an application is running.
-                        </p>
-
-                        <p>
-                            Good state management keeps application
-                            behaviour predictable.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `const state = {
-
-    count: 0
+    xp: 100
 
 };
 
-function increment() {
+function render() {
 
-    state.count++;
-
-    console.log(
-        state.count
-    );
+    document.getElementById("output")
+        .textContent =
+        state.user +
+        " has " +
+        state.xp +
+        " XP.";
 
 }
 
-increment();
+render();
 
-increment();`,
+</script>
 
-                challenge:
-                    "Create and update application state."
-            },
+</body>
 
-
-            {
-                title: "Final Project Architecture",
-
-                explanation: `
-                    <div class="lesson-text">
-
-                        <p>
-                            A professional project combines
-                            structure, styling, JavaScript logic,
-                            reusable components, state and data.
-                        </p>
-
-                        <p>
-                            This is where individual concepts
-                            become a complete application.
-                        </p>
-
-                    </div>
-                `,
-
-                code: `const app = {
-
-    state: {
-
-        xp: 0,
-
-        lessonsCompleted: 0
-
-    },
-
-    completeLesson() {
-
-        this.state.xp += 10;
-
-        this.state.lessonsCompleted++;
-
-    },
-
-    getProgress() {
-
-        return {
-
-            xp: this.state.xp,
-
-            lessons:
-                this.state.lessonsCompleted
-
-        };
-
-    }
-
-};
-
-app.completeLesson();
-
-console.log(
-    app.getProgress()
-);`,
+</html>`,
 
                 challenge:
-                    "Build a small application state system."
+                    "Change the XP value."
             }
 
         ]
@@ -2436,8 +1745,9 @@ console.log(
 };
 
 
+
 /* =========================================================
-   0.2 — APPLICATION STATE
+   APPLICATION STATE
 ========================================================= */
 
 let currentCourse = "HTML";
@@ -2448,7 +1758,7 @@ let currentLesson = 0;
 
 
 /* =========================================================
-   0.3 — LOAD SAVED PROGRESS
+   SAVED PROGRESS
 ========================================================= */
 
 let xp =
@@ -2463,8 +1773,9 @@ let completedLessons =
     ) || 0;
 
 
+
 /* =========================================================
-   0.4 — PAGE SYSTEM
+   PAGE SYSTEM
 ========================================================= */
 
 function showPage(page) {
@@ -2503,13 +1814,19 @@ function showPage(page) {
 }
 
 
+
 /* =========================================================
-   0.5 — OPEN COURSE
+   OPEN COURSE
 ========================================================= */
 
 function openCourse(course) {
 
     if (!courses[course]) {
+
+        console.error(
+            "Course not found:",
+            course
+        );
 
         return;
 
@@ -2518,16 +1835,34 @@ function openCourse(course) {
 
     currentCourse = course;
 
+    currentLevel = "Basic";
 
-    document
-        .getElementById("course-name")
-        .textContent = course;
+    currentLesson = 0;
 
 
-    document
-        .getElementById("course-description")
-        .textContent =
-        courses[course].description;
+    const name =
+        document.getElementById("course-name");
+
+
+    const description =
+        document.getElementById(
+            "course-description"
+        );
+
+
+    if (name) {
+
+        name.textContent = course;
+
+    }
+
+
+    if (description) {
+
+        description.textContent =
+            courses[course].description;
+
+    }
 
 
     showPage("course");
@@ -2535,8 +1870,9 @@ function openCourse(course) {
 }
 
 
+
 /* =========================================================
-   0.6 — OPEN LEVEL
+   OPEN LEVEL
 ========================================================= */
 
 function openLevel(level) {
@@ -2546,8 +1882,10 @@ function openLevel(level) {
         !courses[currentCourse][level]
     ) {
 
-        alert(
-            "This level is not available yet."
+        console.error(
+            "Level not found:",
+            currentCourse,
+            level
         );
 
         return;
@@ -2562,38 +1900,61 @@ function openLevel(level) {
 
     loadLesson();
 
-
     showPage("lesson");
 
 }
 
 
+
 /* =========================================================
-   0.7 — LOAD LESSON
+   LOAD LESSON
 ========================================================= */
 
 function loadLesson() {
 
-    const lessons =
-        courses[currentCourse][currentLevel];
+    const course =
+        courses[currentCourse];
 
 
-    if (!lessons) {
+    if (!course) {
 
         return;
+
+    }
+
+
+    const lessons =
+        course[currentLevel];
+
+
+    if (
+        !lessons ||
+        lessons.length === 0
+    ) {
+
+        console.error(
+            "No lessons found:",
+            currentCourse,
+            currentLevel
+        );
+
+        return;
+
+    }
+
+
+    if (
+        currentLesson < 0 ||
+        currentLesson >= lessons.length
+    ) {
+
+        currentLesson = 0;
 
     }
 
 
     const lesson =
         lessons[currentLesson];
-
-
-    if (!lesson) {
-
-        return;
-
-    }
 
 
     const courseElement =
@@ -2682,14 +2043,14 @@ function loadLesson() {
 
     buildLessonList();
 
-
     runCode();
 
 }
 
 
+
 /* =========================================================
-   0.8 — BUILD LESSON SIDEBAR
+   LESSON LIST
 ========================================================= */
 
 function buildLessonList() {
@@ -2717,15 +2078,13 @@ function buildLessonList() {
     lessons.forEach(
         function(lesson, index) {
 
-
             const button =
                 document.createElement(
                     "button"
                 );
 
 
-            button.type =
-                "button";
+            button.type = "button";
 
 
             button.className =
@@ -2770,8 +2129,9 @@ function buildLessonList() {
 }
 
 
+
 /* =========================================================
-   0.9 — RUN CODE
+   RUN CODE
 ========================================================= */
 
 function runCode() {
@@ -2804,8 +2164,9 @@ function runCode() {
 }
 
 
+
 /* =========================================================
-   0.10 — NEXT LESSON
+   NEXT LESSON
 ========================================================= */
 
 function nextLesson() {
@@ -2828,18 +2189,23 @@ function nextLesson() {
     }
 
 
-    completeLevel();
+    alert(
+        "🎉 You completed this level!"
+    );
 
 }
 
 
+
 /* =========================================================
-   0.11 — PREVIOUS LESSON
+   PREVIOUS LESSON
 ========================================================= */
 
 function previousLesson() {
 
-    if (currentLesson > 0) {
+    if (
+        currentLesson > 0
+    ) {
 
         currentLesson--;
 
@@ -2851,14 +2217,15 @@ function previousLesson() {
 
 
     alert(
-        "You are already on the first lesson."
+        "This is the first lesson."
     );
 
 }
 
 
+
 /* =========================================================
-   0.12 — COMPLETE CHALLENGE
+   COMPLETE CHALLENGE
 ========================================================= */
 
 function completeChallenge() {
@@ -2884,34 +2251,15 @@ function completeChallenge() {
 
 
     alert(
-        "🎉 Challenge completed!\n\n" +
-        "+10 XP"
+        "🎉 Challenge completed!\n\n+10 XP"
     );
 
 }
 
 
-/* =========================================================
-   0.13 — COMPLETE LEVEL
-========================================================= */
-
-function completeLevel() {
-
-    alert(
-        "🎉 Level completed!\n\n" +
-        currentCourse +
-        " — " +
-        currentLevel
-    );
-
-
-    showPage("progress");
-
-}
-
 
 /* =========================================================
-   0.14 — UPDATE PROGRESS
+   UPDATE PROGRESS
 ========================================================= */
 
 function updateProgress() {
@@ -2934,18 +2282,24 @@ function updateProgress() {
         );
 
 
-    if (xpDisplay) {
+    if (!xpDisplay) {
 
-        xpDisplay.textContent =
-            xp + " XP";
+        return;
 
     }
+
+
+    xpDisplay.textContent =
+        xp + " XP";
 
 
     if (xpBar) {
 
         const percentage =
-            Math.min(xp, 100);
+            Math.min(
+                xp,
+                100
+            );
 
 
         xpBar.style.width =
@@ -2968,36 +2322,37 @@ function updateProgress() {
 }
 
 
+
 /* =========================================================
-   0.15 — BADGES
+   BADGES
 ========================================================= */
 
 function unlockBadges() {
 
-    const firstBadge =
+    const first =
         document.getElementById(
             "badge-first"
         );
 
 
-    const fiveBadge =
+    const five =
         document.getElementById(
             "badge-five"
         );
 
 
-    const masterBadge =
+    const master =
         document.getElementById(
             "badge-master"
         );
 
 
     if (
-        firstBadge &&
+        first &&
         completedLessons >= 1
     ) {
 
-        firstBadge.classList.add(
+        first.classList.add(
             "unlocked"
         );
 
@@ -3005,11 +2360,11 @@ function unlockBadges() {
 
 
     if (
-        fiveBadge &&
+        five &&
         completedLessons >= 5
     ) {
 
-        fiveBadge.classList.add(
+        five.classList.add(
             "unlocked"
         );
 
@@ -3017,11 +2372,11 @@ function unlockBadges() {
 
 
     if (
-        masterBadge &&
+        master &&
         xp >= 100
     ) {
 
-        masterBadge.classList.add(
+        master.classList.add(
             "unlocked"
         );
 
@@ -3030,8 +2385,9 @@ function unlockBadges() {
 }
 
 
+
 /* =========================================================
-   0.16 — KEYBOARD SHORTCUT
+   KEYBOARD SHORTCUT
 ========================================================= */
 
 document.addEventListener(
@@ -3039,14 +2395,16 @@ document.addEventListener(
     function(event) {
 
         /*
-            Ctrl + Enter
-            runs the code editor.
+         Ctrl + Enter
+         = Run Code
         */
 
         if (
             event.ctrlKey &&
             event.key === "Enter"
         ) {
+
+            event.preventDefault();
 
             runCode();
 
@@ -3056,34 +2414,9 @@ document.addEventListener(
 );
 
 
-/* =========================================================
-   0.17 — EDITOR AUTO UPDATE
-========================================================= */
-
-document.addEventListener(
-    "input",
-    function(event) {
-
-        if (
-            event.target.id ===
-            "code-editor"
-        ) {
-
-            /*
-                The code is not automatically
-                executed on every keystroke.
-
-                The user can press Run.
-            */
-
-        }
-
-    }
-);
-
 
 /* =========================================================
-   0.18 — APPLICATION START
+   START APPLICATION
 ========================================================= */
 
 document.addEventListener(
@@ -3094,27 +2427,6 @@ document.addEventListener(
 
         showPage("home");
 
-        console.log(
-            "🚀 Stardance Learning Hub v1.0"
-        );
-
-        console.log(
-            "HTML: Basic → Intermediate → Advanced → Expert"
-        );
-
-        console.log(
-            "CSS: Basic → Intermediate → Advanced → Expert"
-        );
-
-        console.log(
-            "JavaScript: Basic → Intermediate → Advanced → Expert"
-        );
-
     }
 );
-
-
-/* =========================================================
-   1.0 — END
-========================================================= */
 ```
