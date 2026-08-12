@@ -1,1749 +1,1363 @@
-```css
 /* =========================================================
    STARDANCE LEARNING HUB
-   CSS v0.1 → v1.0
+   CSS v1.0
    ========================================================= */
 
 
 /* =========================================================
-   0.1 — GLOBAL VARIABLES
-========================================================= */
-
-:root {
-
-    --bg-main: #070b16;
-    --bg-secondary: #0d1324;
-    --bg-card: #111a2e;
-    --bg-card-hover: #17233c;
-
-    --text-main: #f4f7ff;
-    --text-secondary: #aab5cc;
-    --text-muted: #71809b;
-
-    --primary: #6c63ff;
-    --primary-light: #8d86ff;
-
-    --cyan: #35d9ff;
-    --green: #39e58c;
-    --yellow: #ffd166;
-    --red: #ff667d;
-    --purple: #b57cff;
-
-    --border: rgba(255, 255, 255, 0.09);
-
-    --shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
-
-    --radius-small: 10px;
-    --radius-medium: 18px;
-    --radius-large: 28px;
-
-    --max-width: 1250px;
-
-}
-
-
-/* =========================================================
-   0.2 — RESET
-========================================================= */
+   1. GLOBAL RESET
+   ========================================================= */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
-
 body {
-
-    min-height: 100vh;
-
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    color: var(--text-main);
-
     background:
         radial-gradient(
-            circle at 20% 10%,
-            rgba(108, 99, 255, 0.16),
-            transparent 28%
-        ),
+            circle at top,
+            #202b55 0%,
+            #10152d 45%,
+            #080b18 100%
+        );
 
-        radial-gradient(
-            circle at 85% 25%,
-            rgba(53, 217, 255, 0.10),
-            transparent 25%
-        ),
+    color: #ffffff;
 
-        var(--bg-main);
+    min-height: 100vh;
 
     line-height: 1.6;
-
 }
 
 
 /* =========================================================
-   0.3 — GENERAL ELEMENTS
-========================================================= */
+   2. GENERAL ELEMENTS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
 
 button {
-
-    font: inherit;
-
     cursor: pointer;
-
 }
-
-
-button:focus-visible,
-a:focus-visible,
-textarea:focus-visible {
-
-    outline:
-        2px solid var(--cyan);
-
-    outline-offset: 3px;
-
-}
-
 
 a {
-
     color: inherit;
-
     text-decoration: none;
-
 }
 
-
-.hidden {
-
-    display: none !important;
-
+img {
+    max-width: 100%;
+    display: block;
 }
 
 
 /* =========================================================
-   0.4 — NAVIGATION
-========================================================= */
+   3. PAGE SYSTEM
+   ========================================================= */
 
-.navbar {
+.page {
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   4. CONTAINER
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   5. HEADER / NAVIGATION
+   ========================================================= */
+
+header {
+    width: 100%;
 
     position: sticky;
-
     top: 0;
 
     z-index: 1000;
 
+    background:
+        rgba(8, 11, 24, 0.88);
+
+    backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #67e8f9;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    list-style: none;
+}
+
+.nav-links button,
+.nav-links a {
+    background: transparent;
+
+    border: none;
+
+    color: #dbeafe;
+
+    padding: 9px 14px;
+
+    border-radius: 10px;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.nav-links button:hover,
+.nav-links a:hover {
+    background: rgba(103, 232, 249, 0.12);
+
+    color: #67e8f9;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   6. HERO SECTION
+   ========================================================= */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #67e8f9,
+            #a78bfa,
+            #f0abfc
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+}
+
+.hero p {
+    max-width: 750px;
+
+    color: #cbd5e1;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   7. BUTTONS
+   ========================================================= */
+
+.btn {
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 13px 24px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06b6d4,
+            #6366f1
+        );
+
+    box-shadow:
+        0 10px 30px rgba(59, 130, 246, 0.25);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(59, 130, 246, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background:
+        rgba(255, 255, 255, 0.14);
+}
+
+
+/* =========================================================
+   8. CARDS
+   ========================================================= */
+
+.card {
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s,
+        background 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(103, 232, 249, 0.3);
+
+    background:
+        rgba(255, 255, 255, 0.075);
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   9. COURSE GRID
+   ========================================================= */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: 35px auto;
+}
+
+.course-card {
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.course-card h2 {
+    font-size: 1.7rem;
+}
+
+.course-card p {
+    margin: 15px 0 25px;
+}
+
+
+/* =========================================================
+   10. COURSE COLORS
+   ========================================================= */
+
+.course-html {
+    border-top:
+        4px solid #f97316;
+}
+
+.course-css {
+    border-top:
+        4px solid #38bdf8;
+}
+
+.course-js {
+    border-top:
+        4px solid #facc15;
+}
+
+
+/* =========================================================
+   11. SECTION HEADINGS
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title h1 {
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #94a3b8;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   12. COURSE PAGE
+   ========================================================= */
+
+#course {
+    padding-top: 55px;
+}
+
+.course-header {
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.course-header h1 {
+    font-size:
+        clamp(2rem, 5vw, 4rem);
+
+    margin-bottom: 15px;
+}
+
+.course-header p {
+    color: #cbd5e1;
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   13. LEVEL GRID
+   ========================================================= */
+
+.level-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(210px, 1fr)
+        );
+
+    gap: 20px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.level-card {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.09);
+
+    text-align: center;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+.level-card:hover {
+    transform: translateY(-6px);
+
+    background:
+        rgba(255, 255, 255, 0.1);
+}
+
+.level-card h3 {
+    margin-bottom: 10px;
+}
+
+.level-card p {
+    color: #94a3b8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   14. LEVEL COLORS
+   ========================================================= */
+
+.level-basic {
+    border-top:
+        4px solid #22c55e;
+}
+
+.level-intermediate {
+    border-top:
+        4px solid #38bdf8;
+}
+
+.level-advanced {
+    border-top:
+        4px solid #a78bfa;
+}
+
+.level-expert {
+    border-top:
+        4px solid #f59e0b;
+}
+
+
+/* =========================================================
+   15. LESSON PAGE
+   ========================================================= */
+
+.lesson-layout {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        270px
+        minmax(0, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   16. LESSON SIDEBAR
+   ========================================================= */
+
+.lesson-sidebar {
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    height: fit-content;
+
+    position: sticky;
+
+    top: 90px;
+}
+
+.lesson-sidebar h3 {
+    margin-bottom: 15px;
+
+    color: #67e8f9;
+}
+
+#lesson-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   17. LESSON ITEMS
+   ========================================================= */
+
+.lesson-item {
     width: 100%;
 
+    text-align: left;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 11px 12px;
+
+    color: #cbd5e1;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.lesson-item:hover {
+    background:
+        rgba(103, 232, 249, 0.1);
+
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.lesson-item.active {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6, 182, 212, 0.2),
+            rgba(99, 102, 241, 0.2)
+        );
+
+    color: #67e8f9;
+
+    border-left:
+        3px solid #67e8f9;
+}
+
+
+/* =========================================================
+   18. LESSON CONTENT
+   ========================================================= */
+
+.lesson-content {
+    min-width: 0;
+}
+
+.lesson-top {
+    margin-bottom: 25px;
+}
+
+#lesson-course,
+#lesson-level {
+    color: #67e8f9;
+
+    font-weight: 700;
+
+    margin-right: 8px;
+}
+
+#lesson-title {
+    font-size:
+        clamp(2rem, 5vw, 3.2rem);
+
+    margin: 10px 0 20px;
+}
+
+
+/* =========================================================
+   19. LESSON BODY
+   ========================================================= */
+
+#lesson-body {
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+#lesson-body h1,
+#lesson-body h2,
+#lesson-body h3 {
+    margin-top: 15px;
+
+    margin-bottom: 12px;
+}
+
+#lesson-body p {
+    color: #cbd5e1;
+
+    margin-bottom: 15px;
+}
+
+#lesson-body strong {
+    color: #67e8f9;
+}
+
+
+/* =========================================================
+   20. CODE EDITOR
+   ========================================================= */
+
+.editor-container {
+    margin-top: 25px;
+}
+
+.editor-container h3 {
+    margin-bottom: 12px;
+}
+
+#code-editor {
+    width: 100%;
+
+    min-height: 330px;
+
+    resize: vertical;
+
+    padding: 20px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 16px;
+
+    outline: none;
+
+    background:
+        #080b16;
+
+    color: #dbeafe;
+
+    font-family:
+        "Courier New",
+        Consolas,
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    tab-size: 4;
+
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+#code-editor:focus {
+    border-color:
+        rgba(103, 232, 249, 0.5);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(103, 232, 249, 0.08);
+}
+
+
+/* =========================================================
+   21. CODE ACTIONS
+   ========================================================= */
+
+.code-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   22. LIVE PREVIEW
+   ========================================================= */
+
+.preview-container {
+    margin-top: 30px;
+}
+
+.preview-container h3 {
+    margin-bottom: 12px;
+}
+
+#preview {
+    width: 100%;
+
+    min-height: 350px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: white;
+
+    display: block;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   23. CHALLENGE
+   ========================================================= */
+
+.challenge {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(99, 102, 241, 0.15),
+            rgba(6, 182, 212, 0.1)
+        );
+
+    border:
+        1px solid rgba(103, 232, 249, 0.15);
+}
+
+.challenge h3 {
+    color: #facc15;
+
+    margin-bottom: 10px;
+}
+
+#challenge-text {
+    color: #dbeafe;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   24. LESSON NAVIGATION
+   ========================================================= */
+
+.lesson-navigation {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   25. PROGRESS
+   ========================================================= */
+
+.progress-section {
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.progress-header {
     display: flex;
 
     justify-content: space-between;
 
     align-items: center;
 
-    padding:
-        18px 5%;
+    gap: 15px;
 
-    background:
-        rgba(7, 11, 22, 0.82);
-
-    backdrop-filter:
-        blur(18px);
-
-    -webkit-backdrop-filter:
-        blur(18px);
-
-    border-bottom:
-        1px solid var(--border);
-
+    margin-bottom: 12px;
 }
 
-
-.logo {
-
-    font-size: 20px;
+#xp-display {
+    color: #facc15;
 
     font-weight: 800;
-
-    letter-spacing: -0.4px;
-
 }
-
-
-.nav-buttons {
-
-    display: flex;
-
-    gap: 8px;
-
-}
-
-
-.nav-buttons button {
-
-    border: 0;
-
-    background: transparent;
-
-    color: var(--text-secondary);
-
-    padding:
-        9px 15px;
-
-    border-radius:
-        var(--radius-small);
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.nav-buttons button:hover {
-
-    color: white;
-
-    background:
-        rgba(255, 255, 255, 0.07);
-
-}
-
-
-/* =========================================================
-   0.5 — MAIN
-========================================================= */
-
-main {
-
-    width: 100%;
-
-    max-width:
-        var(--max-width);
-
-    margin:
-        0 auto;
-
-    padding:
-        0 25px;
-
-}
-
-
-.page {
-
-    min-height:
-        calc(100vh - 80px);
-
-    padding:
-        70px 0;
-
-}
-
-
-/* =========================================================
-   0.6 — HERO
-========================================================= */
-
-.hero {
-
-    position: relative;
-
-    min-height:
-        600px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: flex-start;
-
-    max-width:
-        850px;
-
-}
-
-
-.hero::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-
-    height: 350px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(108, 99, 255, 0.14);
-
-    filter:
-        blur(80px);
-
-    z-index: -1;
-
-    top: 70px;
-
-    left: 100px;
-
-}
-
-
-.eyebrow {
-
-    color:
-        var(--cyan);
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        2.5px;
-
-    margin-bottom:
-        15px;
-
-}
-
-
-.hero h1 {
-
-    font-size:
-        clamp(48px, 8vw, 90px);
-
-    line-height:
-        0.98;
-
-    letter-spacing:
-        -4px;
-
-    margin-bottom:
-        25px;
-
-}
-
-
-.hero p {
-
-    max-width:
-        650px;
-
-    color:
-        var(--text-secondary);
-
-    font-size:
-        18px;
-
-    margin-bottom:
-        35px;
-
-}
-
-
-/* =========================================================
-   0.7 — PRIMARY BUTTON
-========================================================= */
-
-.primary-button {
-
-    border: 0;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--primary),
-            var(--primary-light)
-        );
-
-    padding:
-        15px 24px;
-
-    border-radius:
-        13px;
-
-    font-weight:
-        700;
-
-    box-shadow:
-        0 10px 30px
-        rgba(108, 99, 255, 0.25);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-
-}
-
-
-.primary-button:hover {
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 15px 40px
-        rgba(108, 99, 255, 0.4);
-
-}
-
-
-/* =========================================================
-   0.8 — FEATURES
-========================================================= */
-
-.features {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        18px;
-
-    padding-bottom:
-        80px;
-
-}
-
-
-.feature {
-
-    padding:
-        28px;
-
-    border:
-        1px solid var(--border);
-
-    background:
-        rgba(255, 255, 255, 0.025);
-
-    border-radius:
-        var(--radius-medium);
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.feature:hover {
-
-    transform:
-        translateY(-5px);
-
-    background:
-        rgba(255, 255, 255, 0.05);
-
-}
-
-
-.feature-icon {
-
-    font-size:
-        30px;
-
-    margin-bottom:
-        15px;
-
-}
-
-
-.feature h3 {
-
-    margin-bottom:
-        8px;
-
-}
-
-
-.feature p {
-
-    color:
-        var(--text-secondary);
-
-}
-
-
-/* =========================================================
-   0.9 — SECTION HEADINGS
-========================================================= */
-
-.section-heading {
-
-    margin-bottom:
-        45px;
-
-}
-
-
-.section-heading h2 {
-
-    font-size:
-        clamp(35px, 5vw, 60px);
-
-    letter-spacing:
-        -2px;
-
-    margin-bottom:
-        10px;
-
-}
-
-
-.section-heading p {
-
-    color:
-        var(--text-secondary);
-
-    max-width:
-        650px;
-
-}
-
-
-/* =========================================================
-   0.10 — COURSE CARDS
-========================================================= */
-
-.course-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        22px;
-
-}
-
-
-.course-card {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    padding:
-        32px;
-
-    min-height:
-        320px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-large);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.055),
-            rgba(255, 255, 255, 0.015)
-        );
-
-    cursor:
-        pointer;
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease;
-
-}
-
-
-.course-card::before {
-
-    content: "";
-
-    position:
-        absolute;
-
-    width:
-        160px;
-
-    height:
-        160px;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(108, 99, 255, 0.12);
-
-    filter:
-        blur(45px);
-
-    right:
-        -50px;
-
-    top:
-        -50px;
-
-}
-
-
-.course-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    border-color:
-        rgba(108, 99, 255, 0.5);
-
-    background:
-        var(--bg-card-hover);
-
-}
-
-
-.course-icon {
-
-    width:
-        60px;
-
-    height:
-        60px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    margin-bottom:
-        25px;
-
-    border-radius:
-        16px;
-
-    background:
-        rgba(108, 99, 255, 0.15);
-
-    color:
-        var(--primary-light);
-
-    font-size:
-        24px;
-
-    font-weight:
-        800;
-
-}
-
-
-.course-card h3 {
-
-    font-size:
-        28px;
-
-    margin-bottom:
-        12px;
-
-}
-
-
-.course-card p {
-
-    color:
-        var(--text-secondary);
-
-    margin-bottom:
-        25px;
-
-}
-
-
-.course-level {
-
-    color:
-        var(--cyan);
-
-    font-size:
-        13px;
-
-    font-weight:
-        700;
-
-}
-
-
-/* =========================================================
-   0.11 — BACK BUTTON
-========================================================= */
-
-.back-button {
-
-    border:
-        1px solid var(--border);
-
-    background:
-        rgba(255, 255, 255, 0.04);
-
-    color:
-        var(--text-secondary);
-
-    padding:
-        10px 16px;
-
-    border-radius:
-        10px;
-
-    margin-bottom:
-        40px;
-
-    transition:
-        0.2s ease;
-
-}
-
-
-.back-button:hover {
-
-    color:
-        white;
-
-    background:
-        rgba(255, 255, 255, 0.08);
-
-}
-
-
-/* =========================================================
-   0.12 — COURSE HEADER
-========================================================= */
-
-.course-header {
-
-    margin-bottom:
-        40px;
-
-}
-
-
-.course-header h2 {
-
-    font-size:
-        clamp(40px, 6vw, 65px);
-
-    letter-spacing:
-        -3px;
-
-    margin-bottom:
-        10px;
-
-}
-
-
-.course-header p {
-
-    color:
-        var(--text-secondary);
-
-    max-width:
-        700px;
-
-}
-
-
-/* =========================================================
-   0.13 — LEVEL GRID
-========================================================= */
-
-.level-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap:
-        18px;
-
-}
-
-
-.level-button {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        22px;
-
-    text-align:
-        left;
-
-    padding:
-        25px;
-
-    min-height:
-        155px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-medium);
-
-    background:
-        var(--bg-card);
-
-    color:
-        white;
-
-    transition:
-        0.25s ease;
-
-}
-
-
-.level-button:hover {
-
-    transform:
-        translateY(-5px);
-
-    background:
-        var(--bg-card-hover);
-
-    border-color:
-        rgba(108, 99, 255, 0.45);
-
-}
-
-
-.level-number {
-
-    font-size:
-        34px;
-
-    color:
-        var(--primary-light);
-
-    min-width:
-        55px;
-
-}
-
-
-.level-button span {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    gap:
-        4px;
-
-}
-
-
-.level-button b {
-
-    font-size:
-        20px;
-
-}
-
-
-.level-button small {
-
-    color:
-        var(--text-secondary);
-
-    font-size:
-        14px;
-
-}
-
-
-.level-button em {
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        12px;
-
-    font-style:
-        normal;
-
-}
-
-
-/* =========================================================
-   0.14 — LESSON LAYOUT
-========================================================= */
-
-.lesson-layout {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        270px 1fr;
-
-    gap:
-        25px;
-
-    align-items:
-        start;
-
-}
-
-
-/* =========================================================
-   0.15 — LESSON SIDEBAR
-========================================================= */
-
-.lesson-sidebar {
-
-    position:
-        sticky;
-
-    top:
-        100px;
-
-    max-height:
-        calc(100vh - 125px);
-
-    overflow-y:
-        auto;
-
-    padding:
-        15px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-medium);
-
-    background:
-        rgba(13, 19, 36, 0.85);
-
-}
-
-
-.lesson-sidebar-header {
-
-    padding:
-        12px;
-
-    margin-bottom:
-        10px;
-
-    border-bottom:
-        1px solid var(--border);
-
-}
-
-
-.lesson-sidebar-header h3 {
-
-    font-size:
-        20px;
-
-}
-
-
-.lesson-sidebar-header p {
-
-    color:
-        var(--cyan);
-
-    font-size:
-        13px;
-
-}
-
-
-/* =========================================================
-   0.16 — LESSON ITEMS
-========================================================= */
-
-.lesson-item {
-
-    width:
-        100%;
-
-    display:
-        block;
-
-    text-align:
-        left;
-
-    border:
-        0;
-
-    border-radius:
-        9px;
-
-    background:
-        transparent;
-
-    color:
-        var(--text-secondary);
-
-    padding:
-        11px 12px;
-
-    margin-bottom:
-        4px;
-
-    font-size:
-        13px;
-
-    transition:
-        0.2s ease;
-
-}
-
-
-.lesson-item:hover {
-
-    background:
-        rgba(255, 255, 255, 0.05);
-
-    color:
-        white;
-
-}
-
-
-.lesson-item.active {
-
-    background:
-        rgba(108, 99, 255, 0.18);
-
-    color:
-        white;
-
-    border-left:
-        3px solid var(--primary-light);
-
-}
-
-
-/* =========================================================
-   0.17 — LESSON CONTENT
-========================================================= */
-
-.lesson-content {
-
-    min-width:
-        0;
-
-    padding:
-        35px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-large);
-
-    background:
-        rgba(13, 19, 36, 0.72);
-
-}
-
-
-.lesson-content h2 {
-
-    font-size:
-        clamp(32px, 5vw, 52px);
-
-    line-height:
-        1.1;
-
-    letter-spacing:
-        -2px;
-
-    margin-bottom:
-        25px;
-
-}
-
-
-/* =========================================================
-   0.18 — LESSON TEXT
-========================================================= */
-
-.lesson-text {
-
-    color:
-        var(--text-secondary);
-
-    font-size:
-        16px;
-
-    margin-bottom:
-        35px;
-
-}
-
-
-.lesson-text p {
-
-    margin-bottom:
-        16px;
-
-}
-
-
-.lesson-text h3 {
-
-    color:
-        white;
-
-    margin:
-        25px 0 10px;
-
-}
-
-
-/* =========================================================
-   0.19 — CODE EDITOR
-========================================================= */
-
-.editor {
-
-    overflow:
-        hidden;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-medium);
-
-    background:
-        #050812;
-
-    margin-top:
-        25px;
-
-}
-
-
-.editor-top {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    padding:
-        12px 15px;
-
-    background:
-        rgba(255, 255, 255, 0.04);
-
-    border-bottom:
-        1px solid var(--border);
-
-    font-size:
-        13px;
-
-    color:
-        var(--text-secondary);
-
-}
-
-
-.run-button {
-
-    border:
-        0;
-
-    border-radius:
-        8px;
-
-    padding:
-        7px 13px;
-
-    color:
-        white;
-
-    background:
-        var(--green);
-
-    font-weight:
-        700;
-
-}
-
-
-.run-button:hover {
-
-    filter:
-        brightness(1.1);
-
-}
-
-
-#code-editor {
-
-    display:
-        block;
-
-    width:
-        100%;
-
-    min-height:
-        320px;
-
-    padding:
-        20px;
-
-    border:
-        0;
-
-    outline:
-        0;
-
-    resize:
-        vertical;
-
-    background:
-        #050812;
-
-    color:
-        #d9e2ff;
-
-    font-family:
-        "Courier New",
-        monospace;
-
-    font-size:
-        14px;
-
-    line-height:
-        1.7;
-
-    tab-size:
-        4;
-
-}
-
-
-/* =========================================================
-   0.20 — LIVE PREVIEW
-========================================================= */
-
-.preview-heading {
-
-    margin:
-        30px 0 10px;
-
-    color:
-        var(--text-secondary);
-
-    font-size:
-        13px;
-
-    font-weight:
-        700;
-
-}
-
-
-#preview {
-
-    display:
-        block;
-
-    width:
-        100%;
-
-    min-height:
-        250px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-medium);
-
-    background:
-        white;
-
-}
-
-
-/* =========================================================
-   0.21 — CHALLENGE
-========================================================= */
-
-.challenge {
-
-    margin-top:
-        30px;
-
-    padding:
-        25px;
-
-    border:
-        1px solid
-        rgba(53, 217, 255, 0.18);
-
-    border-radius:
-        var(--radius-medium);
-
-    background:
-        rgba(53, 217, 255, 0.04);
-
-}
-
-
-.challenge h3 {
-
-    margin-bottom:
-        8px;
-
-}
-
-
-.challenge p {
-
-    color:
-        var(--text-secondary);
-
-    margin-bottom:
-        18px;
-
-}
-
-
-.challenge-button {
-
-    border:
-        0;
-
-    border-radius:
-        10px;
-
-    padding:
-        11px 17px;
-
-    background:
-        var(--cyan);
-
-    color:
-        #041018;
-
-    font-weight:
-        800;
-
-}
-
-
-.challenge-button:hover {
-
-    filter:
-        brightness(1.1);
-
-}
-
-
-/* =========================================================
-   0.22 — LESSON NAVIGATION
-========================================================= */
-
-.lesson-navigation {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    gap:
-        15px;
-
-    margin-top:
-        30px;
-
-}
-
-
-.lesson-navigation button {
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        10px;
-
-    padding:
-        11px 18px;
-
-    background:
-        rgba(255, 255, 255, 0.04);
-
-    color:
-        white;
-
-    transition:
-        0.2s ease;
-
-}
-
-
-.lesson-navigation button:hover {
-
-    background:
-        rgba(108, 99, 255, 0.18);
-
-}
-
-
-/* =========================================================
-   0.23 — PROGRESS
-========================================================= */
-
-.progress-card {
-
-    padding:
-        35px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-large);
-
-    background:
-        var(--bg-card);
-
-}
-
-
-.xp-number {
-
-    font-size:
-        45px;
-
-    font-weight:
-        800;
-
-    margin-bottom:
-        20px;
-
-}
-
 
 .progress-bar {
+    width: 100%;
 
-    width:
-        100%;
-
-    height:
-        14px;
-
-    overflow:
-        hidden;
-
-    border-radius:
-        100px;
+    height: 14px;
 
     background:
         rgba(255, 255, 255, 0.08);
 
+    border-radius: 50px;
+
+    overflow: hidden;
 }
 
-
 #xp-bar {
+    width: 0%;
 
-    width:
-        0%;
+    height: 100%;
 
-    height:
-        100%;
-
-    border-radius:
-        inherit;
+    border-radius: inherit;
 
     background:
         linear-gradient(
             90deg,
-            var(--primary),
-            var(--cyan)
+            #06b6d4,
+            #6366f1,
+            #a78bfa
         );
 
     transition:
         width 0.5s ease;
-
 }
 
+#progress-text {
+    margin-top: 10px;
 
-.progress-description {
+    color: #94a3b8;
 
-    margin-top:
-        15px;
-
-    color:
-        var(--text-secondary);
-
+    font-size: 0.9rem;
 }
 
 
 /* =========================================================
-   0.24 — BADGES
-========================================================= */
+   26. STAT CARDS
+   ========================================================= */
 
-.badges {
-
-    display:
-        grid;
+.stats-grid {
+    display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
 
-    gap:
-        18px;
+    gap: 18px;
 
-    margin-top:
-        25px;
+    max-width: 900px;
 
+    margin: 30px auto;
 }
 
+.stat-card {
+    padding: 22px;
 
-.badge {
+    text-align: center;
 
-    display:
-        flex;
+    border-radius: 18px;
 
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    gap:
-        10px;
-
-    min-height:
-        180px;
-
-    padding:
-        20px;
+    background:
+        rgba(255, 255, 255, 0.05);
 
     border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-medium);
-
-    background:
-        rgba(255, 255, 255, 0.025);
-
-    opacity:
-        0.35;
-
-    filter:
-        grayscale(1);
-
-    transition:
-        0.3s ease;
-
+        1px solid rgba(255, 255, 255, 0.08);
 }
 
+.stat-card strong {
+    display: block;
 
-.badge.unlocked {
+    font-size: 2rem;
 
-    opacity:
-        1;
+    color: #67e8f9;
 
-    filter:
-        grayscale(0);
-
-    background:
-        rgba(108, 99, 255, 0.10);
-
-    border-color:
-        rgba(108, 99, 255, 0.4);
-
+    margin-bottom: 5px;
 }
 
-
-.badge-icon {
-
-    font-size:
-        45px;
-
-}
-
-
-.badge-name {
-
-    font-weight:
-        700;
-
-    text-align:
-        center;
-
+.stat-card span {
+    color: #94a3b8;
 }
 
 
 /* =========================================================
-   0.25 — FOOTER
+   27. BADGES
+   ========================================================= */
+
+.badges {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: 30px auto;
+}
+
+.badge {
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    opacity: 0.4;
+
+    filter: grayscale(1);
+
+    transition:
+        opacity 0.3s,
+        filter 0.3s,
+        transform 0.3s;
+}
+
+.badge.unlocked {
+    opacity: 1;
+
+    filter: grayscale(0);
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(250, 204, 21, 0.4);
+}
+
+.badge-icon {
+    font-size: 3rem;
+
+    margin-bottom: 10px;
+}
+
+.badge h3 {
+    margin-bottom: 5px;
+}
+
+.badge p {
+    color: #94a3b8;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   28. REQUIREMENTS
+========================================================= */
+
+.requirements {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+.requirement-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.requirement {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+.requirement-number {
+    min-width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        2px solid #67e8f9;
+
+    color: #67e8f9;
+
+    font-size: 1.3rem;
+
+    font-weight: 800;
+}
+
+.requirement p {
+    color: #dbeafe;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   29. FOOTER
 ========================================================= */
 
 footer {
+    margin-top: 60px;
 
-    display:
-        flex;
+    padding: 35px 20px;
 
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    gap:
-        20px;
-
-    padding:
-        30px 5%;
-
-    margin-top:
-        50px;
+    text-align: center;
 
     border-top:
-        1px solid var(--border);
+        1px solid rgba(255, 255, 255, 0.08);
 
-    color:
-        var(--text-muted);
+    color: #94a3b8;
+}
 
-    font-size:
-        13px;
-
+footer strong {
+    color: #67e8f9;
 }
 
 
 /* =========================================================
-   0.26 — SCROLLBAR
+   30. SCROLLBAR
 ========================================================= */
 
 ::-webkit-scrollbar {
-
-    width:
-        9px;
-
+    width: 10px;
 }
-
 
 ::-webkit-scrollbar-track {
-
-    background:
-        var(--bg-main);
-
+    background: #080b18;
 }
-
 
 ::-webkit-scrollbar-thumb {
-
     background:
-        #27314a;
+        linear-gradient(
+            #06b6d4,
+            #6366f1
+        );
 
-    border-radius:
-        20px;
-
+    border-radius: 20px;
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
-
     background:
-        #37445f;
-
+        linear-gradient(
+            #22d3ee,
+            #818cf8
+        );
 }
 
 
 /* =========================================================
-   0.27 — SELECTION
+   31. TEXT SELECTION
 ========================================================= */
 
 ::selection {
+    background: #6366f1;
 
-    background:
-        rgba(108, 99, 255, 0.5);
+    color: white;
+}
 
-    color:
-        white;
+
+/* =========================================================
+   32. FOCUS ACCESSIBILITY
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline:
+        3px solid #67e8f9;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   33. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        position: static;
+    }
+
+    #lesson-list {
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(180px, 1fr)
+            );
+    }
 
 }
 
 
 /* =========================================================
-   0.28 — ANIMATIONS
+   34. RESPONSIVE — MOBILE
 ========================================================= */
 
-@keyframes pageEnter {
+@media (max-width: 650px) {
+
+    .page {
+        padding: 20px 14px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    .nav-links button,
+    .nav-links a {
+        padding: 7px 8px;
+
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 75vh;
+
+        padding: 50px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .lesson-navigation {
+        flex-direction: column;
+    }
+
+    .lesson-navigation .btn {
+        width: 100%;
+    }
+
+    .requirement {
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+    .requirement-number {
+        min-width: 45px;
+
+        height: 45px;
+
+        font-size: 1rem;
+    }
+
+    #code-editor {
+        min-height: 280px;
+
+        font-size: 13px;
+    }
+
+    #preview {
+        min-height: 300px;
+    }
+
+}
+
+
+/* =========================================================
+   35. VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .code-actions {
+        flex-direction: column;
+    }
+
+    .code-actions .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   36. ANIMATIONS
+========================================================= */
+
+@keyframes fadeIn {
 
     from {
 
-        opacity:
-            0;
+        opacity: 0;
 
         transform:
-            translateY(10px);
+            translateY(15px);
 
     }
 
     to {
 
-        opacity:
-            1;
+        opacity: 1;
 
         transform:
             translateY(0);
@@ -1756,234 +1370,29 @@ footer {
 .page:not(.hidden) {
 
     animation:
-        pageEnter 0.35s ease;
+        fadeIn 0.35s ease;
 
 }
 
 
 /* =========================================================
-   0.29 — TABLET
+   37. REDUCED MOTION
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (prefers-reduced-motion: reduce) {
 
+    *,
+    *::before,
+    *::after {
 
-    .features {
+        scroll-behavior: auto !important;
 
-        grid-template-columns:
-            1fr;
+        animation-duration: 0.01ms !important;
 
-    }
+        animation-iteration-count: 1 !important;
 
-
-    .course-grid {
-
-        grid-template-columns:
-            1fr;
+        transition-duration: 0.01ms !important;
 
     }
 
-
-    .lesson-layout {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .lesson-sidebar {
-
-        position:
-            static;
-
-        max-height:
-            300px;
-
-    }
-
-
-    .badges {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-}
-
-
-/* =========================================================
-   0.30 — MOBILE
-========================================================= */
-
-@media (max-width: 650px) {
-
-
-    .navbar {
-
-        flex-direction:
-            column;
-
-        gap:
-            12px;
-
-        align-items:
-            flex-start;
-
-    }
-
-
-    .nav-buttons {
-
-        width:
-            100%;
-
-        overflow-x:
-            auto;
-
-    }
-
-
-    main {
-
-        padding:
-            0 15px;
-
-    }
-
-
-    .page {
-
-        padding:
-            45px 0;
-
-    }
-
-
-    .hero {
-
-        min-height:
-            500px;
-
-    }
-
-
-    .hero h1 {
-
-        font-size:
-            48px;
-
-        letter-spacing:
-            -2px;
-
-    }
-
-
-    .hero p {
-
-        font-size:
-            16px;
-
-    }
-
-
-    .level-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .lesson-content {
-
-        padding:
-            22px;
-
-    }
-
-
-    .lesson-content h2 {
-
-        font-size:
-            34px;
-
-    }
-
-
-    #code-editor {
-
-        min-height:
-            260px;
-
-        font-size:
-            12px;
-
-    }
-
-
-    footer {
-
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
-
-    }
-
-}
-
-
-/* =========================================================
-   0.31 — VERY SMALL SCREENS
-========================================================= */
-
-@media (max-width: 400px) {
-
-
-    .hero h1 {
-
-        font-size:
-            40px;
-
-    }
-
-
-    .course-card {
-
-        padding:
-            24px;
-
-    }
-
-
-    .level-button {
-
-        padding:
-            18px;
-
-        gap:
-            12px;
-
-    }
-
-
-    .level-number {
-
-        min-width:
-            40px;
-
-        font-size:
-            25px;
-
-    }
-
-}
-
-
-/* =========================================================
-   1.0 — END
-========================================================= */
-```
+   }
