@@ -1,31 +1,36 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- =================================================
-         0.1 — DOCUMENT SETUP
-    ================================================== -->
-
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Stardance Learning Hub — Learn HTML, CSS and JavaScript from absolute beginner to professional level.">
+    <meta
+        name="description"
+        content="Stardance Learning Hub - Learn HTML, CSS and JavaScript from Basic to Expert."
+    >
 
-    <meta name="author"
-          content="Stardance Learning Hub">
+    <meta
+        name="author"
+        content="Sarthak Vishwakarma"
+    >
+
+    <meta
+        name="theme-color"
+        content="#080b18"
+    >
 
     <title>Stardance Learning Hub</title>
 
-
-    <!-- =================================================
-         0.2 — CONNECT CSS
-    ================================================== -->
-
+    <!--
+        CSS FILE
+        Do not change this name.
+    -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -34,918 +39,1358 @@
 <body>
 
 
-    <!-- =================================================
-         0.3 — NAVIGATION BAR
-    ================================================== -->
+<!-- =====================================================
+     HEADER / NAVIGATION
+===================================================== -->
 
-    <header class="navbar">
+<header id="header">
+
+    <nav class="navbar">
 
         <div class="logo">
-            🚀 Stardance Learning
+            🚀 Stardance Learning Hub
         </div>
 
-
-        <nav class="nav-buttons">
+        <div class="nav-links">
 
             <button
                 type="button"
-                onclick="showPage('home')">
+                data-page="home"
+            >
                 Home
             </button>
 
             <button
                 type="button"
-                onclick="showPage('courses')">
-                Courses
+                data-page="courses"
+            >
+                Learn
             </button>
 
             <button
                 type="button"
-                onclick="showPage('progress')">
+                data-page="projects"
+            >
+                Projects
+            </button>
+
+            <button
+                type="button"
+                data-page="progress"
+            >
                 Progress
             </button>
 
-        </nav>
+            <button
+                type="button"
+                data-page="requirements"
+            >
+                Requirements
+            </button>
 
-    </header>
+        </div>
+
+    </nav>
+
+</header>
 
 
 
-    <!-- =================================================
-         MAIN APPLICATION
-    ================================================== -->
+<!-- =====================================================
+     MAIN APPLICATION
+===================================================== -->
 
-    <main>
+<main id="app">
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<section
+    id="home"
+    class="page home-page"
+>
+
+    <div class="hero">
+
+        <p class="eyebrow">
+            🚀 NASA STARDANCE PROJECT
+        </p>
+
+        <h1>
+            Learn.
+            <span>Build.</span>
+            Explore.
+        </h1>
+
+        <p class="hero-description">
+
+            Learn HTML, CSS and JavaScript from
+            complete beginner to advanced level
+            through simple explanations, examples,
+            challenges and projects.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                type="button"
+                id="start-learning"
+                class="primary-button"
+            >
+                🚀 Start Learning
+            </button>
+
+
+            <button
+                type="button"
+                id="explore-project"
+                class="secondary-button"
+            >
+                Explore Project
+            </button>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div class="stat-card">
+
+                <strong>3</strong>
+
+                <span>
+                    Technologies
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>4</strong>
+
+                <span>
+                    Learning Levels
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <strong>∞</strong>
+
+                <span>
+                    Possibilities
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HOME INTRODUCTION -->
+
+    <div class="home-introduction">
+
+        <h2>
+            Why Stardance Learning Hub?
+        </h2>
+
+        <p>
+
+            The main goal is to make programming
+            easy to understand. A learner should be
+            able to start with zero knowledge,
+            understand the concept, write code,
+            run it, complete a challenge and
+            eventually build real projects.
+
+        </p>
+
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Easy Explanations
+                </h3>
+
+                <p>
+                    Concepts explained in simple
+                    language.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Practice
+                </h3>
+
+                <p>
+                    Write and run code directly
+                    in the browser.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Challenges
+                </h3>
+
+                <p>
+                    Complete challenges and earn XP.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Projects
+                </h3>
+
+                <p>
+                    Turn your knowledge into real
+                    projects.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COURSES PAGE
+===================================================== -->
+
+<section
+    id="courses"
+    class="page courses-page hidden"
+>
+
+    <div class="page-header">
+
+        <p class="eyebrow">
+            LEARNING HUB
+        </p>
+
+        <h1>
+            What do you want to learn?
+        </h1>
+
+        <p>
+            Choose a technology and begin your journey.
+        </p>
+
+    </div>
+
+
+    <div class="course-grid">
+
+
+        <!-- HTML -->
+
+        <article
+            class="course-card"
+            data-course="HTML"
+        >
+
+            <div class="course-icon html-icon">
+                HTML
+            </div>
+
+            <h2>
+                HTML
+            </h2>
+
+            <p>
+
+                Learn webpage structure,
+                elements, semantic HTML,
+                forms, accessibility and
+                professional page architecture.
+
+            </p>
+
+            <div class="course-info">
+
+                <span>
+                    4 Levels
+                </span>
+
+                <span>
+                    Beginner → Expert
+                </span>
+
+            </div>
+
+            <button
+                type="button"
+                class="course-button"
+                data-course="HTML"
+            >
+                Learn HTML →
+            </button>
+
+        </article>
+
+
+
+        <!-- CSS -->
+
+        <article
+            class="course-card"
+            data-course="CSS"
+        >
+
+            <div class="course-icon css-icon">
+                CSS
+            </div>
+
+            <h2>
+                CSS
+            </h2>
+
+            <p>
+
+                Learn colors, fonts, spacing,
+                Flexbox, Grid, responsive design,
+                transitions, animations and
+                advanced styling.
+
+            </p>
+
+            <div class="course-info">
+
+                <span>
+                    4 Levels
+                </span>
+
+                <span>
+                    Beginner → Expert
+                </span>
+
+            </div>
+
+            <button
+                type="button"
+                class="course-button"
+                data-course="CSS"
+            >
+                Learn CSS →
+            </button>
+
+        </article>
+
+
+
+        <!-- JAVASCRIPT -->
+
+        <article
+            class="course-card"
+            data-course="JavaScript"
+        >
+
+            <div class="course-icon js-icon">
+                JS
+            </div>
+
+            <h2>
+                JavaScript
+            </h2>
+
+            <p>
+
+                Learn programming logic,
+                variables, functions, DOM,
+                events, storage, APIs and
+                application architecture.
+
+            </p>
+
+            <div class="course-info">
+
+                <span>
+                    4 Levels
+                </span>
+
+                <span>
+                    Beginner → Expert
+                </span>
+
+            </div>
+
+            <button
+                type="button"
+                class="course-button"
+                data-course="JavaScript"
+            >
+                Learn JavaScript →
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COURSE LEVEL PAGE
+===================================================== -->
+
+<section
+    id="course"
+    class="page course-page hidden"
+>
+
+    <div class="page-header">
+
+        <button
+            type="button"
+            id="back-to-courses"
+            class="back-button"
+        >
+            ← Back to Courses
+        </button>
+
+
+        <p class="eyebrow">
+            CURRENT COURSE
+        </p>
+
+
+        <h1 id="course-name">
+            HTML
+        </h1>
+
+
+        <p id="course-description">
+            Choose your learning level.
+        </p>
+
+    </div>
+
+
+
+    <!-- LEVELS -->
+
+    <div class="level-grid">
+
+
+        <!-- BASIC -->
+
+        <button
+            type="button"
+            class="level-card"
+            data-level="Basic"
+        >
+
+            <span class="level-number">
+                01
+            </span>
+
+            <span class="level-icon">
+                🌱
+            </span>
+
+            <strong>
+                Basic
+            </strong>
+
+            <span>
+                Start from zero.
+            </span>
+
+        </button>
+
+
+
+        <!-- INTERMEDIATE -->
+
+        <button
+            type="button"
+            class="level-card"
+            data-level="Intermediate"
+        >
+
+            <span class="level-number">
+                02
+            </span>
+
+            <span class="level-icon">
+                ⚡
+            </span>
+
+            <strong>
+                Intermediate
+            </strong>
+
+            <span>
+                Build stronger skills.
+            </span>
+
+        </button>
+
+
+
+        <!-- ADVANCED -->
+
+        <button
+            type="button"
+            class="level-card"
+            data-level="Advanced"
+        >
+
+            <span class="level-number">
+                03
+            </span>
+
+            <span class="level-icon">
+                🔥
+            </span>
+
+            <strong>
+                Advanced
+            </strong>
+
+            <span>
+                Learn real-world techniques.
+            </span>
+
+        </button>
+
+
+
+        <!-- EXPERT -->
+
+        <button
+            type="button"
+            class="level-card"
+            data-level="Expert"
+        >
+
+            <span class="level-number">
+                04
+            </span>
+
+            <span class="level-icon">
+                🏆
+            </span>
+
+            <strong>
+                Expert
+            </strong>
+
+            <span>
+                Explore professional concepts.
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LESSON PAGE
+===================================================== -->
+
+<section
+    id="lesson"
+    class="page lesson-page hidden"
+>
+
+    <div class="lesson-layout">
 
 
         <!-- =================================================
-             0.4 — HOME PAGE
+             LESSON SIDEBAR
         ================================================== -->
 
-        <section id="home" class="page">
+        <aside class="lesson-sidebar">
+
+            <button
+                type="button"
+                id="back-to-course"
+                class="back-button"
+            >
+                ← Back
+            </button>
 
 
-            <div class="hero">
+            <div class="lesson-sidebar-title">
+
+                <span id="lesson-course">
+                    HTML
+                </span>
+
+                <strong id="lesson-level">
+                    Basic
+                </strong>
+
+            </div>
 
 
-                <div class="eyebrow">
-                    STARDANCE LEARNING HUB
-                </div>
+            <div
+                id="lesson-list"
+                class="lesson-list"
+            >
+
+                <!-- JavaScript will generate lessons here -->
+
+            </div>
+
+        </aside>
 
 
-                <h1>
-                    Learn Coding
-                    <br>
-                    Without Confusion.
+
+        <!-- =================================================
+             MAIN LESSON
+        ================================================== -->
+
+        <article class="lesson-main">
+
+
+            <div class="lesson-header">
+
+                <p class="eyebrow">
+                    LESSON
+                </p>
+
+
+                <h1 id="lesson-title">
+                    Welcome
                 </h1>
 
+            </div>
+
+
+
+            <!-- EXPLANATION -->
+
+            <div
+                id="lesson-body"
+                class="lesson-body"
+            >
 
                 <p>
-                    Learn HTML, CSS and JavaScript
-                    from absolute beginner to advanced
-                    level through simple explanations,
-                    examples, experiments and projects.
+                    Select a lesson to begin learning.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CODE EDITOR
+            ================================================== -->
+
+            <div class="editor-box">
+
+                <div class="editor-header">
+
+                    <span>
+                        💻 Code Editor
+                    </span>
+
+
+                    <button
+                        type="button"
+                        id="run-code"
+                    >
+                        ▶ Run Code
+                    </button>
+
+                </div>
+
+
+                <textarea
+                    id="code-editor"
+                    spellcheck="false"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    aria-label="Code editor"
+                    placeholder="Write your code here..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LIVE PREVIEW
+            ================================================== -->
+
+            <div class="preview-box">
+
+                <div class="preview-header">
+
+                    <span>
+                        🌐 Live Preview
+                    </span>
+
+                </div>
+
+
+                <iframe
+                    id="preview"
+                    title="Live code preview"
+                    sandbox="allow-scripts"
+                ></iframe>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CHALLENGE
+            ================================================== -->
+
+            <div class="challenge-box">
+
+                <p class="eyebrow">
+                    YOUR CHALLENGE
+                </p>
+
+
+                <h2>
+                    🎯 Mission
+                </h2>
+
+
+                <p id="challenge-text">
+                    Complete the challenge for this lesson.
                 </p>
 
 
                 <button
                     type="button"
+                    id="complete-challenge"
                     class="primary-button"
-                    onclick="showPage('courses')">
-
-                    Start Learning →
-
+                >
+                    ✓ Complete Challenge
                 </button>
-
 
             </div>
 
 
 
             <!-- =================================================
-                 0.5 — FEATURES
+                 LESSON NAVIGATION
             ================================================== -->
 
-            <div class="features">
+            <div class="lesson-navigation">
+
+                <button
+                    type="button"
+                    id="previous-lesson"
+                    class="secondary-button"
+                >
+                    ← Previous
+                </button>
 
 
-                <article class="feature">
-
-                    <div class="feature-icon">
-                        🧠
-                    </div>
-
-                    <h3>
-                        Very Easy
-                    </h3>
-
-                    <p>
-                        Concepts are explained step by step
-                        using simple language.
-                    </p>
-
-                </article>
-
-
-
-                <article class="feature">
-
-                    <div class="feature-icon">
-                        💻
-                    </div>
-
-                    <h3>
-                        Learn by Doing
-                    </h3>
-
-                    <p>
-                        Write code, run it and immediately
-                        see what happens.
-                    </p>
-
-                </article>
-
-
-
-                <article class="feature">
-
-                    <div class="feature-icon">
-                        🚀
-                    </div>
-
-                    <h3>
-                        Beginner → Expert
-                    </h3>
-
-                    <p>
-                        Progress through four different
-                        learning levels.
-                    </p>
-
-                </article>
-
+                <button
+                    type="button"
+                    id="next-lesson"
+                    class="primary-button"
+                >
+                    Next →
+                </button>
 
             </div>
 
-        </section>
+        </article>
+
+    </div>
+
+</section>
 
 
 
-        <!-- =================================================
-             0.6 — COURSE SELECTION
-        ================================================== -->
+<!-- =====================================================
+     PROJECTS PAGE
+===================================================== -->
 
-        <section id="courses" class="page hidden">
+<section
+    id="projects"
+    class="page projects-page hidden"
+>
+
+    <div class="page-header">
+
+        <p class="eyebrow">
+            BUILD
+        </p>
+
+        <h1>
+            Projects
+        </h1>
+
+        <p>
+            Use what you learn to create something real.
+        </p>
+
+    </div>
 
 
-            <div class="section-heading">
+    <div class="project-grid">
 
 
-                <div class="eyebrow">
-                    STEP 01
+        <article class="project-card">
+
+            <div class="project-icon">
+                🌐
+            </div>
+
+            <h2>
+                Personal Website
+            </h2>
+
+            <p>
+                Build your own personal website using
+                HTML and CSS.
+            </p>
+
+            <span>
+                HTML + CSS
+            </span>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+            <div class="project-icon">
+                🎮
+            </div>
+
+            <h2>
+                Mini Browser Game
+            </h2>
+
+            <p>
+                Use JavaScript to create an interactive
+                browser game.
+            </p>
+
+            <span>
+                HTML + CSS + JavaScript
+            </span>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+            <div class="project-icon">
+                🚀
+            </div>
+
+            <h2>
+                Space Dashboard
+            </h2>
+
+            <p>
+                Create an interactive space-themed
+                dashboard.
+            </p>
+
+            <span>
+                Advanced
+            </span>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROGRESS PAGE
+===================================================== -->
+
+<section
+    id="progress"
+    class="page progress-page hidden"
+>
+
+    <div class="page-header">
+
+        <p class="eyebrow">
+            YOUR JOURNEY
+        </p>
+
+        <h1>
+            Progress
+        </h1>
+
+        <p>
+            Track your learning journey.
+        </p>
+
+    </div>
+
+
+    <!-- XP -->
+
+    <div class="progress-dashboard">
+
+
+        <div class="progress-card">
+
+            <span>
+                XP
+            </span>
+
+            <strong id="xp-display">
+                0 XP
+            </strong>
+
+        </div>
+
+
+        <div class="progress-card">
+
+            <span>
+                CHALLENGES
+            </span>
+
+            <strong id="challenge-count">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="progress-card">
+
+            <span>
+                LESSONS
+            </span>
+
+            <strong id="lesson-count">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- XP BAR -->
+
+    <div class="xp-section">
+
+        <div class="xp-bar-container">
+
+            <div
+                id="xp-bar"
+                class="xp-bar"
+            ></div>
+
+        </div>
+
+
+        <p id="progress-text">
+            Start learning to begin your journey.
+        </p>
+
+    </div>
+
+
+
+    <!-- BADGES -->
+
+    <div class="badges-section">
+
+        <h2>
+            Achievements
+        </h2>
+
+
+        <div class="badges-grid">
+
+
+            <article
+                id="badge-first"
+                class="badge locked"
+            >
+
+                <div class="badge-icon">
+                    🌟
                 </div>
 
-
-                <h2>
-                    What do you want to learn?
-                </h2>
-
+                <h3>
+                    First Challenge
+                </h3>
 
                 <p>
-                    Choose a technology to begin your
-                    learning journey.
+                    Complete your first challenge.
                 </p>
 
-
-            </div>
-
-
-
-            <div class="course-grid">
-
-
-                <!-- =========================
-                     HTML COURSE
-                ========================== -->
-
-                <article
-                    class="course-card"
-                    onclick="openCourse('HTML')">
-
-
-                    <div class="course-icon">
-                        &lt;/&gt;
-                    </div>
-
-
-                    <h3>
-                        HTML
-                    </h3>
-
-
-                    <p>
-                        Learn the structure of webpages,
-                        from basic tags to professional
-                        HTML architecture.
-                    </p>
-
-
-                    <span class="course-level">
-                        Basic → Expert
-                    </span>
-
-
-                </article>
+            </article>
 
 
 
-                <!-- =========================
-                     CSS COURSE
-                ========================== -->
+            <article
+                id="badge-five"
+                class="badge locked"
+            >
 
-                <article
-                    class="course-card"
-                    onclick="openCourse('CSS')">
-
-
-                    <div class="course-icon">
-                        🎨
-                    </div>
-
-
-                    <h3>
-                        CSS
-                    </h3>
-
-
-                    <p>
-                        Learn styling, layouts, responsive
-                        design, animations and advanced
-                        visual techniques.
-                    </p>
-
-
-                    <span class="course-level">
-                        Basic → Expert
-                    </span>
-
-
-                </article>
-
-
-
-                <!-- =========================
-                     JAVASCRIPT COURSE
-                ========================== -->
-
-                <article
-                    class="course-card"
-                    onclick="openCourse('JavaScript')">
-
-
-                    <div class="course-icon">
-                        ⚡
-                    </div>
-
-
-                    <h3>
-                        JavaScript
-                    </h3>
-
-
-                    <p>
-                        Learn programming, interactivity,
-                        APIs, asynchronous code and
-                        advanced web applications.
-                    </p>
-
-
-                    <span class="course-level">
-                        Basic → Expert
-                    </span>
-
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             0.7 — COURSE INFORMATION + LEVEL SELECTION
-        ================================================== -->
-
-        <section id="course" class="page hidden">
-
-
-            <button
-                type="button"
-                class="back-button"
-                onclick="showPage('courses')">
-
-                ← Back to courses
-
-            </button>
-
-
-
-            <div class="course-header">
-
-
-                <div class="eyebrow">
-                    STEP 02 — CHOOSE YOUR LEVEL
+                <div class="badge-icon">
+                    🔥
                 </div>
 
-
-                <h2 id="course-name">
-                    HTML
-                </h2>
-
-
-                <p id="course-description">
-                    Learn HTML from absolute beginner
-                    to professional level.
-                </p>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 FOUR DIFFERENT LEVELS
-            ================================================== -->
-
-            <div class="level-grid">
-
-
-                <!-- =========================
-                     BASIC
-                ========================== -->
-
-                <button
-                    type="button"
-                    class="level-button"
-                    onclick="openLevel('Basic')">
-
-
-                    <strong class="level-number">
-                        01
-                    </strong>
-
-
-                    <span>
-
-                        <b>
-                            🟢 Basic
-                        </b>
-
-                        <small>
-                            Start from absolute zero.
-                        </small>
-
-                        <em>
-                            No previous knowledge required.
-                        </em>
-
-                    </span>
-
-
-                </button>
-
-
-
-                <!-- =========================
-                     INTERMEDIATE
-                ========================== -->
-
-                <button
-                    type="button"
-                    class="level-button"
-                    onclick="openLevel('Intermediate')">
-
-
-                    <strong class="level-number">
-                        02
-                    </strong>
-
-
-                    <span>
-
-                        <b>
-                            🟡 Intermediate
-                        </b>
-
-                        <small>
-                            Build real webpages and components.
-                        </small>
-
-                        <em>
-                            Requires Basic knowledge.
-                        </em>
-
-                    </span>
-
-
-                </button>
-
-
-
-                <!-- =========================
-                     ADVANCED
-                ========================== -->
-
-                <button
-                    type="button"
-                    class="level-button"
-                    onclick="openLevel('Advanced')">
-
-
-                    <strong class="level-number">
-                        03
-                    </strong>
-
-
-                    <span>
-
-                        <b>
-                            🔴 Advanced
-                        </b>
-
-                        <small>
-                            Learn powerful professional techniques.
-                        </small>
-
-                        <em>
-                            Requires Intermediate knowledge.
-                        </em>
-
-                    </span>
-
-
-                </button>
-
-
-
-                <!-- =========================
-                     EXPERT
-                ========================== -->
-
-                <button
-                    type="button"
-                    class="level-button"
-                    onclick="openLevel('Expert')">
-
-
-                    <strong class="level-number">
-                        04
-                    </strong>
-
-
-                    <span>
-
-                        <b>
-                            🟣 Expert
-                        </b>
-
-                        <small>
-                            Think, design and build professionally.
-                        </small>
-
-                        <em>
-                            Final learning level.
-                        </em>
-
-                    </span>
-
-
-                </button>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             0.8 — LESSON PAGE
-        ================================================== -->
-
-        <section id="lesson" class="page hidden">
-
-
-            <button
-                type="button"
-                class="back-button"
-                onclick="showPage('course')">
-
-                ← Back to levels
-
-            </button>
-
-
-
-            <div class="lesson-layout">
-
-
-                <!-- =================================================
-                     LESSON SIDEBAR
-                ================================================== -->
-
-                <aside class="lesson-sidebar">
-
-
-                    <div class="lesson-sidebar-header">
-
-
-                        <h3 id="lesson-course">
-                            HTML
-                        </h3>
-
-
-                        <p id="lesson-level">
-                            Basic
-                        </p>
-
-
-                    </div>
-
-
-                    <div id="lesson-list">
-
-                        <!-- JavaScript will create
-                             the correct lessons here. -->
-
-                    </div>
-
-
-                </aside>
-
-
-
-                <!-- =================================================
-                     LESSON CONTENT
-                ================================================== -->
-
-                <article class="lesson-content">
-
-
-                    <div class="eyebrow">
-                        LESSON
-                    </div>
-
-
-                    <h2 id="lesson-title">
-                        Welcome
-                    </h2>
-
-
-                    <!-- Lesson explanation -->
-
-                    <div id="lesson-body">
-
-                        <!-- JavaScript inserts
-                             lesson content here. -->
-
-                    </div>
-
-
-
-                    <!-- =================================================
-                         CODE EDITOR
-                    ================================================== -->
-
-                    <div class="editor">
-
-
-                        <div class="editor-top">
-
-
-                            <span>
-                                💻 Try the code
-                            </span>
-
-
-                            <button
-                                type="button"
-                                class="run-button"
-                                onclick="runCode()">
-
-                                ▶ Run
-
-                            </button>
-
-
-                        </div>
-
-
-                        <textarea
-                            id="code-editor"
-                            spellcheck="false"
-                            aria-label="Code editor"></textarea>
-
-
-                    </div>
-
-
-
-                    <!-- =================================================
-                         LIVE PREVIEW
-                    ================================================== -->
-
-                    <div class="preview-heading">
-
-                        Live Preview
-
-                    </div>
-
-
-                    <iframe
-                        id="preview"
-                        title="Live code preview">
-
-                    </iframe>
-
-
-
-                    <!-- =================================================
-                         CHALLENGE
-                    ================================================== -->
-
-                    <div class="challenge">
-
-
-                        <h3>
-                            🧪 Challenge
-                        </h3>
-
-
-                        <p id="challenge-text">
-                            Complete the challenge.
-                        </p>
-
-
-                        <button
-                            type="button"
-                            class="challenge-button"
-                            onclick="completeChallenge()">
-
-                            ✓ Complete Challenge
-
-                        </button>
-
-
-                    </div>
-
-
-
-                    <!-- =================================================
-                         LESSON NAVIGATION
-                    ================================================== -->
-
-                    <div class="lesson-navigation">
-
-
-                        <button
-                            type="button"
-                            onclick="previousLesson()">
-
-                            ← Previous
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            onclick="nextLesson()">
-
-                            Next →
-
-                        </button>
-
-
-                    </div>
-
-
-                </article>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             0.9 — PROGRESS PAGE
-        ================================================== -->
-
-        <section id="progress" class="page hidden">
-
-
-            <div class="section-heading">
-
-
-                <div class="eyebrow">
-                    YOUR JOURNEY
-                </div>
-
-
-                <h2>
-                    Your Progress
-                </h2>
-
+                <h3>
+                    5 Challenges
+                </h3>
 
                 <p>
-                    Complete lessons and challenges
-                    to earn XP and unlock badges.
+                    Complete five challenges.
                 </p>
 
-
-            </div>
-
+            </article>
 
 
-            <!-- =========================
-                 XP
-            ========================== -->
 
-            <div class="progress-card">
+            <article
+                id="badge-master"
+                class="badge locked"
+            >
 
-
-                <div
-                    class="xp-number"
-                    id="xp-display">
-
-                    0 XP
-
+                <div class="badge-icon">
+                    🏆
                 </div>
 
-
-                <div class="progress-bar">
-
-
-                    <div id="xp-bar"></div>
-
-
-                </div>
-
-
-                <p
-                    class="progress-description"
-                    id="progress-text">
-
-                    Start learning to earn XP.
-
-                </p>
-
-
-            </div>
-
-
-
-            <!-- =========================
-                 BADGES
-            ========================== -->
-
-            <div class="badges">
-
-
-                <div
-                    class="badge"
-                    id="badge-first">
-
-
-                    <div class="badge-icon">
-                        🌟
-                    </div>
-
-
-                    <span class="badge-name">
-                        First Challenge
-                    </span>
-
-
-                </div>
-
-
-
-                <div
-                    class="badge"
-                    id="badge-five">
-
-
-                    <div class="badge-icon">
-                        🔥
-                    </div>
-
-
-                    <span class="badge-name">
-                        5 Challenges
-                    </span>
-
-
-                </div>
-
-
-
-                <div
-                    class="badge"
-                    id="badge-master">
-
-
-                    <div class="badge-icon">
-                        🏆
-                    </div>
-
-
-                    <span class="badge-name">
-                        100 XP Master
-                    </span>
-
-
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =================================================
-             1.0 — FUTURE PLATFORM AREA
-        ================================================== -->
-
-        <section id="future" class="page hidden">
-
-
-            <div class="section-heading">
-
-
-                <div class="eyebrow">
-                    STARDANCE
-                </div>
-
-
-                <h2>
-                    Keep Exploring.
-                </h2>
-
+                <h3>
+                    100 XP Master
+                </h3>
 
                 <p>
-                    Future versions can add projects,
-                    quizzes, certificates, search,
-                    achievements and more learning paths.
+                    Earn 100 XP.
                 </p>
 
+            </article>
 
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REQUIREMENTS PAGE
+===================================================== -->
+
+<section
+    id="requirements"
+    class="page requirements-page hidden"
+>
+
+    <div class="page-header">
+
+        <p class="eyebrow">
+            STARDANCE
+        </p>
+
+        <h1>
+            Project Requirements
+        </h1>
+
+        <p>
+            Core requirements and project goals.
+        </p>
+
+    </div>
+
+
+    <div class="requirements-grid">
+
+
+        <!-- 1 -->
+
+        <article class="requirement-card">
+
+            <div class="requirement-number">
+                1
             </div>
 
+            <h2>
+                HTML + CSS
+            </h2>
 
-        </section>
+            <p>
+                The website uses HTML and custom CSS.
+                JavaScript adds interactivity.
+            </p>
+
+            <span>
+                ✓ INCLUDED
+            </span>
+
+        </article>
 
 
-    </main>
+
+        <!-- 2 -->
+
+        <article class="requirement-card">
+
+            <div class="requirement-number">
+                2
+            </div>
+
+            <h2>
+                Public Repository
+            </h2>
+
+            <p>
+                The project source code is maintained
+                in a public GitHub repository.
+            </p>
+
+            <span>
+                ✓ INCLUDED
+            </span>
+
+        </article>
 
 
 
-    <!-- =================================================
-         FOOTER
-    ================================================== -->
+        <!-- 3 -->
 
-    <footer>
+        <article class="requirement-card">
+
+            <div class="requirement-number">
+                3
+            </div>
+
+            <h2>
+                Fully Deployed
+            </h2>
+
+            <p>
+                The project is designed to run as a
+                real deployed website.
+            </p>
+
+            <span>
+                ✓ INCLUDED
+            </span>
+
+        </article>
 
 
-        <span>
+
+        <!-- 4 -->
+
+        <article class="requirement-card">
+
+            <div class="requirement-number">
+                4
+            </div>
+
+            <h2>
+                Personal Website
+            </h2>
+
+            <p>
+                The website contains Home, Learning,
+                Projects, Progress and other sections.
+            </p>
+
+            <span>
+                ✓ INCLUDED
+            </span>
+
+        </article>
+
+
+
+        <!-- 5 -->
+
+        <article class="requirement-card">
+
+            <div class="requirement-number">
+                5
+            </div>
+
+            <h2>
+                Custom CSS
+            </h2>
+
+            <p>
+                The design will use our own custom CSS
+                rather than depending on a website template.
+            </p>
+
+            <span>
+                ✓ INCLUDED
+            </span>
+
+        </article>
+
+    </div>
+
+
+
+    <!-- REQUIREMENT CHECKLIST -->
+
+    <div class="checklist">
+
+        <h2>
+            Project Checklist
+        </h2>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            HTML structure
+        </div>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            CSS design
+        </div>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            JavaScript functionality
+        </div>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            Public GitHub repository
+        </div>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            Deployed website
+        </div>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            Multiple website sections
+        </div>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            Educational purpose
+        </div>
+
+
+        <div class="checklist-item">
+            <span>✓</span>
+            Custom CSS
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="footer">
+
+    <div class="footer-content">
+
+        <h2>
             🚀 Stardance Learning Hub
-        </span>
+        </h2>
 
-
-        <span>
+        <p>
             Learn • Build • Explore
-        </span>
+        </p>
+
+        <p>
+            Built as a Stardance project.
+        </p>
+
+        <p>
+            © 2026 Sarthak Vishwakarma
+        </p>
+
+    </div>
+
+</footer>
 
 
-    </footer>
 
+<!-- =====================================================
+     JAVASCRIPT
+     
+     IMPORTANT:
+     The JavaScript we write next will use these
+     exact IDs. You will NOT need to modify this HTML.
+===================================================== -->
 
-
-    <!-- =================================================
-         1.0 — JAVASCRIPT CONNECTION
-    ================================================== -->
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 
 </body>
 
 </html>
-```
