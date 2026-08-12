@@ -1,15 +1,12 @@
-```javascript
 /* =========================================================
    STARDANCE LEARNING HUB
    JAVASCRIPT v1.0
-
-   HTML + CSS + JavaScript
-   Basic → Intermediate → Advanced → Expert
+   Works with the fixed index.html
 ========================================================= */
 
 
 /* =========================================================
-   COURSE DATABASE
+   1. COURSE DATABASE
 ========================================================= */
 
 const courses = {
@@ -23,30 +20,26 @@ const courses = {
         description:
             "Learn HTML from your first tag to professional webpage structure.",
 
-
         Basic: [
 
             {
                 title: "What is HTML?",
 
                 explanation: `
-                    <p><strong>HTML</strong> means HyperText Markup Language.</p>
+                    <h3>HTML = HyperText Markup Language</h3>
 
                     <p>
-                    HTML is used to create the structure of a webpage.
-                    Think of HTML as the skeleton of a website.
+                        HTML creates the structure of a webpage.
+                        Think of HTML as the skeleton of a website.
                     </p>
 
-                    <h3>Example</h3>
-
                     <p>
-                    A heading, paragraph, image and button can all be
-                    created using HTML elements.
+                        HTML uses elements such as headings,
+                        paragraphs, links, images and buttons.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
 <head>
     <title>My First Page</title>
@@ -67,34 +60,33 @@ const courses = {
 
 
             {
-                title: "HTML Headings",
+                title: "Headings",
 
                 explanation: `
                     <p>
-                    HTML provides six heading levels:
-                    <strong>h1</strong> through <strong>h6</strong>.
+                        HTML has six heading levels:
+                        <strong>h1</strong> to <strong>h6</strong>.
                     </p>
 
                     <p>
-                    h1 is the most important heading and h6 is the
-                    least important.
+                        h1 is normally the main heading of a page.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
 <body>
 
 <h1>Main Heading</h1>
 <h2>Second Heading</h2>
 <h3>Third Heading</h3>
+<h4>Fourth Heading</h4>
 
 </body>
 </html>`,
 
                 challenge:
-                    "Add an h4 heading containing the text 'My Website'."
+                    "Add an h5 heading."
             },
 
 
@@ -103,17 +95,17 @@ const courses = {
 
                 explanation: `
                     <p>
-                    The <strong>p</strong> element creates a paragraph.
+                        The <strong>p</strong> element creates
+                        a paragraph.
                     </p>
 
                     <p>
-                    You can use multiple paragraphs to organize
-                    information on your webpage.
+                        You can create multiple paragraphs
+                        to organize information.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
 <body>
 
@@ -127,7 +119,7 @@ const courses = {
 </html>`,
 
                 challenge:
-                    "Add another paragraph."
+                    "Add one more paragraph."
             },
 
 
@@ -136,21 +128,21 @@ const courses = {
 
                 explanation: `
                     <p>
-                    The <strong>a</strong> element creates a hyperlink.
+                        The <strong>a</strong> element creates
+                        a hyperlink.
                     </p>
 
                     <p>
-                    The <strong>href</strong> attribute tells the browser
-                    where the link should go.
+                        The <strong>href</strong> attribute
+                        contains the destination.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
 <body>
 
-<h1>My Links</h1>
+<h1>My Link</h1>
 
 <a href="https://www.nasa.gov">
     Visit NASA
@@ -160,98 +152,120 @@ const courses = {
 </html>`,
 
                 challenge:
-                    "Create a link to another website."
+                    "Create another link."
             }
 
         ],
 
 
-
         Intermediate: [
 
             {
-                title: "Semantic HTML",
+                title: "Images",
 
                 explanation: `
                     <p>
-                    Semantic elements describe what their content means.
+                        The <strong>img</strong> element displays
+                        an image.
                     </p>
 
                     <p>
-                    Examples include:
-                    <strong>header</strong>,
-                    <strong>nav</strong>,
-                    <strong>main</strong>,
-                    <strong>section</strong>,
-                    <strong>article</strong> and
-                    <strong>footer</strong>.
+                        The <strong>alt</strong> attribute describes
+                        the image.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
-
 <body>
 
-<header>
-    <h1>My Website</h1>
-</header>
+<h1>My Image</h1>
 
-<main>
-
-    <section>
-        <h2>About</h2>
-        <p>Welcome to my website.</p>
-    </section>
-
-</main>
-
-<footer>
-    My Footer
-</footer>
+<img
+    src="https://via.placeholder.com/300"
+    alt="Example image"
+>
 
 </body>
 </html>`,
 
                 challenge:
-                    "Add a navigation section."
+                    "Change the alt text."
             },
 
 
             {
-                title: "HTML Forms",
+                title: "Lists",
 
                 explanation: `
                     <p>
-                    Forms allow users to enter information.
+                        HTML supports ordered and unordered lists.
                     </p>
 
                     <p>
-                    Common form elements include input,
-                    label, textarea and button.
+                        <strong>ul</strong> creates a bullet list
+                        and <strong>ol</strong> creates a numbered list.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
-
 <body>
 
-<h1>Contact</h1>
+<h2>My Skills</h2>
+
+<ul>
+
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+
+</ul>
+
+</body>
+</html>`,
+
+                challenge:
+                    "Add another skill."
+            },
+
+
+            {
+                title: "Forms",
+
+                explanation: `
+                    <p>
+                        Forms allow users to enter information.
+                    </p>
+
+                    <p>
+                        Common elements include input,
+                        label and button.
+                    </p>
+                `,
+
+                code: `<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Contact Form</h2>
 
 <form>
 
-<label>Name:</label>
+    <label for="name">
+        Name:
+    </label>
 
-<input type="text">
+    <input
+        id="name"
+        type="text"
+    >
 
-<br><br>
+    <br><br>
 
-<button type="submit">
-    Send
-</button>
+    <button type="submit">
+        Send
+    </button>
 
 </form>
 
@@ -260,89 +274,98 @@ const courses = {
 
                 challenge:
                     "Add an email input."
-            },
-
-
-            {
-                title: "Tables",
-
-                explanation: `
-                    <p>
-                    HTML tables organize information into rows
-                    and columns.
-                    </p>
-
-                    <p>
-                    Important elements are:
-                    table, tr, th and td.
-                    </p>
-                `,
-
-                code:
-`<!DOCTYPE html>
-<html>
-
-<body>
-
-<table border="1">
-
-<tr>
-    <th>Name</th>
-    <th>Score</th>
-</tr>
-
-<tr>
-    <td>Alex</td>
-    <td>95</td>
-</tr>
-
-</table>
-
-</body>
-</html>`,
-
-                challenge:
-                    "Add another student to the table."
             }
 
         ],
 
 
-
         Advanced: [
+
+            {
+                title: "Semantic HTML",
+
+                explanation: `
+                    <p>
+                        Semantic elements tell the browser
+                        what different parts of a page mean.
+                    </p>
+
+                    <p>
+                        Examples include header, nav, main,
+                        section, article and footer.
+                    </p>
+                `,
+
+                code: `<!DOCTYPE html>
+<html>
+
+<body>
+
+<header>
+
+    <h1>My Website</h1>
+
+</header>
+
+<main>
+
+    <section>
+
+        <h2>About</h2>
+
+        <p>
+            Welcome to my website.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+
+    My Footer
+
+</footer>
+
+</body>
+</html>`,
+
+                challenge:
+                    "Add a navigation element."
+            },
+
 
             {
                 title: "Accessibility",
 
                 explanation: `
                     <p>
-                    Accessible HTML makes websites easier to use
-                    for people with different abilities.
+                        Accessible HTML makes websites easier
+                        for more people to use.
                     </p>
 
                     <p>
-                    Use meaningful headings, labels, alt text
-                    and semantic elements.
+                        Useful practices include meaningful
+                        headings, labels and alternative text.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
 
 <body>
 
 <img
-    src="https://via.placeholder.com/300"
-    alt="Example image"
+    src="https://via.placeholder.com/250"
+    alt="A sample placeholder image"
 >
 
-<label for="name">
-    Your name
+<label for="username">
+    Username
 </label>
 
 <input
-    id="name"
+    id="username"
     type="text"
 >
 
@@ -350,7 +373,7 @@ const courses = {
 </html>`,
 
                 challenge:
-                    "Add an accessible label to another input."
+                    "Add a label for another input."
             },
 
 
@@ -359,17 +382,16 @@ const courses = {
 
                 explanation: `
                     <p>
-                    HTML allows custom data using
-                    <strong>data-*</strong> attributes.
+                        HTML allows custom data using
+                        <strong>data-*</strong> attributes.
                     </p>
 
                     <p>
-                    JavaScript can later read these values.
+                        JavaScript can later read these values.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 <html>
 
 <body>
@@ -385,136 +407,83 @@ const courses = {
 </html>`,
 
                 challenge:
-                    "Create a button with a data-topic attribute."
-            },
-
-
-            {
-                title: "Professional Page Structure",
-
-                explanation: `
-                    <p>
-                    Large websites should have a clear and logical
-                    document structure.
-                    </p>
-
-                    <p>
-                    Organize content using semantic elements
-                    instead of putting everything inside divs.
-                    </p>
-                `,
-
-                code:
-`<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Professional Site</title>
-</head>
-
-<body>
-
-<header>
-    <h1>My Site</h1>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-    </nav>
-</header>
-
-<main>
-
-    <article>
-        <h2>My Article</h2>
-
-        <p>
-            Article content.
-        </p>
-    </article>
-
-</main>
-
-<footer>
-    Copyright 2026
-</footer>
-
-</body>
-</html>`,
-
-                challenge:
-                    "Add a second article."
+                    "Add a data-topic attribute."
             }
 
         ],
 
 
-
         Expert: [
 
             {
-                title: "HTML Architecture",
+                title: "Professional Page Architecture",
 
                 explanation: `
                     <p>
-                    Professional websites need a consistent
-                    document architecture.
+                        Professional webpages should have
+                        a clear and logical structure.
                     </p>
 
                     <p>
-                    Separate navigation, content, supporting
-                    information and footer content clearly.
+                        Semantic sections make large projects
+                        easier to understand and maintain.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>Professional Application</title>
+    <title>Professional Site</title>
 
 </head>
 
 <body>
 
 <header>
+
     <nav>
-        <a href="/">Home</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
     </nav>
+
 </header>
 
 <main>
 
-    <section>
-        <h1>Application</h1>
+    <article>
 
-        <article>
-            <h2>Content</h2>
-            <p>Main information.</p>
-        </article>
+        <h1>My Article</h1>
 
-    </section>
+        <p>
+            Professional HTML structure.
+        </p>
+
+    </article>
 
 </main>
 
 <footer>
-    Footer
+
+    <p>My Website</p>
+
 </footer>
 
 </body>
+
 </html>`,
 
                 challenge:
-                    "Create another semantic section."
+                    "Add another semantic section."
             },
 
 
@@ -523,49 +492,48 @@ const courses = {
 
                 explanation: `
                     <p>
-                    Metadata gives browsers and search engines
-                    information about your webpage.
+                        Metadata gives browsers and search engines
+                        information about a webpage.
                     </p>
 
                     <p>
-                    Common metadata includes charset,
-                    viewport and description.
+                        Common examples are charset, viewport
+                        and description.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta
-    name="description"
-    content="My professional website"
->
+    <meta
+        name="description"
+        content="My professional website"
+    >
 
-<title>Professional Website</title>
+    <title>My Website</title>
 
 </head>
 
 <body>
 
-<h1>Hello</h1>
+    <h1>Hello</h1>
 
 </body>
 
 </html>`,
 
                 challenge:
-                    "Add a theme-color metadata tag."
+                    "Add another useful meta element."
             },
 
 
@@ -574,26 +542,25 @@ const courses = {
 
                 explanation: `
                     <p>
-                    Professional HTML should be readable,
-                    semantic, accessible and logically organized.
+                        Professional HTML should be readable,
+                        semantic, accessible and logically organized.
                     </p>
 
                     <p>
-                    Good structure makes CSS and JavaScript
-                    easier to maintain.
+                        Good HTML makes CSS and JavaScript
+                        easier to write and maintain.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<title>Clean HTML</title>
+    <title>Clean HTML</title>
 
 </head>
 
@@ -604,8 +571,15 @@ const courses = {
     <h1>My Application</h1>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
     </nav>
 
 </header>
@@ -643,7 +617,6 @@ const courses = {
     },
 
 
-
     /* =====================================================
        CSS
     ===================================================== */
@@ -651,8 +624,7 @@ const courses = {
     CSS: {
 
         description:
-            "Learn CSS from colors and sizes to layouts, animations and advanced design.",
-
+            "Learn CSS from basic styling to professional responsive design.",
 
         Basic: [
 
@@ -661,17 +633,17 @@ const courses = {
 
                 explanation: `
                     <p>
-                    CSS means <strong>Cascading Style Sheets</strong>.
+                        CSS means
+                        <strong>Cascading Style Sheets</strong>.
                     </p>
 
                     <p>
-                    HTML creates the structure and CSS controls
-                    how that structure looks.
+                        HTML creates structure.
+                        CSS controls how that structure looks.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -705,12 +677,12 @@ h1 {
 
                 explanation: `
                     <p>
-                    CSS can change text and background colors.
+                        CSS can change text colors and
+                        background colors.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -748,17 +720,16 @@ h1 {
 
                 explanation: `
                     <p>
-                    CSS width and height control the dimensions
-                    of an element.
+                        CSS width and height control
+                        the size of elements.
                     </p>
 
                     <p>
-                    Pixels are one possible unit.
+                        px is one CSS measurement unit.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -789,27 +760,79 @@ h1 {
 </html>`,
 
                 challenge:
-                    "Change the box width to 300px."
+                    "Change the width to 300px."
             }
 
         ],
 
 
-
         Intermediate: [
+
+            {
+                title: "Box Model",
+
+                explanation: `
+                    <p>
+                        Every normal HTML element can be understood
+                        using the CSS box model.
+                    </p>
+
+                    <p>
+                        It includes content, padding, border
+                        and margin.
+                    </p>
+                `,
+
+                code: `<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+.box {
+
+    width: 200px;
+
+    padding: 20px;
+
+    border: 5px solid blue;
+
+    margin: 20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+    Box Model
+</div>
+
+</body>
+
+</html>`,
+
+                challenge:
+                    "Change the padding."
+            },
+
 
             {
                 title: "Flexbox",
 
                 explanation: `
                     <p>
-                    Flexbox is used to arrange elements efficiently
-                    in rows or columns.
+                        Flexbox is a powerful layout system
+                        for arranging elements.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -841,11 +864,11 @@ h1 {
 
 <div class="container">
 
-<div class="box">A</div>
+    <div class="box">A</div>
 
-<div class="box">B</div>
+    <div class="box">B</div>
 
-<div class="box">C</div>
+    <div class="box">C</div>
 
 </div>
 
@@ -863,12 +886,12 @@ h1 {
 
                 explanation: `
                     <p>
-                    CSS Grid is useful for two-dimensional layouts.
+                        CSS Grid is useful for two-dimensional
+                        page layouts.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -903,9 +926,9 @@ h1 {
 
 <div class="grid">
 
-<div class="box">1</div>
-<div class="box">2</div>
-<div class="box">3</div>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
 
 </div>
 
@@ -920,7 +943,6 @@ h1 {
         ],
 
 
-
         Advanced: [
 
             {
@@ -928,17 +950,17 @@ h1 {
 
                 explanation: `
                     <p>
-                    Responsive design allows a website to adapt
-                    to different screen sizes.
+                        Responsive design allows a webpage
+                        to adapt to different screen sizes.
                     </p>
 
                     <p>
-                    Media queries are commonly used for this.
+                        Media queries are commonly used
+                        for responsive layouts.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -988,13 +1010,12 @@ h1 {
 
                 explanation: `
                     <p>
-                    CSS transitions create smooth changes
-                    between states.
+                        Transitions create smooth changes
+                        between CSS states.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1041,7 +1062,6 @@ button:hover {
         ],
 
 
-
         Expert: [
 
             {
@@ -1049,17 +1069,12 @@ button:hover {
 
                 explanation: `
                     <p>
-                    CSS custom properties allow reusable values.
-                    </p>
-
-                    <p>
-                    They are especially useful in large projects
-                    and design systems.
+                        CSS custom properties allow values
+                        to be reused throughout a stylesheet.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1075,8 +1090,7 @@ button:hover {
 
 button {
 
-    background:
-        var(--main-color);
+    background: var(--main-color);
 
     color: white;
 
@@ -1104,17 +1118,16 @@ button {
 
 
             {
-                title: "Advanced Animations",
+                title: "Animations",
 
                 explanation: `
                     <p>
-                    CSS keyframes allow you to create custom
-                    animations without JavaScript.
+                        CSS keyframes allow you to create
+                        custom animations.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1139,13 +1152,15 @@ button {
 
     from {
 
-        transform: translateX(0);
+        transform:
+            translateX(0);
 
     }
 
     to {
 
-        transform: translateX(200px);
+        transform:
+            translateX(200px);
 
     }
 
@@ -1172,7 +1187,6 @@ button {
     },
 
 
-
     /* =====================================================
        JAVASCRIPT
     ===================================================== */
@@ -1180,8 +1194,7 @@ button {
     JavaScript: {
 
         description:
-            "Learn JavaScript programming from variables to interactive web applications.",
-
+            "Learn JavaScript programming from your first variable to interactive web applications.",
 
         Basic: [
 
@@ -1190,18 +1203,18 @@ button {
 
                 explanation: `
                     <p>
-                    JavaScript is a programming language commonly
-                    used to make websites interactive.
+                        JavaScript is a programming language
+                        commonly used to make websites interactive.
                     </p>
 
                     <p>
-                    HTML creates structure, CSS creates appearance,
-                    and JavaScript adds behavior.
+                        HTML = structure.
+                        CSS = appearance.
+                        JavaScript = behavior.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1213,8 +1226,10 @@ button {
 
 <script>
 
-document.getElementById("title")
-    .textContent = "Hello JavaScript!";
+document
+    .getElementById("title")
+    .textContent =
+    "Hello JavaScript!";
 
 </script>
 
@@ -1232,17 +1247,16 @@ document.getElementById("title")
 
                 explanation: `
                     <p>
-                    Variables store information.
+                        Variables store information.
                     </p>
 
                     <p>
-                    Modern JavaScript commonly uses
-                    <strong>let</strong> and <strong>const</strong>.
+                        Modern JavaScript commonly uses
+                        <strong>let</strong> and <strong>const</strong>.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1254,7 +1268,8 @@ document.getElementById("title")
 
 let name = "Sarthak";
 
-document.getElementById("output")
+document
+    .getElementById("output")
     .textContent = name;
 
 </script>
@@ -1273,12 +1288,11 @@ document.getElementById("output")
 
                 explanation: `
                     <p>
-                    Functions contain reusable instructions.
+                        A function contains reusable instructions.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1309,7 +1323,6 @@ function hello() {
         ],
 
 
-
         Intermediate: [
 
             {
@@ -1317,12 +1330,12 @@ function hello() {
 
                 explanation: `
                     <p>
-                    Arrays store multiple values in one variable.
+                        Arrays store multiple values
+                        inside one variable.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1338,8 +1351,10 @@ const planets = [
     "Jupiter"
 ];
 
-document.getElementById("output")
-    .textContent = planets.join(", ");
+document
+    .getElementById("output")
+    .textContent =
+    planets.join(", ");
 
 </script>
 
@@ -1357,13 +1372,12 @@ document.getElementById("output")
 
                 explanation: `
                     <p>
-                    Objects store related information using
-                    properties and values.
+                        Objects store related information
+                        using properties and values.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1381,9 +1395,12 @@ const student = {
 
 };
 
-document.getElementById("output")
+document
+    .getElementById("output")
     .textContent =
-    student.name + " - Class " + student.level;
+    student.name +
+    " - Class " +
+    student.level;
 
 </script>
 
@@ -1392,7 +1409,7 @@ document.getElementById("output")
 </html>`,
 
                 challenge:
-                    "Add a new property."
+                    "Add another property."
             },
 
 
@@ -1401,13 +1418,16 @@ document.getElementById("output")
 
                 explanation: `
                     <p>
-                    The DOM represents the webpage as objects
-                    that JavaScript can access and modify.
+                        The DOM represents the webpage.
+                    </p>
+
+                    <p>
+                        JavaScript can use the DOM to
+                        change HTML elements.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1425,8 +1445,10 @@ document.getElementById("output")
 
 function changeTitle() {
 
-    document.getElementById("title")
-        .textContent = "Changed!";
+    document
+        .getElementById("title")
+        .textContent =
+        "Changed!";
 
 }
 
@@ -1437,11 +1459,10 @@ function changeTitle() {
 </html>`,
 
                 challenge:
-                    "Change the text and its style."
+                    "Change the heading and its style."
             }
 
         ],
-
 
 
         Advanced: [
@@ -1451,17 +1472,12 @@ function changeTitle() {
 
                 explanation: `
                     <p>
-                    Events allow JavaScript to react to user actions.
-                    </p>
-
-                    <p>
-                    Examples include clicks, typing,
-                    mouse movement and keyboard events.
+                        Events allow JavaScript to react
+                        to actions such as clicks and typing.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1505,17 +1521,17 @@ document
 
                 explanation: `
                     <p>
-                    localStorage allows a webpage to store
-                    small amounts of data in the browser.
+                        localStorage allows a webpage to
+                        store small pieces of data in the browser.
                     </p>
 
                     <p>
-                    This can be useful for saving learning progress.
+                        It can be useful for saving learning
+                        progress.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1544,7 +1560,8 @@ function saveData() {
 
 function loadData() {
 
-    document.getElementById("output")
+    document
+        .getElementById("output")
         .textContent =
         localStorage.getItem("message");
 
@@ -1563,22 +1580,20 @@ function loadData() {
         ],
 
 
-
         Expert: [
 
             {
-                title: "Async JavaScript",
+                title: "Asynchronous JavaScript",
 
                 explanation: `
                     <p>
-                    Asynchronous JavaScript allows a program to
-                    perform operations that may take time without
-                    blocking everything else.
+                        Asynchronous JavaScript allows operations
+                        that take time to happen without stopping
+                        the entire program.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1591,14 +1606,18 @@ function loadData() {
 <script>
 
 setTimeout(
+
     function() {
 
-        document.getElementById("output")
+        document
+            .getElementById("output")
             .textContent =
             "Finished!";
 
     },
+
     2000
+
 );
 
 </script>
@@ -1617,17 +1636,17 @@ setTimeout(
 
                 explanation: `
                     <p>
-                    The Fetch API allows JavaScript to request
-                    resources from servers.
+                        The Fetch API allows JavaScript to
+                        request resources from a server.
                     </p>
 
                     <p>
-                    It is commonly used when working with APIs.
+                        APIs are important when applications
+                        need external data.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1651,7 +1670,8 @@ fetch(
 .then(
     data => {
 
-        document.getElementById("output")
+        document
+            .getElementById("output")
             .textContent =
             data.title;
 
@@ -1659,13 +1679,16 @@ fetch(
 )
 
 .catch(
+
     error => {
 
-        document.getElementById("output")
+        document
+            .getElementById("output")
             .textContent =
             "Request failed.";
 
     }
+
 );
 
 </script>
@@ -1680,22 +1703,22 @@ fetch(
 
 
             {
-                title: "Application Architecture",
+                title: "Application State",
 
                 explanation: `
                     <p>
-                    Professional JavaScript applications separate
-                    data, state, user interface and application logic.
+                        Application state is the information
+                        that describes what an application
+                        currently knows.
                     </p>
 
                     <p>
-                    This makes large applications easier to maintain
-                    and expand.
+                        Separating state from rendering is
+                        an important programming concept.
                     </p>
                 `,
 
-                code:
-`<!DOCTYPE html>
+                code: `<!DOCTYPE html>
 
 <html>
 
@@ -1717,7 +1740,8 @@ const state = {
 
 function render() {
 
-    document.getElementById("output")
+    document
+        .getElementById("output")
         .textContent =
         state.user +
         " has " +
@@ -1747,7 +1771,7 @@ render();
 
 
 /* =========================================================
-   APPLICATION STATE
+   2. APPLICATION STATE
 ========================================================= */
 
 let currentCourse = "HTML";
@@ -1758,7 +1782,7 @@ let currentLesson = 0;
 
 
 /* =========================================================
-   SAVED PROGRESS
+   3. SAVED PROGRESS
 ========================================================= */
 
 let xp =
@@ -1773,31 +1797,66 @@ let completedLessons =
     ) || 0;
 
 
+/*
+   Store individual completed challenges.
+
+   This prevents the same challenge from giving
+   unlimited XP.
+*/
+
+let completedChallenges = [];
+
+try {
+
+    completedChallenges =
+        JSON.parse(
+            localStorage.getItem(
+                "stardanceChallenges"
+            )
+        ) || [];
+
+} catch (error) {
+
+    completedChallenges = [];
+
+}
+
+
 
 /* =========================================================
-   PAGE SYSTEM
+   4. PAGE SYSTEM
 ========================================================= */
 
-function showPage(page) {
+function showPage(pageId) {
 
-    document
-        .querySelectorAll(".page")
-        .forEach(function(element) {
+    const pages =
+        document.querySelectorAll(".page");
 
-            element.classList.add("hidden");
 
-        });
+    pages.forEach(function(page) {
+
+        page.classList.add("hidden");
+
+    });
 
 
     const target =
-        document.getElementById(page);
+        document.getElementById(pageId);
 
 
-    if (target) {
+    if (!target) {
 
-        target.classList.remove("hidden");
+        console.error(
+            "Page not found:",
+            pageId
+        );
+
+        return;
 
     }
+
+
+    target.classList.remove("hidden");
 
 
     window.scrollTo({
@@ -1816,16 +1875,27 @@ function showPage(page) {
 
 
 /* =========================================================
-   OPEN COURSE
+   5. START LEARNING
 ========================================================= */
 
-function openCourse(course) {
+function startLearning() {
 
-    if (!courses[course]) {
+    showPage("courses");
+
+}
+
+
+/* =========================================================
+   6. OPEN COURSE
+========================================================= */
+
+function openCourse(courseName) {
+
+    if (!courses[courseName]) {
 
         console.error(
-            "Course not found:",
-            course
+            "Course does not exist:",
+            courseName
         );
 
         return;
@@ -1833,34 +1903,37 @@ function openCourse(course) {
     }
 
 
-    currentCourse = course;
+    currentCourse = courseName;
 
     currentLevel = "Basic";
 
     currentLesson = 0;
 
 
-    const name =
-        document.getElementById("course-name");
+    const courseNameElement =
+        document.getElementById(
+            "course-name"
+        );
 
 
-    const description =
+    const descriptionElement =
         document.getElementById(
             "course-description"
         );
 
 
-    if (name) {
+    if (courseNameElement) {
 
-        name.textContent = course;
+        courseNameElement.textContent =
+            courseName;
 
     }
 
 
-    if (description) {
+    if (descriptionElement) {
 
-        description.textContent =
-            courses[course].description;
+        descriptionElement.textContent =
+            courses[courseName].description;
 
     }
 
@@ -1872,19 +1945,26 @@ function openCourse(course) {
 
 
 /* =========================================================
-   OPEN LEVEL
+   7. OPEN LEVEL
 ========================================================= */
 
 function openLevel(level) {
 
-    if (
-        !courses[currentCourse] ||
-        !courses[currentCourse][level]
-    ) {
+    const course =
+        courses[currentCourse];
+
+
+    if (!course) {
+
+        return;
+
+    }
+
+
+    if (!course[level]) {
 
         console.error(
-            "Level not found:",
-            currentCourse,
+            "Level does not exist:",
             level
         );
 
@@ -1907,7 +1987,7 @@ function openLevel(level) {
 
 
 /* =========================================================
-   LOAD LESSON
+   8. LOAD LESSON
 ========================================================= */
 
 function loadLesson() {
@@ -1933,9 +2013,7 @@ function loadLesson() {
     ) {
 
         console.error(
-            "No lessons found:",
-            currentCourse,
-            currentLevel
+            "No lessons found."
         );
 
         return;
@@ -1957,39 +2035,11 @@ function loadLesson() {
         lessons[currentLesson];
 
 
+    /* Course */
+
     const courseElement =
         document.getElementById(
             "lesson-course"
-        );
-
-
-    const levelElement =
-        document.getElementById(
-            "lesson-level"
-        );
-
-
-    const titleElement =
-        document.getElementById(
-            "lesson-title"
-        );
-
-
-    const bodyElement =
-        document.getElementById(
-            "lesson-body"
-        );
-
-
-    const editor =
-        document.getElementById(
-            "code-editor"
-        );
-
-
-    const challenge =
-        document.getElementById(
-            "challenge-text"
         );
 
 
@@ -2001,12 +2051,28 @@ function loadLesson() {
     }
 
 
+    /* Level */
+
+    const levelElement =
+        document.getElementById(
+            "lesson-level"
+        );
+
+
     if (levelElement) {
 
         levelElement.textContent =
             currentLevel;
 
     }
+
+
+    /* Title */
+
+    const titleElement =
+        document.getElementById(
+            "lesson-title"
+        );
 
 
     if (titleElement) {
@@ -2017,12 +2083,28 @@ function loadLesson() {
     }
 
 
+    /* Explanation */
+
+    const bodyElement =
+        document.getElementById(
+            "lesson-body"
+        );
+
+
     if (bodyElement) {
 
         bodyElement.innerHTML =
             lesson.explanation;
 
     }
+
+
+    /* Code editor */
+
+    const editor =
+        document.getElementById(
+            "code-editor"
+        );
 
 
     if (editor) {
@@ -2033,9 +2115,17 @@ function loadLesson() {
     }
 
 
-    if (challenge) {
+    /* Challenge */
 
-        challenge.textContent =
+    const challengeElement =
+        document.getElementById(
+            "challenge-text"
+        );
+
+
+    if (challengeElement) {
+
+        challengeElement.textContent =
             lesson.challenge;
 
     }
@@ -2050,7 +2140,7 @@ function loadLesson() {
 
 
 /* =========================================================
-   LESSON LIST
+   9. BUILD LESSON LIST
 ========================================================= */
 
 function buildLessonList() {
@@ -2108,7 +2198,8 @@ function buildLessonList() {
                 lesson.title;
 
 
-            button.onclick =
+            button.addEventListener(
+                "click",
                 function() {
 
                     currentLesson =
@@ -2116,7 +2207,8 @@ function buildLessonList() {
 
                     loadLesson();
 
-                };
+                }
+            );
 
 
             list.appendChild(
@@ -2131,7 +2223,7 @@ function buildLessonList() {
 
 
 /* =========================================================
-   RUN CODE
+   10. RUN CODE
 ========================================================= */
 
 function runCode() {
@@ -2166,7 +2258,7 @@ function runCode() {
 
 
 /* =========================================================
-   NEXT LESSON
+   11. NEXT LESSON
 ========================================================= */
 
 function nextLesson() {
@@ -2190,7 +2282,8 @@ function nextLesson() {
 
 
     alert(
-        "🎉 You completed this level!"
+        "🎉 You completed this level!\n\n" +
+        "Choose another level to continue."
     );
 
 }
@@ -2198,7 +2291,7 @@ function nextLesson() {
 
 
 /* =========================================================
-   PREVIOUS LESSON
+   12. PREVIOUS LESSON
 ========================================================= */
 
 function previousLesson() {
@@ -2225,10 +2318,42 @@ function previousLesson() {
 
 
 /* =========================================================
-   COMPLETE CHALLENGE
+   13. COMPLETE CHALLENGE
 ========================================================= */
 
 function completeChallenge() {
+
+    const challengeId =
+        currentCourse +
+        "-" +
+        currentLevel +
+        "-" +
+        currentLesson;
+
+
+    /*
+       Don't give XP twice for the same challenge.
+    */
+
+    if (
+        completedChallenges.includes(
+            challengeId
+        )
+    ) {
+
+        alert(
+            "✅ You already completed this challenge!"
+        );
+
+        return;
+
+    }
+
+
+    completedChallenges.push(
+        challengeId
+    );
+
 
     xp += 10;
 
@@ -2247,11 +2372,20 @@ function completeChallenge() {
     );
 
 
+    localStorage.setItem(
+        "stardanceChallenges",
+        JSON.stringify(
+            completedChallenges
+        )
+    );
+
+
     updateProgress();
 
 
     alert(
-        "🎉 Challenge completed!\n\n+10 XP"
+        "🎉 Challenge completed!\n\n" +
+        "+10 XP"
     );
 
 }
@@ -2259,7 +2393,7 @@ function completeChallenge() {
 
 
 /* =========================================================
-   UPDATE PROGRESS
+   14. UPDATE PROGRESS
 ========================================================= */
 
 function updateProgress() {
@@ -2267,6 +2401,18 @@ function updateProgress() {
     const xpDisplay =
         document.getElementById(
             "xp-display"
+        );
+
+
+    const challengeCount =
+        document.getElementById(
+            "challenge-count"
+        );
+
+
+    const lessonCount =
+        document.getElementById(
+            "lesson-count"
         );
 
 
@@ -2282,77 +2428,120 @@ function updateProgress() {
         );
 
 
-    if (!xpDisplay) {
+    if (xpDisplay) {
 
-        return;
+        xpDisplay.textContent =
+            xp + " XP";
 
     }
 
 
-    xpDisplay.textContent =
-        xp + " XP";
+    if (challengeCount) {
+
+        challengeCount.textContent =
+            completedLessons;
+
+    }
+
+
+    if (lessonCount) {
+
+        lessonCount.textContent =
+            completedLessons;
+
+    }
 
 
     if (xpBar) {
 
+        /*
+           Every 100 XP = one full progress bar.
+        */
+
         const percentage =
             Math.min(
-                xp,
+                xp % 100,
                 100
             );
 
 
-        xpBar.style.width =
-            percentage + "%";
+        /*
+           If XP is exactly 100, show full.
+        */
+
+        if (xp > 0 && xp % 100 === 0) {
+
+            xpBar.style.width =
+                "100%";
+
+        } else {
+
+            xpBar.style.width =
+                percentage + "%";
+
+        }
 
     }
 
 
     if (progressText) {
 
-        progressText.textContent =
-            completedLessons +
-            " challenges completed.";
+        if (completedLessons === 0) {
+
+            progressText.textContent =
+                "Start learning to begin your journey.";
+
+        } else {
+
+            progressText.textContent =
+                completedLessons +
+                " challenge(s) completed.";
+
+        }
 
     }
 
 
-    unlockBadges();
+    updateBadges();
 
 }
 
 
 
 /* =========================================================
-   BADGES
+   15. BADGES
 ========================================================= */
 
-function unlockBadges() {
+function updateBadges() {
 
-    const first =
+    const firstBadge =
         document.getElementById(
             "badge-first"
         );
 
 
-    const five =
+    const fiveBadge =
         document.getElementById(
             "badge-five"
         );
 
 
-    const master =
+    const masterBadge =
         document.getElementById(
             "badge-master"
         );
 
 
     if (
-        first &&
+        firstBadge &&
         completedLessons >= 1
     ) {
 
-        first.classList.add(
+        firstBadge.classList.remove(
+            "locked"
+        );
+
+        firstBadge.classList.add(
             "unlocked"
         );
 
@@ -2360,11 +2549,15 @@ function unlockBadges() {
 
 
     if (
-        five &&
+        fiveBadge &&
         completedLessons >= 5
     ) {
 
-        five.classList.add(
+        fiveBadge.classList.remove(
+            "locked"
+        );
+
+        fiveBadge.classList.add(
             "unlocked"
         );
 
@@ -2372,11 +2565,15 @@ function unlockBadges() {
 
 
     if (
-        master &&
+        masterBadge &&
         xp >= 100
     ) {
 
-        master.classList.add(
+        masterBadge.classList.remove(
+            "locked"
+        );
+
+        masterBadge.classList.add(
             "unlocked"
         );
 
@@ -2387,17 +2584,321 @@ function unlockBadges() {
 
 
 /* =========================================================
-   KEYBOARD SHORTCUT
+   16. EVENT CONNECTIONS
 ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+
+        /* ---------------------------------------------
+           START LEARNING
+        --------------------------------------------- */
+
+        const startButton =
+            document.getElementById(
+                "start-learning"
+            );
+
+
+        if (startButton) {
+
+            startButton.addEventListener(
+                "click",
+                startLearning
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           EXPLORE PROJECT
+        --------------------------------------------- */
+
+        const exploreButton =
+            document.getElementById(
+                "explore-project"
+            );
+
+
+        if (exploreButton) {
+
+            exploreButton.addEventListener(
+                "click",
+                function() {
+
+                    showPage(
+                        "requirements"
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           NAVIGATION BUTTONS
+        --------------------------------------------- */
+
+        document
+            .querySelectorAll(
+                "[data-page]"
+            )
+            .forEach(
+                function(button) {
+
+                    button.addEventListener(
+                        "click",
+                        function() {
+
+                            const page =
+                                button.dataset.page;
+
+                            showPage(page);
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* ---------------------------------------------
+           COURSE BUTTONS
+        --------------------------------------------- */
+
+        document
+            .querySelectorAll(
+                "[data-course]"
+            )
+            .forEach(
+                function(button) {
+
+                    /*
+                       Only buttons inside the course
+                       cards should open a course.
+                    */
+
+                    if (
+                        button.classList.contains(
+                            "course-button"
+                        )
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function() {
+
+                                openCourse(
+                                    button.dataset.course
+                                );
+
+                            }
+                        );
+
+                    }
+
+                }
+            );
+
+
+
+        /* ---------------------------------------------
+           LEVEL BUTTONS
+        --------------------------------------------- */
+
+        document
+            .querySelectorAll(
+                "[data-level]"
+            )
+            .forEach(
+                function(button) {
+
+                    button.addEventListener(
+                        "click",
+                        function() {
+
+                            openLevel(
+                                button.dataset.level
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* ---------------------------------------------
+           BACK TO COURSES
+        --------------------------------------------- */
+
+        const backToCourses =
+            document.getElementById(
+                "back-to-courses"
+            );
+
+
+        if (backToCourses) {
+
+            backToCourses.addEventListener(
+                "click",
+                function() {
+
+                    showPage("courses");
+
+                }
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           BACK TO COURSE
+        --------------------------------------------- */
+
+        const backToCourse =
+            document.getElementById(
+                "back-to-course"
+            );
+
+
+        if (backToCourse) {
+
+            backToCourse.addEventListener(
+                "click",
+                function() {
+
+                    showPage("course");
+
+                }
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           RUN CODE
+        --------------------------------------------- */
+
+        const runButton =
+            document.getElementById(
+                "run-code"
+            );
+
+
+        if (runButton) {
+
+            runButton.addEventListener(
+                "click",
+                runCode
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           COMPLETE CHALLENGE
+        --------------------------------------------- */
+
+        const completeButton =
+            document.getElementById(
+                "complete-challenge"
+            );
+
+
+        if (completeButton) {
+
+            completeButton.addEventListener(
+                "click",
+                completeChallenge
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           NEXT LESSON
+        --------------------------------------------- */
+
+        const nextButton =
+            document.getElementById(
+                "next-lesson"
+            );
+
+
+        if (nextButton) {
+
+            nextButton.addEventListener(
+                "click",
+                nextLesson
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           PREVIOUS LESSON
+        --------------------------------------------- */
+
+        const previousButton =
+            document.getElementById(
+                "previous-lesson"
+            );
+
+
+        if (previousButton) {
+
+            previousButton.addEventListener(
+                "click",
+                previousLesson
+            );
+
+        }
+
+
+
+        /* ---------------------------------------------
+           INITIAL PROGRESS
+        --------------------------------------------- */
+
+        updateProgress();
+
+
+        /* ---------------------------------------------
+           START ON HOME
+        --------------------------------------------- */
+
+        showPage("home");
+
+    }
+);
+
+
+
+/* =========================================================
+   17. KEYBOARD SHORTCUT
+========================================================= */
+
+/*
+   Ctrl + Enter
+   = Run code
+*/
 
 document.addEventListener(
     "keydown",
     function(event) {
-
-        /*
-         Ctrl + Enter
-         = Run Code
-        */
 
         if (
             event.ctrlKey &&
@@ -2412,21 +2913,3 @@ document.addEventListener(
 
     }
 );
-
-
-
-/* =========================================================
-   START APPLICATION
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function() {
-
-        updateProgress();
-
-        showPage("home");
-
-    }
-);
-```
