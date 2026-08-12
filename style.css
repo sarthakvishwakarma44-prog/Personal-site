@@ -1,0 +1,1168 @@
+```css
+/* =====================================
+   STARDANCE LEARNING HUB
+   CSS
+===================================== */
+
+
+/* =====================================
+   GLOBAL RESET
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #070a12;
+    --surface: #101522;
+    --surface-2: #171d2d;
+
+    --border: #292f42;
+
+    --text: #ffffff;
+    --muted: #929aae;
+
+    --accent: #7c9cff;
+    --success: #61d98b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+button {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+.navbar {
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(7, 10, 18, 0.94);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* Navigation buttons */
+
+.nav-buttons {
+    display: flex;
+
+    gap: 6px;
+}
+
+.nav-buttons button {
+    padding: 10px 15px;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.nav-buttons button:hover {
+    background: var(--surface-2);
+
+    color: var(--text);
+}
+
+
+/* =====================================
+   MAIN PAGE
+===================================== */
+
+.page {
+    min-height:
+        calc(100vh - 130px);
+
+    padding: 70px 6%;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    max-width: 950px;
+
+    margin:
+        70px auto 100px;
+
+    text-align: center;
+}
+
+
+/* Small heading */
+
+.eyebrow {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    margin-bottom: 30px;
+
+    font-size:
+        clamp(48px, 8vw, 100px);
+
+    line-height: 0.98;
+}
+
+
+/* Hero paragraph */
+
+.hero p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 18px;
+}
+
+
+/* Main button */
+
+.primary-button {
+    margin-top: 35px;
+
+    padding: 16px 28px;
+
+    background: var(--accent);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================
+   FEATURE CARDS
+===================================== */
+
+.features {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.feature {
+    padding: 30px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    transition: 0.2s;
+}
+
+.feature:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--accent);
+}
+
+
+.feature-icon {
+    margin-bottom: 15px;
+
+    font-size: 32px;
+}
+
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+
+.feature p {
+    color: var(--muted);
+}
+
+
+/* =====================================
+   SECTION HEADINGS
+===================================== */
+
+.section-heading {
+    max-width: 900px;
+
+    margin:
+        0 auto 50px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    line-height: 1;
+}
+
+
+.section-heading p {
+    color: var(--muted);
+}
+
+
+/* =====================================
+   COURSE GRID
+===================================== */
+
+.course-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Course card */
+
+.course-card {
+    padding: 35px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        border-color 0.2s;
+}
+
+
+.course-card:hover {
+    transform:
+        translateY(-8px);
+
+    background:
+        var(--surface-2);
+
+    border-color:
+        var(--accent);
+}
+
+
+/* Course icon */
+
+.course-icon {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        var(--surface-2);
+
+    border-radius: 15px;
+
+    font-size: 28px;
+}
+
+
+.course-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+
+.course-card p {
+    margin-bottom: 25px;
+
+    color: var(--muted);
+}
+
+
+.course-level {
+    color: var(--accent);
+
+    font-size: 13px;
+}
+
+
+/* =====================================
+   BACK BUTTON
+===================================== */
+
+.back-button {
+    margin-bottom: 35px;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    border: none;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.back-button:hover {
+    color: white;
+}
+
+
+/* =====================================
+   COURSE HEADER
+===================================== */
+
+.course-header {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+.course-header h2 {
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(45px, 7vw, 75px);
+
+    line-height: 1;
+}
+
+
+.course-header p {
+    color: var(--muted);
+}
+
+
+/* =====================================
+   LEVEL BUTTONS
+===================================== */
+
+.level-grid {
+    max-width: 900px;
+
+    margin:
+        45px auto 0;
+
+    display: grid;
+
+    gap: 15px;
+}
+
+
+.level-button {
+    width: 100%;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    background:
+        var(--surface);
+
+    color: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.level-button:hover {
+    background:
+        var(--surface-2);
+
+    border-color:
+        var(--accent);
+
+    transform:
+        translateX(5px);
+}
+
+
+.level-number {
+    min-width: 45px;
+
+    color: var(--muted);
+
+    font-size: 25px;
+}
+
+
+.level-button span {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.level-button b {
+    font-size: 19px;
+}
+
+
+.level-button small {
+    margin-top: 3px;
+
+    color: var(--muted);
+}
+
+
+/* =====================================
+   LESSON LAYOUT
+===================================== */
+
+.lesson-layout {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        240px 1fr;
+
+    gap: 40px;
+}
+
+
+/* =====================================
+   LESSON SIDEBAR
+===================================== */
+
+.lesson-sidebar {
+    height: fit-content;
+
+    padding: 20px;
+
+    position: sticky;
+
+    top: 95px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+}
+
+
+.lesson-sidebar h3 {
+    font-size: 20px;
+}
+
+
+.lesson-sidebar > p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* Lesson navigation */
+
+.lesson-item {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 5px;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    border: none;
+
+    border-radius: 8px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.lesson-item:hover {
+    background:
+        var(--surface-2);
+
+    color: white;
+}
+
+
+.lesson-item.active {
+    background:
+        var(--surface-2);
+
+    color: white;
+}
+
+
+/* =====================================
+   LESSON CONTENT
+===================================== */
+
+.lesson-content {
+    max-width: 900px;
+}
+
+
+.lesson-content h2 {
+    margin-bottom: 25px;
+
+    font-size:
+        clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+}
+
+
+.lesson-text {
+    color: #c7ccda;
+
+    font-size: 17px;
+}
+
+
+.lesson-text h3 {
+    margin-top: 30px;
+
+    margin-bottom: 10px;
+
+    color: white;
+}
+
+
+.lesson-text p {
+    margin-bottom: 15px;
+}
+
+
+.lesson-text code {
+    padding: 3px 7px;
+
+    background:
+        var(--surface-2);
+
+    border-radius: 5px;
+
+    color: #dfe5ff;
+}
+
+
+/* =====================================
+   CODE EDITOR
+===================================== */
+
+.editor {
+    margin-top: 40px;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+}
+
+
+/* Editor header */
+
+.editor-top {
+    padding: 13px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        var(--surface);
+}
+
+
+/* Run button */
+
+.run-button {
+    padding: 8px 16px;
+
+    background:
+        var(--success);
+
+    color: #07120b;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.run-button:hover {
+    filter: brightness(1.1);
+}
+
+
+/* Code area */
+
+#code-editor {
+    width: 100%;
+
+    min-height: 300px;
+
+    display: block;
+
+    padding: 20px;
+
+    resize: vertical;
+
+    outline: none;
+
+    border: none;
+
+    background: #04060b;
+
+    color: #e0e5f3;
+
+    font-family:
+        Consolas,
+        Monaco,
+        monospace;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   LIVE PREVIEW
+===================================== */
+
+.preview-heading {
+    margin-top: 30px;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+}
+
+
+#preview {
+    width: 100%;
+
+    min-height: 260px;
+
+    display: block;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+
+/* =====================================
+   CHALLENGE
+===================================== */
+
+.challenge {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+}
+
+
+.challenge h3 {
+    margin-bottom: 8px;
+}
+
+
+.challenge p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+}
+
+
+.challenge-button {
+    padding: 11px 18px;
+
+    background:
+        var(--accent);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+.challenge-button:hover {
+    filter: brightness(1.1);
+}
+
+
+/* =====================================
+   LESSON NAVIGATION
+===================================== */
+
+.lesson-navigation {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.lesson-navigation button {
+    padding: 11px 18px;
+
+    background:
+        var(--surface);
+
+    color: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.lesson-navigation button:hover {
+    background:
+        var(--surface-2);
+
+    border-color:
+        var(--accent);
+}
+
+
+/* =====================================
+   PROGRESS
+===================================== */
+
+.progress-card {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+}
+
+
+.xp-number {
+    margin-bottom: 20px;
+
+    font-size: 38px;
+
+    font-weight: bold;
+}
+
+
+/* Progress background */
+
+.progress-bar {
+    height: 16px;
+
+    overflow: hidden;
+
+    background:
+        var(--surface-2);
+
+    border-radius: 20px;
+}
+
+
+/* Actual progress */
+
+#xp-bar {
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        var(--accent);
+
+    transition:
+        width 0.5s;
+}
+
+
+.progress-description {
+    margin-top: 15px;
+
+    color: var(--muted);
+}
+
+
+/* =====================================
+   BADGES
+===================================== */
+
+.badges {
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.badge {
+    padding: 25px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    opacity: 0.3;
+
+    transition: 0.3s;
+}
+
+
+.badge.unlocked {
+    opacity: 1;
+
+    border-color:
+        var(--accent);
+
+    transform:
+        translateY(-3px);
+}
+
+
+.badge-icon {
+    font-size: 35px;
+}
+
+
+.badge-name {
+    display: block;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    min-height: 60px;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+/* =====================================
+   FOCUS / ACCESSIBILITY
+===================================== */
+
+button:focus-visible,
+textarea:focus-visible {
+    outline:
+        2px solid var(--accent);
+
+    outline-offset: 3px;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+
+    .nav-buttons {
+        display: none;
+    }
+
+
+    .page {
+        padding: 50px 5%;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .lesson-sidebar {
+        position: static;
+    }
+
+
+    .badges {
+        grid-template-columns: 1fr;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 500px) {
+
+    .hero {
+        margin-top: 35px;
+    }
+
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    .course-card {
+        padding: 25px;
+    }
+
+
+    .level-button {
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+
+    .level-number {
+        min-width: 35px;
+
+        font-size: 20px;
+    }
+
+
+    .lesson-content h2 {
+        font-size: 38px;
+    }
+
+
+    #code-editor {
+        min-height: 250px;
+
+        font-size: 13px;
+    }
+
+}
+
