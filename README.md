@@ -1,2 +1,2 @@
-                                                  Learning Coding is now easy.
+                                                          Learning Coding is now easy.
 <hr>
