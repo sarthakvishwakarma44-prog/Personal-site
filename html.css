@@ -1,0 +1,43 @@
+.htmlbodyheading {
+    font-size: 2.5em;
+    text-align: center;
+    color: #0c71cfb5;
+    margin-top: 20px;
+}
+.htmlp {
+    font-size: 60px;
+    text-align: center;
+    color: #4329d7b4;
+    margin-top: 10px;
+}
+body {
+    background-color: rgba(216, 63, 191, 0.462); /* Set the background color to light blue */
+    background-repeat: no-repeat;
+    position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.htmllearner {
+    font-size: 30px; /* Adjust the font size as needed */
+    color: #802a54; /* Adjust the text color as needed */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+.fillitwithcolor {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #ec0fe8; /* Adjust the text color as needed */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+.letsstart {
+    background-color: #e62079c1; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 345px;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+}
